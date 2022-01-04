@@ -388,6 +388,19 @@ if ($(document).width() <= 1210) {
    new Swiper('.slider-reviews', {
       slidesPerView: 'auto',
    })
+   new Swiper('.slider-tariffs', {
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      initialSlide: 1,
+      breakpoints: {
+         768: {
+            spaceBetween: 15,
+         },
+         320: {
+            spaceBetween: 20,
+         }
+      },
+   })
 }
 new Swiper('.slider-partners ', {
    slidesPerView: 'auto',
