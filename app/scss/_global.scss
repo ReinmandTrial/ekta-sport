@@ -1504,3 +1504,42 @@ p.input {
 		color: $mainColor !important;
 	}
 }
+
+.breadcrumbs {
+	background: rgba(255, 255, 255, 0.4);
+	backdrop-filter: blur(10px);
+	position: relative;
+	z-index: 10;
+	margin-top: 10px;
+	padding: 10px 0;
+	@media (max-width: 575.98px) {
+		padding: 6px 0;
+	}
+	&__content {
+		display: flex;
+		align-items: center;
+		column-gap: 10px;
+	}
+
+	&__home {
+		font-size: 24px;
+		@media (max-width: 575.98px) {
+			font-size: 18px;
+		}
+	}
+
+	&__divide {
+		font-size: 18px;
+		@media (max-width: 575.98px) {
+			font-size: 12px;
+		}
+	}
+
+	&__link {
+		font-size: 16px;
+		@media (max-width: 575.98px) {
+			font-weight: 600;
+			font-size: 12px;
+		}
+	}
+}
