@@ -356,13 +356,13 @@
       font-size: 18px;
       display: none;
       &:hover {
-         background: #8f9bb37a !important;
+         background: #8f9bb37a;
       }
       &.show {
          display: block;
       }
       &:nth-child(n + 15) {
-         display: none !important;
+         display: none;
       }
       @media (max-width: 575.98px) {
          padding: 3px 13px;
@@ -872,8 +872,8 @@
          border: unset;
          border-top: 2px solid #c5cee0;
          border-bottom: 2px solid #c5cee0;
-         margin-left: -15px !important;
-         margin-right: -15px !important;
+         margin-left: -15px;
+         margin-right: -15px;
          border-radius: unset;
          background: unset;
          padding: 18px;
@@ -1448,7 +1448,7 @@
    &__final-info-head {
       padding: 0;
       margin-bottom: 10px;
-      border-bottom: unset !important;
+      border-bottom: unset;
       font-weight: 600;
    }
    &__final-info-item {
@@ -1659,8 +1659,8 @@
    }
    &__input-num {
       max-width: 314px;
-      width: 100% !important;
-      margin: 0 0 16px 0 !important;
+      width: 100%;
+      margin: 0 0 16px 0;
       @media (max-width: 575.98px) {
          max-width: unset;
       }
@@ -1670,8 +1670,8 @@
    }
    &__input-term {
       max-width: 145px;
-      width: stretch !important;
-      margin: 0 !important;
+      width: stretch;
+      margin: 0;
       @media (max-width: 575.98px) {
          flex: 1 1 50%;
          max-width: unset;
@@ -1717,7 +1717,7 @@
       .form-card__input-pass {
          flex: 1 1 50%;
          .input {
-            width: 100% !important;
+            width: 100%;
          }
          .form-card__info {
             position: absolute;
@@ -1772,15 +1772,15 @@
    &__input-pass {
       position: relative;
       z-index: 20;
-      width: stretch !important;
-      margin: 0 !important;
+      width: stretch;
+      margin: 0;
       .input__box {
          display: flex;
          align-items: center;
          column-gap: 3px;
       }
       .input {
-         width: 72px !important;
+         width: 72px;
          background: rgba(255, 255, 255, 0.5);
          padding-left: 12px;
          padding-right: 12px;
@@ -1801,9 +1801,9 @@
       }
    }
    &__info-icon {
-      font-size: 14px !important;
-      position: static !important;
-      transform: none !important;
+      font-size: 14px;
+      position: static;
+      transform: none;
    }
    &__info-body {
       position: absolute;
@@ -2267,14 +2267,14 @@
             }
             .consolidator {
                &__stop1 {
-                  stop-color: #c60fe9 !important;
+                  stop-color: #c60fe9;
                }
 
                &__stop2 {
-                  stop-color: #0c6af7 !important;
+                  stop-color: #0c6af7;
                }
                &__stop3 {
-                  stop-color: #2be4fc !important;
+                  stop-color: #2be4fc;
                }
             }
          }
@@ -4117,6 +4117,197 @@
          border: 1px solid $mainColor;
       }
    }
+}
+
+//DIVING START========================================================================================================================================================
+
+.page-diving {
+   .banner__bg,
+   .banner__bg--mobile {
+      &::before,
+      &::after {
+         display: none;
+      }
+   }
+}
+
+.page-diving {
+   &__breadcrumbs {
+      :nth-child(3) {
+         font-weight: 600;
+      }
+   }
+   &__banner {
+      margin-bottom: 70px;
+      @media (max-width: 575.98px) {
+         min-height: 595px;
+         margin-bottom: 30px;
+      }
+   }
+   &__banner-title {
+      color: #fff;
+      margin-bottom: 65px;
+      max-width: 600px;
+   }
+   &__descr {
+      margin-bottom: 70px;
+      @media (max-width: 575.98px) {
+         margin-bottom: 20px;
+      }
+   }
+   &__bg-mobile {
+      bottom: 0px;
+   }
+}
+
+.diving-banner {
+   @media (max-width: 575.98px) {
+      padding-top: 10px;
+      p {
+         margin-bottom: 240px;
+      }
+   }
+}
+
+.block-table {
+   &__title {
+      margin-bottom: 30px;
+      @media (max-width: 575.98px) {
+         margin-bottom: 20px;
+      }
+   }
+   &__descr-top {
+      margin-bottom: 20px;
+   }
+}
+
+.choice {
+   &__title {
+      margin-bottom: 30px;
+      @media (max-width: 575.98px) {
+         margin-bottom: 20px;
+      }
+   }
+   &__text {
+      margin-bottom: 20px;
+   }
+   &__list {
+      margin-bottom: 20px;
+   }
+   &__list-item {
+      padding-left: 34px;
+      position: relative;
+      &:not(:last-child) {
+         margin-bottom: 5px;
+      }
+      &::before {
+         content: "";
+         position: absolute;
+         top: 8px;
+         left: 8px;
+         background: #006fd6;
+         width: 8px;
+         height: 8px;
+         border-radius: 50%;
+      }
+   }
+   &__listbtn {
+      list-style-type: none; /* Убираем исходные маркеры */
+      counter-reset: my-counter; /* Задаём имя счетчика */
+   }
+   &__listbtn-item {
+      &:not(:last-child) {
+         margin-bottom: 5px;
+      }
+      &::before {
+         content: counter(my-counter); /* Выводим число */
+         counter-increment: my-counter; /* Увеличиваем значение счётчика */
+         width: 24px;
+         height: 24px;
+         display: inline-flex;
+         justify-content: center;
+         align-items: center;
+         margin-right: 10px;
+         background: #c5cee0;
+         border-radius: 5px;
+         text-align: center;
+      }
+   }
+   &__img {
+   }
+   &__high {
+      margin-bottom: 70px;
+   }
+}
+
+// ol {
+// 	list-style-type: none; /* Убираем исходные маркеры */
+// 	counter-reset: my-counter; /* Задаём имя счетчика */
+// }
+// li::before {
+// 	content: counter(my-counter); /* Выводим число */
+// 	counter-increment: my-counter; /* Увеличиваем значение счётчика */
+// 	color: #ed1c24; /* Цвет текста */
+// 	font-weight: bold; /* Жирное начертание */
+// 	font-style: italic; /* Курсивное начертание */
+// 	margin-right: 0.5em; /* Расстояние от цифры до текста */
+// }
+.recom {
+   margin-bottom: 120px;
+   @media (max-width: 575.98px) {
+      margin-bottom: 70px;
+   }
+   &__title {
+      margin-bottom: 30px;
+      @media (max-width: 575.98px) {
+         margin-bottom: 20px;
+      }
+   }
+   &__text {
+      margin-bottom: 20px;
+      @media (max-width: 575.98px) {
+         margin-bottom: 10px;
+      }
+   }
+   &__namelist {
+      margin-bottom: 20px;
+      @media (max-width: 575.98px) {
+         margin-bottom: 10px;
+      }
+   }
+   &__list {
+      margin-bottom: 20px;
+   }
+
+   &__list-item {
+      padding-left: 34px;
+      position: relative;
+      &:not(:last-child) {
+         margin-bottom: 5px;
+      }
+      &::before {
+         content: "";
+         position: absolute;
+         top: 8px;
+         left: 8px;
+         background: #006fd6;
+         width: 8px;
+         height: 8px;
+         border-radius: 50%;
+      }
+   }
+}
+
+.diving-question {
+   position: relative;
+}
+
+.diving-question-bg {
+   position: absolute;
+   top: 90px;
+   left: 50%;
+   width: 165px;
+   transform: translateX(-50%);
 }
 
 .traveling {
