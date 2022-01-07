@@ -5496,6 +5496,15 @@
          margin-bottom: calc(43px + (140 - 43) * ((100vw - 375px) / (991 - 375)));
       }
    }
+   .banner__bg {
+      @media (max-width: 575.98px) {
+         display: none;
+      }
+   }
+   .banner__bg--mobile {
+      height: 778px;
+      bottom: unset;
+   }
    &__content {
       position: relative;
       z-index: 20;
@@ -5914,6 +5923,16 @@
 .management {
    position: relative;
    z-index: 20;
+
+   .banner__bg {
+      @media (max-width: 575.98px) {
+         display: none;
+      }
+   }
+   .banner__bg--mobile {
+      height: 778px;
+      bottom: unset;
+   }
    &__content {
    }
    &__title {
