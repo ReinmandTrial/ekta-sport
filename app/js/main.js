@@ -146,6 +146,15 @@ $('.js-select--swich .js-select-body .js-select-item').on('click', function () {
    block.find('.js-select-head p').text(thisText);
    block.find('.js-select-head input').val(thisText);
 });
+$('.js-select--swich .js-select-several .js-select-item').on('click', function () {
+   btn = $(this);
+   block = btn.closest('.js-select--swich');
+   thisText = btn.text();
+
+   block.toggleClass('open');
+   block.find('.js-select-head p').text(thisText);
+   block.find('.js-select-head input').val(thisText);
+});
 // dropdowns end
 
 // плавная прокрутка якоря
@@ -450,3 +459,48 @@ $('.card-tariff__item-head').on('click', function () {
    $(this).closest('.card-tariff__item').find('.card-tariff__item-icon').toggleClass('icon-plus-circle');
    $(this).closest('.card-tariff__item').find('.card-tariff__item-icon').toggleClass('icon-minus-circle');
 })
+
+$(".countries-tabs__head-item").on('click', function () {
+   // aleft('l')
+   if (!$(this).hasClass("active")) {
+      let btns = $(this).closest(".countries-tabs").find(".countries-tabs__head-item");
+      let count;
+      $(btns).each(function () {
+         $(this).removeClass("active");
+      })
+
+      $(this).addClass("active");
+
+      $(btns).each(function (index) {
+         if ($(this).hasClass("active")) {
+            count = index;
+         }
+      })
+
+      let blocks = $('.countries-tabs__body').find('.countries-tabs__body-item');
+
+      $(blocks).each(function (index) {
+         if (index == count) {
+            $(this).addClass("active");
+         } else {
+            $(this).removeClass("active");
+         }
+      })
+   }
+
+})
+
+// calculator start
+$('.form-calculator__policy-includes-btn-show').on('click', function () {
+   $('.form-calculator__policy-includes-descr-short').hide();
+   $('.form-calculator__policy-includes-descr-full').show();
+   $('.form-calculator__policy-includes-btn-show').hide();
+   $('.form-calculator__policy-includes-btn-hide').css('display', 'flex');
+})
+$('.form-calculator__policy-includes-btn-hide').on('click', function () {
+   $('.form-calculator__policy-includes-descr-full').hide();
+   $('.form-calculator__policy-includes-descr-short').show();
+   $('.form-calculator__policy-includes-btn-hide').hide();
+   $('.form-calculator__policy-includes-btn-show').css('display', 'flex');
+})
+// calculator end

@@ -1417,6 +1417,15 @@ input {
 		font-size: 14px;
 	}
 
+	&__several {
+		padding-left: 25px;
+		margin-top: 3px;
+	}
+	&__several-item {
+		font-size: 14px;
+		color: #044481;
+	}
+
 	&__more-details {
 		margin-top: 7px;
 		padding-left: 16px;
