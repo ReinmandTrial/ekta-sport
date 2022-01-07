@@ -374,6 +374,9 @@ $('.form-policy__include-btn-more').on('click', function () {
 $('.btn-popup-type-of-rest').on('click', function () {
    $('.popup-type-of-rest').fadeIn();
 });
+$('.btn-popup-write-to-us').on('click', function () {
+   $('.popup-write-to-us').fadeIn();
+});
 //нажатие вне body
 $(document).on('click', function (e) {
    if (!$(e.target).closest(".popup__content").length && !$(e.target).closest(".btn-popup").length) {

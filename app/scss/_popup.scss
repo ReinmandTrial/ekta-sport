@@ -182,3 +182,30 @@
    background: #005a8f;
 }
 
+.popup-write-to-us {
+   .popup__content {
+      padding: 30px 15px;
+      align-self: flex-end;
+      width: 100%;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 11.98%, #ffffff 100%);
+   }
+   .case-social {
+      &__item {
+         padding: 7px 20px;
+         background: rgba(228, 232, 242, 0.4);
+         border: 1px solid #8f9bb3;
+         border-radius: 20px;
+         &:not(:last-child) {
+            margin-bottom: 15px;
+         }
+      }
+
+      &__label {
+         width: 22px;
+         height: 22px;
+      }
+
+      &__name {
+      }
+   }
+}

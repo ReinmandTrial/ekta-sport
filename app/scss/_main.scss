@@ -5259,6 +5259,15 @@
          margin-bottom: 70px;
       }
    }
+   .banner__bg {
+      @media (max-width: 575.98px) {
+         display: none;
+      }
+   }
+   .banner__bg--mobile {
+      height: 778px;
+      bottom: unset;
+   }
    &__content {
       position: relative;
       z-index: 20;
@@ -5449,6 +5458,28 @@
       margin-right: 12px;
       @media (max-width: 991.98px) {
          margin-right: 10px;
+      }
+   }
+
+   &__write--mobile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: bold;
+      background: rgba(228, 232, 242, 0.4);
+      border: 1px solid #8f9bb3;
+      padding: 14px;
+      border-radius: 20px;
+      column-gap: 10px;
+      max-width: 500px;
+      margin: 0 auto 70px;
+      width: 100%;
+      @media (min-width: 992px) {
+         display: none;
+      }
+      .icon {
+         font-size: 22px;
       }
    }
 }
