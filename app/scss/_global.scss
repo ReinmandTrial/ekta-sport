@@ -1291,6 +1291,21 @@ input {
 				display: block;
 			}
 		}
+		&.success {
+			.input__success {
+				display: block;
+			}
+		}
+	}
+	&__success {
+		display: none;
+		color: #219653;
+		position: absolute;
+		top: calc(100% + 3px);
+		left: 0;
+		width: 100%;
+		font-size: 14px;
+		font-weight: 600;
 	}
 	&__box {
 		position: relative;

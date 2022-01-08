@@ -106,4 +106,14 @@
         width: 100%;
         max-width: 280px;
     }
+    &-blue {
+        padding: 13px 30px;
+        background: $blue;
+        color: $white;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 20px;
+        width: 100%;
+        max-width: 280px;
+    }
 }
