@@ -146,6 +146,14 @@ $('.js-select--swich .js-select-body .js-select-item').on('click', function () {
    block.find('.js-select-head p').text(thisText);
    block.find('.js-select-head input').val(thisText);
 });
+// $('.js-select--swich .js-select-several .js-select-item').on('click', function () {
+//    btn = $(this);
+//    block = btn.closest('.js-select--swich');
+//    thisText = btn.text();
+
+//    block.find('.js-select-head p').text(thisText);
+//    block.find('.js-select-head input').val(thisText);
+// });
 // dropdowns end
 
 // плавная прокрутка якоря
@@ -365,6 +373,12 @@ $('.form-policy__include-btn-more').on('click', function () {
 $('.btn-popup-type-of-rest').on('click', function () {
    $('.popup-type-of-rest').fadeIn();
 });
+$('.btn-popup-write-to-us').on('click', function () {
+   $('.popup-write-to-us').fadeIn();
+});
+$('.btn-popup-sms').on('click', function () {
+   $('.popup-sms').fadeIn();
+});
 //нажатие вне body
 $(document).on('click', function (e) {
    if (!$(e.target).closest(".popup__content").length && !$(e.target).closest(".btn-popup").length) {
@@ -450,3 +464,218 @@ $('.card-tariff__item-head').on('click', function () {
    $(this).closest('.card-tariff__item').find('.card-tariff__item-icon').toggleClass('icon-plus-circle');
    $(this).closest('.card-tariff__item').find('.card-tariff__item-icon').toggleClass('icon-minus-circle');
 })
+
+$(".countries-tabs__head-item").on('click', function () {
+   // aleft('l')
+   if (!$(this).hasClass("active")) {
+      let btns = $(this).closest(".countries-tabs").find(".countries-tabs__head-item");
+      let count;
+      $(btns).each(function () {
+         $(this).removeClass("active");
+      })
+
+      $(this).addClass("active");
+
+      $(btns).each(function (index) {
+         if ($(this).hasClass("active")) {
+            count = index;
+         }
+      })
+
+      let blocks = $('.countries-tabs__body').find('.countries-tabs__body-item');
+
+      $(blocks).each(function (index) {
+         if (index == count) {
+            $(this).addClass("active");
+         } else {
+            $(this).removeClass("active");
+         }
+      })
+   }
+
+})
+
+// calculator start
+$('.form-calculator__policy-includes-btn-show').on('click', function () {
+   $('.form-calculator__policy-includes-descr-short').hide();
+   $('.form-calculator__policy-includes-descr-full').show();
+   $('.form-calculator__policy-includes-btn-show').hide();
+   $('.form-calculator__policy-includes-btn-hide').css('display', 'flex');
+})
+$('.form-calculator__policy-includes-btn-hide').on('click', function () {
+   $('.form-calculator__policy-includes-descr-full').hide();
+   $('.form-calculator__policy-includes-descr-short').show();
+   $('.form-calculator__policy-includes-btn-hide').hide();
+   $('.form-calculator__policy-includes-btn-show').css('display', 'flex');
+})
+
+// $('.form-calculator__check-item-head .checkbox').on('click', function () {
+//    if ($(this).find('.checkbox-none').prop("checked", true)) {
+//       $(this).closest('.form-calculator__check-block').find('.form-calculator__check-block-body .checkbox-none').prop("checked", true)
+//    } else if ($(this).find('.checkbox-none').prop("checked", false)) {
+//       alert('j')
+//       $(this).closest('.form-calculator__check-block').find('.form-calculator__check-block-body .checkbox-none').prop("checked", false)
+//    }
+// })
+
+$('.form-calculator__show-all').on('click', function () {
+   $($(this).closest('.form-calculator__body').find('.form-calculator__check-block')).each(function () {
+      $(this).addClass('open');
+
+   })
+   $(this).hide();
+   $('.form-calculator__hide-all').show();
+})
+$('.form-calculator__hide-all').on('click', function () {
+   $($(this).closest('.form-calculator__body').find('.form-calculator__check-block')).each(function () {
+      $(this).removeClass('open');
+   })
+   $(this).hide();
+   $('.form-calculator__show-all').show();
+})
+
+$('.form-calculator__check-block .checkbox').on('click', function () {
+   $(this).closest('.form-calculator').find('.form-calculator__addition').show();
+})
+$('.form-calculator__input .input__select-item, .form-calculator__input .js-calendar-head').on('click', function () {
+   $(this).closest('.form-calculator').find('.form-calculator__calc-peoples-prev').show();
+   $(this).closest('.form-calculator').find('.form-calculator__details').show();
+   $(this).closest('.form-calculator').find('.form-calculator__calc-peoples').show();
+   $(this).closest('.form-calculator').find('.form-calculator__list-all').hide();
+})
+
+$('.form-calculator__btn-to-step-two').on('click', function () {
+   // $(this).closest('.form-calculator').find('.form-calculator__step-three').hide();
+   $(this).closest('.form-calculator').find('.form-calculator__step-one').hide();
+   $(this).closest('.form-calculator').find('.form-calculator__step-two').show();
+   $('.form-calculator__btn-edit-step-one').show();
+})
+$('.form-calculator__btn-to-step-three').on('click', function () {
+   // $(this).closest('.form-calculator').find('.form-calculator__step-three').hide();
+   $(this).closest('.form-calculator').find('.form-calculator__step-two').hide();
+   $(this).closest('.form-calculator').find('.form-calculator__step-three').show();
+   $('.form-calculator__btn-edit-step-one').show();
+})
+$('.form-calculator__btn-edit-step-one').on('click', function () {
+   $(this).closest('.form-calculator').find('.form-calculator__step-two').hide();
+   $(this).closest('.form-calculator').find('.form-calculator__step-three').hide();
+   $(this).closest('.form-calculator').find('.form-calculator__step-one').show();
+   $('.form-calculator__btn-edit-step-one').hide();
+})
+
+// туристы
+$('.js-add-tourist').on('click', function () {
+   var btn = $(this);
+   if (btn.hasClass('js-add-tourist-block2')) {
+      btn.closest('.form-calculator').find('.form-policy__participants').show();
+      btn.removeClass('js-add-tourist-block2');
+      $('.form-policy__tourist').find('.num').val('');
+      $('.form-policy__tourist .form-policy__subtitle .num').each(function () {
+         $(this).html($('.form-policy__tourist .form-policy__subtitle .num').index(this));
+      });
+
+      $('.js-input-wrapper-to-hide').each(function () {
+         $(this).addClass('closed');
+         $(this).find('input').prop('disabled', true);
+      })
+      $('.form-policy__tourist:last-child').removeClass('closed');
+      $('.form-policy__tourist:last-child').find('input').prop('disabled', false);
+      $('.form-calculator__step-two').addClass('some-hide');
+   } else {
+      btn.closest('.form-calculator').find('.form-policy__tourist.to-clone').clone().appendTo('.form-policy__participants').show();
+      $('.form-policy__tourist.to-clone:last-child').removeClass('to-clone');
+      $('.form-policy__tourist').find('.num').val('');
+      $('.form-policy__tourist .form-policy__subtitle .num').each(function () {
+         $(this).html($('.form-policy__tourist .form-policy__subtitle .num').index(this));
+      });
+
+      $('.js-input-wrapper-to-hide').each(function () {
+         $(this).addClass('closed');
+         $(this).find('input').prop('disabled', true);
+      })
+      $('.form-policy__tourist:last-child').removeClass('closed');
+      $('.form-policy__tourist:last-child').find('input').prop('disabled', false);
+   }
+});
+
+$(document).on('click', '.form-calculator__edit-this', function () {
+   $('.js-input-wrapper-to-hide').each(function () {
+      $(this).addClass('closed');
+      $(this).find('input').prop('disabled', true);
+   })
+   $(this).closest('.js-input-wrapper-to-hide').removeClass('closed');
+   $(this).closest('.js-input-wrapper-to-hide').find('input').prop('disabled', false);
+})
+
+$(document).on('click', '.form-calculator__delete-this', function () {
+   var btn = $(this);
+   btn.closest('.form-policy__tourist').remove();
+   $('.form-policy__tourist').find('.num').val('');
+   $('.form-policy__tourist .form-policy__subtitle .num').each(function () {
+      $(this).html($('.form-policy__tourist .form-policy__subtitle .num').index(this));
+   });
+   var count = 0;
+   $($(document).find('.form-policy__tourist')).each(function () {
+      count++;
+   })
+   if (count <= 1) {
+      $('.form-policy__participants').hide();
+      $('.js-add-tourist').addClass('js-add-tourist-block');
+      $('.form-policy__tourist.to-clone').clone().appendTo('.form-policy__participants').show();
+      $('.form-policy__tourist.to-clone:last-child').removeClass('to-clone');
+      $('.form-policy__tourist.to-clone').clone().appendTo('.form-policy__participants').show();
+      $('.form-policy__tourist.to-clone:last-child').removeClass('to-clone');
+      $('.form-policy__tourist').find('.num').val('');
+      $('.form-policy__tourist .form-policy__subtitle .num').each(function () {
+         $(this).html($('.form-policy__tourist .form-policy__subtitle .num').index(this));
+      });
+   }
+});
+// calculator end
+
+
+var _Seconds;
+
+//ВВод в инпут номер страхового полиса 
+$('.js-input-track').on('keyup', function () {
+   var val = $(this).val();
+   if (val != '') {
+      $('.js-btn-track').prop('disabled', false);
+   } else {
+      $('.js-btn-track').prop('disabled', true);
+   }
+});
+//ВВод в инпут номер страхового полиса конец
+
+$('.js-btn-track').on('click', function () {
+   $('.check-policy__details').show();
+})
+
+//ВВод в инпут номер паспорта
+$('.js-input-pasport').on('keyup', function () {
+   var val = $(this).val();
+   if (val != '') {
+      $('.btn-popup-sms').prop('disabled', false);
+   } else {
+      $('.btn-popup-sms').prop('disabled', true);
+   }
+});
+//ВВод в инпут номер паспорта конец
+
+
+//Ввод в инпут код подтверждения
+$('.js-input-sms').on('keyup', function () {
+   var val = $(this).val();
+   if (val != '') {
+      $('.js-btn-sms').prop('disabled', false);
+   } else {
+      $('.js-btn-sms').prop('disabled', true);
+   }
+});
+
+$('.js-btn-sms').on('click', function () {
+   $('.popup-sms').fadeOut();
+   $('.check-policy__info').show();
+   $('.check-policy__details').hide();
+})
+//Ввод в инпут код подтверждения конец

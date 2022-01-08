@@ -1291,6 +1291,21 @@ input {
 				display: block;
 			}
 		}
+		&.success {
+			.input__success {
+				display: block;
+			}
+		}
+	}
+	&__success {
+		display: none;
+		color: #219653;
+		position: absolute;
+		top: calc(100% + 3px);
+		left: 0;
+		width: 100%;
+		font-size: 14px;
+		font-weight: 600;
 	}
 	&__box {
 		position: relative;
@@ -1415,6 +1430,15 @@ input {
 		color: $red;
 		padding-left: 20px;
 		font-size: 14px;
+	}
+
+	&__several {
+		padding-left: 25px;
+		margin-top: 3px;
+	}
+	&__several-item {
+		font-size: 14px;
+		color: #044481;
 	}
 
 	&__more-details {

@@ -182,3 +182,108 @@
    background: #005a8f;
 }
 
+.popup-write-to-us {
+   .popup__content {
+      padding: 30px 15px;
+      align-self: flex-end;
+      width: 100%;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 11.98%, #ffffff 100%);
+   }
+   .case-social {
+      &__item {
+         padding: 7px 20px;
+         background: rgba(228, 232, 242, 0.4);
+         border: 1px solid #8f9bb3;
+         border-radius: 20px;
+         &:not(:last-child) {
+            margin-bottom: 15px;
+         }
+      }
+
+      &__label {
+         width: 22px;
+         height: 22px;
+      }
+
+      &__name {
+      }
+   }
+}
+
+.popup-sms {
+   // display: block;
+   .popup__body {
+      background: rgba(0, 0, 0, 0.4);
+   }
+   .popup-close {
+      position: absolute;
+      top: 26px;
+      right: 29px;
+      padding: 6px;
+      font-size: 12px;
+   }
+   .popup__content {
+      margin: 25px;
+      padding: 50px 80px;
+      width: 100%;
+      max-width: 650px;
+      background: $white;
+      box-shadow: 0px 10px 10px rgba(34, 43, 69, 0.1);
+      border-radius: 20px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      @media (max-width: 575.98px) {
+         padding: 50px 30px;
+      }
+   }
+   &__title {
+      color: $blue;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      @media (max-width: 575.98px) {
+         font-size: 18px;
+         font-weight: bold;
+      }
+   }
+
+   &__num {
+      color: $blue;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      @media (max-width: 575.98px) {
+         font-size: 18px;
+         font-weight: bold;
+      }
+   }
+
+   &__input {
+      margin: 0 0 20px;
+      width: 1000%;
+      max-width: 320px;
+   }
+
+   &__not {
+      margin-bottom: 40px;
+   }
+
+   &__not-question {
+      margin-bottom: 5px;
+   }
+
+   &__not-answer {
+   }
+
+   &__not-answer-again {
+      color: $blue;
+      text-decoration-line: underline;
+   }
+
+   &__btn {
+      max-width: 230px;
+   }
+}
