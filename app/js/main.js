@@ -795,3 +795,7 @@ $('.js-star-item').on('click', function () {
    })
 });
 // stars end
+
+$('.item-faq__btn-answer').on('click', function () {
+   $(this).closest('.item-faq').addClass('active');
+})
