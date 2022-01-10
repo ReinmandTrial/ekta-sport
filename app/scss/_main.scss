@@ -7977,3 +7977,1230 @@
 	&__blurb {
 	}
 }
+
+//insurance-MAIN START======================================================================================================================================================
+
+.insurance {
+	.banner__bg,
+	.banner__bg--mobile {
+		&::before {
+			display: none;
+		}
+	}
+
+	.banner {
+		margin-bottom: 140px;
+		@media (max-width: 575.98px) {
+			margin-bottom: 70px;
+		}
+	}
+
+	.traveling__main {
+		padding: 0px;
+	}
+	.traveling__bg,
+	.traveling__bg--mobile {
+		&::before,
+		&::after {
+			display: none;
+		}
+	}
+	.traveling__bg {
+		padding: 0px 0px 0px 0px;
+	}
+	.traveling__bg--mobile {
+		padding-top: 80px;
+		height: 50%;
+	}
+	.traveling__title {
+		color: $mainColor;
+	}
+	.traveling__evaluation {
+		background: none;
+		@media (min-width: 1109.98px) {
+			border: 1px solid #8f9bb3;
+		}
+	}
+	.evaluation__item-descr {
+		color: $mainColor;
+	}
+	.scattered__bg {
+		border: 2px solid #c5cee0;
+	}
+}
+
+//insurance-MAIN END========================================================================================================================================================
+
+//insurance-covid START========================================================================================================================================================
+.insurance-covid {
+	.info-block {
+		&__text {
+			margin-bottom: 20px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 10px;
+			}
+			&_1 {
+			}
+			&_2 {
+				margin-bottom: 70px;
+				@media (max-width: 575.98px) {
+					margin-bottom: 40px;
+				}
+			}
+			&_3 {
+			}
+			&_4 {
+			}
+			&_5 {
+			}
+			&_6 {
+				margin-bottom: 70px;
+				@media (max-width: 575.98px) {
+					margin-bottom: 40px;
+				}
+			}
+			&_7 {
+			}
+			&_8 {
+			}
+			&_9 {
+			}
+			&_10 {
+			}
+			&_11 {
+				margin-bottom: 70px;
+				@media (max-width: 575.98px) {
+					margin-bottom: 40px;
+				}
+			}
+			&_12 {
+			}
+			&_13 {
+			}
+			&_14 {
+			}
+		}
+		&__title {
+			margin-bottom: 30px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 20px;
+			}
+			&_1 {
+			}
+			&_2 {
+			}
+			&_3 {
+			}
+			&_4 {
+			}
+			&_5 {
+			}
+			&_6 {
+			}
+			&_7 {
+			}
+		}
+		&__img {
+			margin-bottom: 70px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	.post__highlight {
+		margin-bottom: 70px;
+		@media (max-width: 575.98px) {
+			margin-bottom: 40px;
+		}
+	}
+
+	.banner__content {
+		@media (max-width: 575.98px) {
+			padding-top: 130px;
+		}
+	}
+
+	.banner__title {
+		@media (max-width: 575.98px) {
+			margin-bottom: 35px;
+		}
+	}
+	@media (max-width: 575.98px) {
+		.table__col:not(:last-child) {
+			border-right: none;
+		}
+	}
+
+	.post__table {
+		margin-bottom: 70px;
+		@media (max-width: 575.98px) {
+			margin-bottom: 40px;
+		}
+	}
+
+	.table__row {
+		@media (max-width: 575.98px) {
+			flex-direction: column;
+			border: none;
+		}
+	}
+
+	.table__col {
+		&:first-child {
+			width: 24%;
+			background: #f7f9fc;
+			align-items: flex-start;
+			@media (max-width: 575.98px) {
+				font-weight: 600;
+				width: 100%;
+				background: #edf1f7;
+				border-top: 1px solid #74798a;
+				border-bottom: 1px solid #74798a;
+			}
+		}
+		&:last-child {
+			width: 100%;
+			padding: 20px;
+			@media (max-width: 575.98px) {
+				padding: 5px;
+			}
+		}
+	}
+
+	.table__col--center {
+		text-align: center;
+		padding-top: 20px;
+		@media (max-width: 575.98px) {
+			display: none;
+		}
+		&:first-child {
+			background: #c5cee0;
+		}
+		&:last-child {
+			background: #edf1f7;
+		}
+	}
+}
+//insurance-covid END========================================================================================================================================================
+
+//insurance-medical START========================================================================================================================================================
+.insurance-medical {
+	.banner__title {
+		color: $mainColor;
+		@media (max-width: 575.98px) {
+			margin-top: 40px;
+			margin-bottom: 90px;
+		}
+	}
+
+	.post__highlight {
+		margin-bottom: 140px;
+		@media (max-width: 575.98px) {
+			margin-bottom: 70px;
+		}
+		&:nth-child(2) {
+			margin-bottom: 20px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	.channel-yt__content {
+		margin-bottom: 140px;
+		@media (max-width: 575.98px) {
+			margin-bottom: 70px;
+		}
+	}
+
+	.choice__listbtn {
+		margin-bottom: 20px;
+		@media (max-width: 575.98px) {
+			margin-bottom: 10px;
+		}
+	}
+
+	.info-block {
+		&__text {
+			margin-bottom: 20px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 10px;
+			}
+			&_1 {
+			}
+			&_2 {
+			}
+			&_3 {
+				margin-bottom: 70px;
+				@media (max-width: 575.98px) {
+					margin-bottom: 40px;
+				}
+			}
+			&_4 {
+			}
+			&_5 {
+				margin-bottom: 70px;
+				@media (max-width: 575.98px) {
+					margin-bottom: 40px;
+				}
+			}
+			&_6 {
+				margin-bottom: 70px;
+				@media (max-width: 575.98px) {
+					margin-bottom: 40px;
+				}
+			}
+			&_7 {
+			}
+			&_8 {
+			}
+			&_9 {
+			}
+			&_12 {
+			}
+			&_13 {
+				margin-bottom: 70px;
+				@media (max-width: 575.98px) {
+					margin-bottom: 40px;
+				}
+			}
+		}
+		&__title {
+			margin-bottom: 30px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 20px;
+			}
+			&_1 {
+			}
+			&_2 {
+			}
+			&_3 {
+			}
+			&_4 {
+			}
+			&_5 {
+			}
+			&_6 {
+			}
+		}
+		&__img {
+			margin-bottom: 70px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	@media (max-width: 575.98px) {
+		.table__col:not(:last-child) {
+			border-right: none;
+		}
+	}
+
+	.post__table {
+		margin-bottom: 70px;
+		@media (max-width: 575.98px) {
+			border-top: none;
+			margin-bottom: 40px;
+		}
+	}
+
+	.table__row {
+		p {
+			&:first-child {
+				padding: 15px;
+				@media (max-width: 575.98px) {
+					padding: 5px;
+				}
+			}
+		}
+		@media (max-width: 575.98px) {
+			flex-direction: column;
+			border: none;
+		}
+	}
+
+	.table__col {
+		&:first-child {
+			width: 35%;
+			background: #f7f9fc;
+			align-items: flex-start;
+			@media (max-width: 575.98px) {
+				font-weight: 600;
+				width: 100%;
+				background: #edf1f7;
+				border-bottom: 1px solid #74798a;
+				border-top: 1px solid #74798a;
+			}
+		}
+		&:last-child {
+			width: 100%;
+			padding: 20px;
+			@media (max-width: 575.98px) {
+				padding: 5px;
+			}
+		}
+	}
+
+	.table__col--center {
+		@media (max-width: 575.98px) {
+			display: none;
+		}
+		&:first-child {
+			background: #c5cee0;
+		}
+		&:last-child {
+			background: #edf1f7;
+		}
+	}
+}
+//insurance-medical END========================================================================================================================================================
+
+//insurance-cancel START========================================================================================================================================================
+.insurance-cancel {
+	.banner__title {
+		color: $mainColor;
+		@media (max-width: 575.98px) {
+			margin-top: 25px;
+			margin-bottom: 190px;
+		}
+	}
+
+	.post__highlight {
+		&:last-child {
+			margin-bottom: 70px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	.info-block {
+		span {
+			font-weight: 600;
+		}
+		&__text {
+			margin-bottom: 20px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 10px;
+			}
+			&_last {
+				margin-bottom: 70px;
+				@media (max-width: 575.98px) {
+					margin-bottom: 40px;
+				}
+			}
+			&_last-2 {
+				margin-bottom: 30px;
+				@media (max-width: 575.98px) {
+					margin-bottom: 20px;
+				}
+			}
+		}
+		&__title {
+			margin-bottom: 30px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 20px;
+			}
+		}
+		&__img {
+			margin-bottom: 70px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	.channel-yt {
+		&__content {
+			margin-bottom: 70px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+}
+//insurance-cancel END  ========================================================================================================================================================
+
+//insurance-air-ticket START========================================================================================================================================================
+.insurance-air-ticket {
+	.banner__title {
+		color: $mainColor;
+		@media (max-width: 575.98px) {
+			margin-top: 50px;
+			margin-bottom: 100px;
+		}
+	}
+
+	.post__highlight {
+		margin-bottom: 70px;
+		@media (max-width: 575.98px) {
+			margin-bottom: 40px;
+		}
+	}
+
+	.info-block {
+		&__text {
+			margin-bottom: 20px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 10px;
+			}
+			&_last {
+				margin-bottom: 30px;
+				@media (max-width: 575.98px) {
+					margin-bottom: 20px;
+				}
+			}
+		}
+		&__title {
+			margin-bottom: 30px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 20px;
+			}
+		}
+		&__img {
+			margin-bottom: 70px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+}
+//insurance-air-ticket END========================================================================================================================================================
+
+//insurance-schengen START========================================================================================================================================================
+.insurance-schengen {
+	.banner__title {
+		@media (max-width: 575.98px) {
+			margin-top: 120px;
+			margin-bottom: 30px;
+		}
+	}
+
+	.info-block {
+		&__text {
+			margin-bottom: 20px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 10px;
+			}
+			&_last {
+				margin-bottom: 70px;
+				@media (max-width: 575.98px) {
+					margin-bottom: 40px;
+				}
+			}
+		}
+		&__title {
+			margin-bottom: 30px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 20px;
+			}
+		}
+		&__img {
+			margin-bottom: 70px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	.post {
+		&__highlight {
+			margin-bottom: 30px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 20px;
+			}
+		}
+		&__highlight--attention {
+		}
+		&__highlight-title {
+		}
+		&__highlight-text {
+		}
+		&__table {
+		}
+	}
+	.table {
+		margin-bottom: 70px;
+		@media (max-width: 575.98px) {
+			margin-bottom: 40px;
+			border-top: none;
+		}
+		&__row {
+			@media (max-width: 575.98px) {
+				flex-direction: column;
+				border: none;
+			}
+		}
+		&__col {
+			@media (max-width: 575.98px) {
+				padding: 5px;
+				border-right: none;
+				border-top: none;
+			}
+			&:first-child {
+				width: 90%;
+				background: #f7f9fc;
+				align-items: flex-start;
+				@media (max-width: 575.98px) {
+					font-weight: 600;
+					width: 100%;
+					background: #edf1f7;
+					border-bottom: 1px solid #74798a;
+					border-top: 1px solid #74798a;
+				}
+			}
+			&:last-child {
+				width: 100%;
+				padding: 20px;
+				@media (max-width: 575.98px) {
+					padding: 5px;
+				}
+			}
+		}
+	}
+}
+//insurance-schengen END========================================================================================================================================================
+
+//insurance-visa-free START========================================================================================================================================================
+.insurance-visa-free {
+	.banner__title {
+		@media (max-width: 575.98px) {
+			margin-top: 75px;
+			margin-bottom: 150px;
+		}
+	}
+
+	.info-block {
+		&__text {
+			margin-bottom: 20px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 10px;
+			}
+			&_last {
+				margin-bottom: 70px;
+				@media (max-width: 575.98px) {
+					margin-bottom: 40px;
+				}
+			}
+		}
+		&__title {
+			margin-bottom: 30px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 20px;
+			}
+		}
+		&__img {
+			margin-bottom: 70px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	.post {
+		&__highlight {
+			margin-bottom: 30px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 20px;
+			}
+			&:last-child {
+				margin-bottom: 70px;
+				@media (max-width: 575.98px) {
+					margin-bottom: 40px;
+				}
+			}
+		}
+	}
+}
+//insurance-visa-free END========================================================================================================================================================
+
+//insurance-baggage START========================================================================================================================================================
+.insurance-baggage {
+	.card-tariff__content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		max-height: 540px;
+		max-width: 383px;
+		padding: 25px 0px 50px 0px;
+	}
+
+	.card-tariff__descr {
+		font-size: 18px;
+		@media (max-width: 575.98px) {
+			font-size: 14px;
+		}
+	}
+
+	.banner__title {
+		color: $mainColor;
+		@media (max-width: 575.98px) {
+			margin-top: 60px;
+			margin-bottom: 50px;
+		}
+	}
+
+	.info-block {
+		&__text {
+			margin-bottom: 20px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 10px;
+			}
+			&_last {
+				margin-bottom: 70px;
+				@media (max-width: 575.98px) {
+					margin-bottom: 40px;
+				}
+			}
+		}
+		&__title {
+			margin-bottom: 30px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 20px;
+			}
+		}
+		&__img {
+			margin-bottom: 70px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	.table {
+		margin-bottom: 20px;
+		@media (max-width: 575.98px) {
+			margin-bottom: 20px;
+		}
+		&__row {
+		}
+		&__row--head {
+			background: #c5cee0;
+		}
+		&__col {
+			@media (max-width: 575.98px) {
+				padding: 5px;
+			}
+			&:first-child {
+				background: #edf1f7;
+				width: 110%;
+			}
+		}
+	}
+	.table__col--center {
+		background: #c5cee0 !important;
+	}
+}
+//insurance-baggage  END ========================================================================================================================================================
+
+//insurance-responsibility START========================================================================================================================================================
+.insurance-responsibility {
+	.banner__title {
+		@media (max-width: 575.98px) {
+			margin-top: 35px;
+			margin-bottom: 70px;
+		}
+	}
+
+	.choice__listbtn {
+		margin-bottom: 30px;
+		@media (max-width: 575.98px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	.info-block {
+		&__text {
+			margin-bottom: 20px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 10px;
+			}
+			&_last {
+				margin-bottom: 70px;
+				@media (max-width: 575.98px) {
+					margin-bottom: 40px;
+				}
+			}
+		}
+		&__title {
+			margin-bottom: 30px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	.post {
+		&__highlight {
+			margin-bottom: 30px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+//insurance-responsibility END========================================================================================================================================================
+
+//insurance-child START ========================================================================================================================================================
+
+.insurance-child {
+	.banner__title {
+		color: $mainColor;
+		@media (max-width: 575.98px) {
+			margin-top: 25px;
+			margin-bottom: 220px;
+		}
+	}
+
+	.info-block {
+		&__text {
+			margin-bottom: 20px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 10px;
+			}
+			&_last {
+				margin-bottom: 70px;
+				@media (max-width: 575.98px) {
+					margin-bottom: 40px;
+				}
+			}
+		}
+		&__title {
+			margin-bottom: 30px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 20px;
+			}
+		}
+		&__img {
+			margin-bottom: 70px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	.post {
+		&__highlight {
+			margin-bottom: 30px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+//insurance-child END========================================================================================================================================================
+
+//insurance-games START========================================================================================================================================================
+
+.insurance-games {
+	.banner__title {
+		@media (max-width: 575.98px) {
+			margin-top: 75px;
+			margin-bottom: 165px;
+		}
+	}
+
+	.info-block {
+		&__text {
+			margin-bottom: 20px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 10px;
+			}
+			&_last {
+				margin-bottom: 70px;
+				@media (max-width: 575.98px) {
+					margin-bottom: 40px;
+				}
+			}
+		}
+		&__title {
+			margin-bottom: 30px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 20px;
+			}
+		}
+		&__img {
+			margin-bottom: 70px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	.post {
+		&__highlight {
+			margin-bottom: 30px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+//insurance-games END========================================================================================================================================================
+
+//insurance-studies START========================================================================================================================================================
+
+.insurance-studies {
+	.banner__title {
+		@media (max-width: 575.98px) {
+			margin-top: 245px;
+			margin-bottom: 25px;
+		}
+	}
+
+	.info-block {
+		&__text {
+			margin-bottom: 20px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 10px;
+			}
+			&_last {
+				margin-bottom: 70px;
+				@media (max-width: 575.98px) {
+					margin-bottom: 40px;
+				}
+			}
+		}
+		&__title {
+			margin-bottom: 30px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 20px;
+			}
+		}
+		&__img {
+			margin-bottom: 70px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	.post {
+		&__highlight {
+			margin-bottom: 30px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	.table {
+		&__row {
+			@media (max-width: 575.98px) {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+		&__column {
+			&_left {
+				p {
+					&:last-child {
+						padding-top: 40px;
+						font-weight: 400;
+					}
+				}
+				background: #edf1f7;
+				border-right: 1px solid #74798a;
+				width: 46%;
+				padding: 20px 10px 0px 10px;
+				font-weight: 600;
+				@media (max-width: 575.98px) {
+					width: 100%;
+					border-bottom: 1px solid #74798a;
+					border-right: none;
+					padding: 5px 20px;
+					p {
+						&:last-child {
+							padding-top: 10px;
+						}
+					}
+				}
+			}
+			&_right {
+				width: 100%;
+				p {
+					padding: 20px;
+				}
+				@media (max-width: 575.98px) {
+					color: $gray;
+					padding: 5px 10px;
+					p {
+						padding: 5px;
+					}
+				}
+			}
+		}
+	}
+}
+
+//insurance-studies END========================================================================================================================================================
+
+//insurance-pregnancy START========================================================================================================================================================
+.insurance-pregnancy {
+	.banner__title {
+		@media (max-width: 575.98px) {
+			margin-top: 245px;
+			margin-bottom: 25px;
+		}
+	}
+
+	.info-block {
+		&__text {
+			margin-bottom: 20px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 10px;
+			}
+			&_last {
+				margin-bottom: 70px;
+				@media (max-width: 575.98px) {
+					margin-bottom: 40px;
+				}
+			}
+		}
+		&__title {
+			margin-bottom: 30px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 20px;
+			}
+		}
+		&__img {
+			margin-bottom: 70px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	.post {
+		&__highlight {
+			margin-bottom: 30px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	.table {
+		&__row {
+		}
+		&__row--head {
+		}
+		&__col {
+			display: flex;
+			align-items: center; 
+			p{
+				&:not(:last-child){
+					margin-bottom: 5px;
+				}
+			}
+		}
+		&__col1 {
+			width: 25%;
+		}
+		&__col--center {
+			// display: flex;
+			// align-items: center;
+			// justify-content: center; 
+		}
+		&__col2 {
+			width: 25%;
+		}
+		&__col3 {
+			width: 50%;
+		}
+		&__col-block {
+		}
+		&__col2-3 {
+			width: 75%;
+		}
+		&__col2-3--1 {
+			width: calc(100% / 3);
+		}
+		&__col2-3--2 {
+			width: calc(100% * (2 / 3));
+		}
+		&--pregnancy-insurance {
+			@media (max-width: 900.98px){
+				display: none;
+			}
+		}
+	}
+
+	.table-mob {
+		@media (min-width: 900.98px){
+			display: none;
+		}
+			&__head {
+				padding: 5px;
+				background: #EDF1F7;
+				font-weight: 600;
+				&:not(:last-child) {
+					border-bottom: 1px solid #74798a;
+				}
+			}
+			&__block {
+				padding: 5px;
+				&:not(:last-child) {
+					border-bottom: 1px solid #74798a;
+				}
+				p{
+					&:last-child{
+						color: #74798A;
+					}
+					&:not(:last-child) {
+						margin: 5px;
+					}
+				}
+			}
+			
+		
+}
+
+
+
+}
+//insurance-pregnancy END========================================================================================================================================================
+
+//insurance-month START========================================================================================================================================================
+.insurance-month {
+	.banner__title {
+		@media (max-width: 575.98px) {
+			margin-top: 100px;
+			margin-bottom: 80px;
+		}
+	}
+
+	.info-block {
+		&__text {
+			margin-bottom: 20px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 10px;
+			}
+			&_last {
+				margin-bottom: 70px;
+				@media (max-width: 575.98px) {
+					margin-bottom: 40px;
+				}
+			}
+		}
+		&__title {
+			margin-bottom: 30px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 20px;
+			}
+		}
+		&__img {
+			margin-bottom: 70px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	.post {
+		&__highlight {
+			margin-bottom: 30px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+//insurance-month END========================================================================================================================================================
+
+//insurance-quarter START========================================================================================================================================================
+.insurance-quarter {
+	.banner__title {
+		@media (max-width: 575.98px) {
+			margin-top: 45px;
+			margin-bottom: 185px;
+		}
+	}
+
+	.info-block {
+		&__text {
+			margin-bottom: 20px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 10px;
+			}
+			&_last {
+				margin-bottom: 70px;
+				@media (max-width: 575.98px) {
+					margin-bottom: 40px;
+				}
+			}
+		}
+		&__title {
+			margin-bottom: 30px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 20px;
+			}
+		}
+		&__img {
+			margin-bottom: 70px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	.post {
+		&__highlight {
+			margin-bottom: 70px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+}
+//insurance-quarter END========================================================================================================================================================
+
+//insurance-year START========================================================================================================================================================
+.insurance-year {
+	.banner__title {
+		@media (max-width: 575.98px) {
+			margin-top: 20px;
+			margin-bottom: 230px;
+		}
+	}
+
+	.info-block {
+		&__text {
+			margin-bottom: 20px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 10px;
+			}
+			&_last {
+				margin-bottom: 70px;
+				@media (max-width: 575.98px) {
+					margin-bottom: 40px;
+				}
+			}
+		}
+		&__title {
+			margin-bottom: 30px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 20px;
+			}
+		}
+		&__img {
+			margin-bottom: 70px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	.post {
+		&__highlight {
+			margin-bottom: 30px;
+			@media (max-width: 575.98px) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+//insurance-year END========================================================================================================================================================
