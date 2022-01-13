@@ -2542,7 +2542,7 @@
    &__highlight-text {
       font-size: 18px;
       font-style: italic;
-      color: $black;
+      color: $mainColor;
       @media (max-width: 575.98px) {
          font-size: 14px;
       }
@@ -3263,11 +3263,32 @@
 }
 
 .page-leisure {
-   .banner__bg,
+	.banner__bg {
+      @media (max-width: 575.98px) {
+         &::before {
+            display: none;
+         }
+      }
+      &::before {
+         content: "";
+         position: absolute;
+         width: 1275px;
+         height: 853px;
+         left: 0px;
+         top: 0px;
+         background: linear-gradient(90deg, rgba(116, 121, 138, 0.93) 0.01%, rgba(116, 121, 138, 0) 99.98%);
+      }
+   }
+
    .banner__bg--mobile {
-      &::before,
-      &::after {
-         display: none;
+      &::before {
+         content: "";
+         position: absolute;
+         width: 375px;
+         height: 595px;
+         left: 0px;
+         top: 0px;
+         background: linear-gradient(90.16deg, rgba(116, 121, 138, 0.93) 0.13%, rgba(116, 121, 138, 0) 62.46%);
       }
    }
    .banner__title {
@@ -4660,34 +4681,13 @@
          margin-bottom: 210px;
       }
    }
-   .banner__bg {
-      @media (max-width: 575.98px) {
+   .banner__bg ,
+	.banner__bg--mobile{
          &::before {
             display: none;
          }
-      }
-      &::before {
-         content: "";
-         position: absolute;
-         width: 1275px;
-         height: 853px;
-         left: 0px;
-         top: 0px;
-         background: linear-gradient(90deg, rgba(116, 121, 138, 0.93) 0.01%, rgba(116, 121, 138, 0) 99.98%);
-      }
-   }
-
-   .banner__bg--mobile {
-      &::before {
-         content: "";
-         position: absolute;
-         width: 375px;
-         height: 595px;
-         left: 0px;
-         top: 0px;
-         background: linear-gradient(90.16deg, rgba(116, 121, 138, 0.93) 0.13%, rgba(116, 121, 138, 0) 62.46%);
-      }
-   }
+      
+	}
 
    .channel-yt__link {
       margin-bottom: 70px;
@@ -7322,6 +7322,15 @@
 }
 
 .blurb {
+	&__title{
+		margin-bottom: 40px;
+		font-weight: 700;
+		font-size: 24px;
+		@media (max-width: 575.98px){
+			font-size: 16px;
+			margin-bottom: 15px;
+		}
+	}
    &__content {
       display: flex;
       align-items: center;
@@ -7371,6 +7380,7 @@
       line-height: 24px;
       @media (max-width: 991.98px) {
          font-size: calc(16px + (18 - 16) * ((100vw - 375px) / (991 - 375)));
+			font-weight: 600;
       }
    }
    &__content svg {
@@ -7409,6 +7419,7 @@
          max-width: 342px;
          width: stretch;
          height: 64px;
+			border: 1px solid #74798A;
       }
    }
 }
@@ -7715,6 +7726,10 @@
 
 //insurance-covid START========================================================================================================================================================
 .insurance-covid {
+
+	.write-review{
+		padding-bottom: 0px;
+	}
    .info-block {
       &__text {
          margin-bottom: 20px;
@@ -7744,6 +7759,10 @@
          &_7 {
          }
          &_8 {
+				margin-bottom: 70px;
+            @media (max-width: 575.98px) {
+               margin-bottom: 40px;
+            }
          }
          &_9 {
          }
@@ -7863,6 +7882,15 @@
          background: #edf1f7;
       }
    }
+
+	.questions__bg{
+		width: 433px;
+		top: 75px;
+		@media (max-width: 575.98px){
+			width: 160px;
+			top: 45px;
+		}
+	}
 }
 //insurance-covid END========================================================================================================================================================
 
@@ -8380,7 +8408,9 @@
 //insurance-responsibility START========================================================================================================================================================
 .insurance-responsibility {
    .banner__title {
+		max-width: 750px;
       @media (max-width: 575.98px) {
+			max-width: 270px;
          margin-top: 35px;
          margin-bottom: 70px;
       }
@@ -8392,6 +8422,10 @@
          margin-bottom: 20px;
       }
    }
+
+	.write-review{
+		margin-bottom: 86px;
+	}
 
    .info-block {
       &__text {
@@ -11126,7 +11160,7 @@
    }
 
    .main {
-      background: linear-gradient(178.56deg, #e9eef7 -1.23%, #ffffff 58.22%);
+		background: linear-gradient(156.01deg, #E9EEF6 0%, #E9EEF6 53.41%, #FFFFFF 100%);
    }
 
    .banner__content {
@@ -11243,6 +11277,10 @@
          text-align: center;
          font-weight: 700;
          background: #d6d9e1;
+			&:hover{
+				background: #222B45;
+				color: #fff;
+			}
          @media (max-width: 767.98px) {
             display: flex;
             flex-direction: column-reverse;
@@ -11260,7 +11298,10 @@
          text-align: center;
          font-weight: 700;
          color: #fff;
-         background: #222b45;
+			background: linear-gradient(107.89deg, #2E3A59 10.19%, #8F9BB3 54.58%, #2E3A59 96.63%, #2E3A59 96.64%);
+			&:hover{
+				background: #222B45;
+			}
          @media (max-width: 767.98px) {
             display: flex;
             flex-direction: column-reverse;
