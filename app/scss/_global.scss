@@ -129,7 +129,7 @@ textarea {
 	backdrop-filter: blur(10px);
 	height: 137px;
 	position: relative;
-	z-index: 10;
+	z-index: 20;
 	@media (max-width: 575.98px) {
 		height: 114px;
 		box-shadow: 0px 10px 10px rgba(143, 155, 179, 0.1);
@@ -233,6 +233,9 @@ textarea {
 			.header__call-dropdown {
 				display: block;
 			}
+			.header__call-icon {
+				transform: rotate(180deg);
+			}
 		}
 	}
 	&__call-phone-icon {
@@ -272,7 +275,7 @@ textarea {
 		padding: 8px 30px;
 		width: max-content;
 		display: none;
-		z-index: 40;
+		z-index: 50;
 	}
 
 	&__call-dropdown-item {
@@ -299,6 +302,7 @@ textarea {
 	}
 
 	.lang {
+		margin-right: -25px;
 		@media (max-width: 991.98px) {
 			display: none;
 		}
@@ -684,6 +688,7 @@ textarea {
 
 	&__info-item {
 		display: flex;
+		align-items: center;
 		&:not(:last-child) {
 			margin-bottom: 20px;
 		}
@@ -720,6 +725,7 @@ textarea {
 
 	&__item {
 		display: block;
+		font-size: 16px;
 		&:not(:last-child) {
 			margin-bottom: 8px;
 			@media (max-width: 575.98px) {
@@ -1967,8 +1973,8 @@ p.input {
 	}
 
 	&__text {
-		font-size: 18px;
-		-webkit-line-clamp: 11;
+		font-size: 16px;
+		-webkit-line-clamp: 10;
 		display: -webkit-box;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
@@ -2078,8 +2084,13 @@ p.input {
 			8.71957px 8.71957px 17.4391px rgba(143, 155, 179, 0.42);
 		.card-tariff__btn-buy {
 			color: $white;
+			transition: none;
 			background: linear-gradient(107.89deg, #2e3a59 10.19%, #8f9bb3 54.58%, #2e3a59 96.63%, #2e3a59 96.64%);
 			box-shadow: inset 0px 10px 10px rgba(143, 155, 179, 0.2);
+			&:hover {
+				background: #2e3a59;
+				box-shadow: inset 0px 10px 10px rgba(143, 155, 179, 0.2);
+			}
 		}
 	}
 	&__title {
@@ -2169,7 +2180,7 @@ p.input {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 8px 0;
+		padding: 6px 0;
 		cursor: pointer;
 	}
 
@@ -2240,18 +2251,19 @@ p.input {
 		height: max-content;
 		font-size: 0;
 	}
-
-	&:last-child {
-		.card-tariff__item-info-body {
-			left: unset;
-			right: 150%;
-			&::before {
+	@media (max-width: 1499px) {
+		&:last-child {
+			.card-tariff__item-info-body {
 				left: unset;
-				right: -5px;
-			}
-			&::after {
-				left: unset;
-				right: 0;
+				right: 150%;
+				&::before {
+					left: unset;
+					right: -5px;
+				}
+				&::after {
+					left: unset;
+					right: 0;
+				}
 			}
 		}
 	}
@@ -2264,7 +2276,7 @@ p.input {
 		font-size: 10px;
 		max-width: 150px;
 		width: max-content;
-		text-align: center;
+		// text-align: center;
 		background: $white;
 		border: 0.5px solid #8f9bb3;
 		filter: drop-shadow(0px 10px 10px rgba(34, 43, 69, 0.1));
@@ -2311,6 +2323,11 @@ p.input {
 		text-align: center;
 		display: block;
 		border-radius: 0px 0px 20px 20px;
+		transition: 0.2s ease;
+		&:hover {
+			background: #c5cee0;
+			box-shadow: inset 0px 10px 10px rgba(143, 155, 179, 0.2);
+		}
 		@media (max-width: 575.98px) {
 			padding: 14px 33px;
 			font-size: 16px;

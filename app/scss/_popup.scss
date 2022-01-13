@@ -165,21 +165,24 @@
    padding: 5px 20px;
    position: relative;
 }
-@media (max-width: 575.98px) {
-   .popup-type-of-rest__list-item {
-      padding: 5px 0 5px 15px;
-      font-size: 14px;
-   }
-}
 .popup-type-of-rest__list-item::before {
    content: "";
    position: absolute;
    left: 0;
    top: 14px;
-   width: 6px;
-   height: 6px;
+   width: 8px;
+   height: 8px;
    border-radius: 50%;
-   background: #005a8f;
+   background: #006fd6;
+}
+@media (max-width: 575.98px) {
+   .popup-type-of-rest__list-item {
+      padding: 5px 0 5px 15px;
+      font-size: 14px;
+   }
+   .popup-type-of-rest__list-item::before {
+      top: 13px;
+   }
 }
 
 .popup-write-to-us {
