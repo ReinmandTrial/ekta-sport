@@ -3736,37 +3736,11 @@
 //DIVING START========================================================================================================================================================
 
 .page-diving {
-   .banner__bg {
-      @media (max-width: 575.98px) {
-         &::before {
-            display: none;
-         }
-      }
-      &::before {
-         content: "";
-         position: absolute;
-         width: 1275px;
-         height: 853px;
-         left: 0px;
-         top: 0px;
-         background: linear-gradient(90deg, rgba(116, 121, 138, 0.93) 0.01%, rgba(116, 121, 138, 0) 99.98%);
-      }
-   }
-
-   .banner__bg--mobile {
-      &::before {
-         content: "";
-         position: absolute;
-         width: 375px;
-         height: 595px;
-         left: 0px;
-         top: 0px;
-         background: linear-gradient(90.16deg, rgba(116, 121, 138, 0.93) 0.13%, rgba(116, 121, 138, 0) 62.46%);
-      }
-   }
-}
-
-.page-diving {
+	.banner__bg{
+		&::before{
+			display: none;
+		}
+	}
    &__breadcrumbs {
       :nth-child(3) {
          font-weight: 600;
@@ -3881,18 +3855,7 @@
    }
 }
 
-// ol {
-// 	list-style-type: none; /* Убираем исходные маркеры */
-// 	counter-reset: my-counter; /* Задаём имя счетчика */
-// }
-// li::before {
-// 	content: counter(my-counter); /* Выводим число */
-// 	counter-increment: my-counter; /* Увеличиваем значение счётчика */
-// 	color: #ed1c24; /* Цвет текста */
-// 	font-weight: bold; /* Жирное начертание */
-// 	font-style: italic; /* Курсивное начертание */
-// 	margin-right: 0.5em; /* Расстояние от цифры до текста */
-// }
+
 .recom {
    margin-bottom: 120px;
    @media (max-width: 575.98px) {
@@ -4299,33 +4262,10 @@
    }
 
    .banner__bg {
-      @media (max-width: 575.98px) {
          &::before {
             display: none;
          }
-      }
-      &::before {
-         content: "";
-         position: absolute;
-         width: 1275px;
-         height: 853px;
-         left: 0px;
-         top: 0px;
-         background: linear-gradient(90deg, rgba(116, 121, 138, 0.93) 0.01%, rgba(116, 121, 138, 0) 99.98%);
-      }
-   }
-
-   .banner__bg--mobile {
-      &::before {
-         content: "";
-         position: absolute;
-         width: 375px;
-         height: 595px;
-         left: 0px;
-         top: 0px;
-         background: linear-gradient(90.16deg, rgba(116, 121, 138, 0.93) 0.13%, rgba(116, 121, 138, 0) 62.46%);
-      }
-   }
+	}
 
    .info-block__img {
       margin-bottom: 70px;
@@ -4464,33 +4404,10 @@
       }
    }
    .banner__bg {
-      @media (max-width: 575.98px) {
          &::before {
             display: none;
-         }
       }
-      &::before {
-         content: "";
-         position: absolute;
-         width: 1275px;
-         height: 853px;
-         left: 0px;
-         top: 0px;
-         background: linear-gradient(90deg, rgba(116, 121, 138, 0.93) 0.01%, rgba(116, 121, 138, 0) 99.98%);
-      }
-   }
-
-   .banner__bg--mobile {
-      &::before {
-         content: "";
-         position: absolute;
-         width: 375px;
-         height: 595px;
-         left: 0px;
-         top: 0px;
-         background: linear-gradient(90.16deg, rgba(116, 121, 138, 0.93) 0.13%, rgba(116, 121, 138, 0) 62.46%);
-      }
-   }
+	}
    .info-block {
       &__text {
          &_1 {
@@ -4698,33 +4615,10 @@
       }
    }
    .banner__bg {
-      @media (max-width: 575.98px) {
          &::before {
             display: none;
          }
-      }
-      &::before {
-         content: "";
-         position: absolute;
-         width: 1275px;
-         height: 853px;
-         left: 0px;
-         top: 0px;
-         background: linear-gradient(90deg, rgba(116, 121, 138, 0.93) 0.01%, rgba(116, 121, 138, 0) 99.98%);
-      }
-   }
-
-   .banner__bg--mobile {
-      &::before {
-         content: "";
-         position: absolute;
-         width: 375px;
-         height: 595px;
-         left: 0px;
-         top: 0px;
-         background: linear-gradient(90.16deg, rgba(116, 121, 138, 0.93) 0.13%, rgba(116, 121, 138, 0) 62.46%);
-      }
-   }
+	}
 
    .info-block {
       margin-bottom: 70px;
@@ -4849,33 +4743,10 @@
       }
    }
    .banner__bg {
-      @media (max-width: 575.98px) {
          &::before {
             display: none;
-         }
       }
-      &::before {
-         content: "";
-         position: absolute;
-         width: 1275px;
-         height: 853px;
-         left: 0px;
-         top: 0px;
-         background: linear-gradient(90deg, rgba(116, 121, 138, 0.93) 0.01%, rgba(116, 121, 138, 0) 99.98%);
-      }
-   }
-
-   .banner__bg--mobile {
-      &::before {
-         content: "";
-         position: absolute;
-         width: 375px;
-         height: 595px;
-         left: 0px;
-         top: 0px;
-         background: linear-gradient(90.16deg, rgba(116, 121, 138, 0.93) 0.13%, rgba(116, 121, 138, 0) 62.46%);
-      }
-   }
+	}
 
    .info-block {
       margin-bottom: 70px;
@@ -10041,6 +9912,7 @@
    }
 }
 .page-article {
+
    .blog-sidebar__tags {
       @media (max-width: 991.98px) {
          display: none;
@@ -10082,7 +9954,7 @@
    .post {
       &__title {
          margin-bottom: 20px;
-         font-size: 25px;
+         font-size: 26px;
          font-weight: bold;
          @media (max-width: 575.98px) {
             margin-bottom: 15px;
@@ -10090,6 +9962,7 @@
          }
       }
       &__subtitle {
+			font-size: 22px;
          font-weight: bold;
          margin-bottom: 10px;
          @media (max-width: 575.98px) {
