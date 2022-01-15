@@ -163,7 +163,11 @@
 				</div>
 
 
+
 				<div class="tariff-block">
+					<div class="tariff-block__tap">
+						<img src="images/tap.png" alt="">
+					</div>
 					<div class="container">
 						<div class="tariff-block__content">
 							<div class="tariff-block__slider slider-tariffs swiper-container">
@@ -461,7 +465,7 @@
 												</ul>
 											</div>
 										</div>
-										<a href="#" class="card-tariff__btn-buy">Купить 1,50 USD/день</a>
+										<a href="#" class="card-tariff__btn-buy">Купить 0,99 USD/день</a>
 									</div>
 									<div class="slider-tariffs__slide swiper-slide card-tariff active">
 										<p class="card-tariff__title h3">Standart</p>
@@ -754,7 +758,7 @@
 												</ul>
 											</div>
 										</div>
-										<a href="#" class="card-tariff__btn-buy">Купить 0,99 USD/день</a>
+										<a href="#" class="card-tariff__btn-buy">Купить 1,50 USD/день</a>
 									</div>
 									<div class="slider-tariffs__slide swiper-slide card-tariff">
 										<p class="card-tariff__title h3">Max</p>
@@ -1105,19 +1109,48 @@
 											<div class="input__block">
 												<!-- ошибка верификации происходит при добавлении класса "error" к блоку выше -->
 												<p class="input__title">Страна путешествия</p>
-												<div class="input__select js-select js-select--swich">
-													<div class="input__box js-select-head">
-														<input type="text" class="input" placeholder="Выберите страну">
+												<div class="input__select input__select--country js-select js-select--country">
+													<div class="input__box js-select-head js-select-head--country">
+														<p class="input">Выберите страну</p>
+														<div class="input input--filled"></div>
 														<span class="icon icon-triangle-down"></span>
 													</div>
-													<div class="input__select-body js-select-body">
-														<p class="input__select-item js-select-item">sdfsdfsd</p>
-														<p class="input__select-item js-select-item">fsdfsdfs</p>
-														<p class="input__select-item js-select-item">sdfsdf</p>
-														<p class="input__select-item js-select-item">dfdfdfdffsdgfs</p>
-														<p class="input__select-item js-select-item">sdvsd</p>
-														<p class="input__select-item js-select-item">sadsf</p>
-														<p class="input__select-item js-select-item">dfvdf</p>
+													<div class="input__select-body js-select-body--country">
+														<div class="input__select-item js-select-item--country">
+															<div class="flag">
+																<img src="images/flag-au.svg" alt="">
+															</div>
+															Australia
+															<button class="icon icon-close input__select-item-close"></button>
+														</div>
+														<div class="input__select-item js-select-item--country">
+															<div class="flag">
+																<img src="images/flag-at.svg" alt="">
+															</div>
+															Austria
+															<button class="icon icon-close input__select-item-close"></button>
+														</div>
+														<div class="input__select-item js-select-item--country">
+															<div class="flag">
+																<img src="images/flag-by.svg" alt="">
+															</div>
+															Belarus
+															<button class="icon icon-close input__select-item-close"></button>
+														</div>
+														<div class="input__select-item js-select-item--country">
+															<div class="flag">
+																<img src="images/flag-be.svg" alt="">
+															</div>
+															Belgium
+															<button class="icon icon-close input__select-item-close"></button>
+														</div>
+														<div class="input__select-item js-select-item--country">
+															<div class="flag">
+																<img src="images/flag-bg.svg" alt="">
+															</div>
+															Bulgaria
+															<button class="icon icon-close input__select-item-close"></button>
+														</div>
 													</div>
 												</div>
 												<p class="input__error">Укажите одну или несколько стран</p>
@@ -1467,8 +1500,9 @@
 													USD</span>
 											</p>
 										</div>
-										<button type="button"
-											class="form-policy__btn-prev form-policy__btn-prev-to-step-one">Назад</button>
+										<button type="button" class="form-policy__btn-prev form-policy__btn-prev-to-step-one">
+											<span class="icon icon-arrow-right"></span>
+											Назад</button>
 										<button type="button"
 											class="form-policy__btn-next form-policy__btn-to-step-three">Далее</button>
 									</div>
@@ -1484,7 +1518,7 @@
 										</div>
 
 										<div class="form-policy__include">
-											<p class="form-policy__include-title h7">Рекомендуем включить в заявку</p>
+											<p class="form-policy__include-title h7">Рекомендуем включить в полис</p>
 											<div class="form-policy__include-container">
 												<div class="form-policy__include-wrapper">
 													<label class="form-policy__include-item">
@@ -2004,7 +2038,7 @@
 										<button type="button"
 											class="form-policy__btn-prev form-policy__btn-prev-to-step-three">Назад</button>
 										<button type="button"
-											class="form-policy__btn-next form-policy__btn-to-step-five">Далее</button>
+											class="form-policy__btn-next form-policy__btn-to-step-five">Купить</button>
 									</div>
 								</div>
 								<div class="form-policy__step-five">
@@ -2068,20 +2102,20 @@
 															<div class="form-card__input-num input__block">
 																<p class="input__title">Номер карты</p>
 																<div class="input__box">
-																	<input type="text" class="input" placeholder="">
+																	<input type="text" class="input" placeholder="**** **** **** ****">
 																</div>
 															</div>
 															<div class="form-card__input-row">
 																<div class=" form-card__input-term input__block">
 																	<p class="input__title">Срок действия</p>
 																	<div class="input__box">
-																		<input type="text" class="input" placeholder="">
+																		<input type="text" class="input" placeholder="**/**">
 																	</div>
 																</div>
 																<div class=" form-card__input-pass input__block">
 																	<p class="input__title">Код</p>
 																	<div class="input__box">
-																		<input type="text" class="input" placeholder="">
+																		<input type="text" class="input" placeholder="***">
 																		<div class="form-card__info">
 																			<button type="button"
 																				class="form-card__info-icon icon icon-info"></button>
@@ -2109,7 +2143,7 @@
 														<div class=" form-card__input-pass input__block">
 															<p class="input__title">Код</p>
 															<div class="input__box">
-																<input type="text" class="input" placeholder="">
+																<input type="text" class="input" placeholder="***">
 																<div class="form-card__info">
 																	<button type="button"
 																		class="form-card__info-icon icon icon-info"></button>
@@ -2398,7 +2432,8 @@
 
 						<p class="info-block__text">В последние два года одной из ключевых проблем стал коронавирус. К
 							сожалению, положительный ПЦР-тест до вылета или к сроку, когда туристу нужно завершить тур,
-							<span>может стать причиной невыезда, госпитализации или вынужденной самоизоляции.</span> </p>
+							<span>может стать причиной невыезда, госпитализации или вынужденной самоизоляции.</span>
+						</p>
 						<p class="info-block__text">Конечно, полис не защитит вас от рисков, связанных с пандемией Covid-19,
 							однако страховка от невылета из за коронавируса поможет существенно снизить финансовые риски.</p>
 						<p class="info-block__text">Наши предложения для страхования невылета покрывают сразу <span>несколько
@@ -2461,7 +2496,8 @@
 							из соседних стран, если вы перемещаетесь наземным транспортом.</p>
 						<p class="info-block__title h6">Страховка от невыезда на Кипр</p>
 						<p class="info-block__text">На сайте нашей компании может быть оформлена страховка от невыезда на Кипр
-							<span>для любых перечисленных выше страховых случаев.</span></p>
+							<span>для любых перечисленных выше страховых случаев.</span>
+						</p>
 
 
 					</div>
@@ -2479,10 +2515,10 @@
 									<img src="images/author-photo1.png" alt="">
 								</div>
 								<div class="info__author-block">
-									<p class="info__author-name">Денис Головко</p>
-									<p class="info__author-function">Руководитель департамента туризма и авиации </p>
-									<p class="info__author-descr">Денис Головко, является руководителем департамента туризма и
-										авиации в страховой компании EKTA TRAVELING.</p>
+									<a href="#" class="info__author-name">Денис Головко</p>
+										<p class="info__author-function">Руководитель департамента туризма и авиации </p>
+										<p class="info__author-descr">Денис Головко, является руководителем департамента туризма и
+											авиации в страховой компании EKTA TRAVELING.</p>
 								</div>
 							</div>
 						</div>
@@ -2945,7 +2981,7 @@
 							<p class="menu__info-link">03150 Украина, Киев,
 								улица Деловая 5</p>
 						</a>
-						<a href="#" class="menu__info-item">
+						<a href="mailto:Info@ekta.travel.com" class="menu__info-item">
 							<span class="menu__info-icon icon icon-email"></span>
 							<p class="menu__info-link">Info@ekta.travel.com </p>
 						</a>
@@ -3114,7 +3150,7 @@
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-gr.svg" alt="">
+							<img src="images/flag-de.svg" alt="">
 						</div>
 						<p class="languages__country-name">Германия</p>
 					</button>
@@ -3126,147 +3162,219 @@
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-au.svg" alt="">
+							<img src="images/flag-kz.svg" alt="">
 						</div>
-						<p class="languages__country-name">Австралия</p>
+						<p class="languages__country-name">Казахстан</p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-at.svg" alt="">
+							<img src="images/flag-ca.svg" alt="">
 						</div>
-						<p class="languages__country-name">Австрия </p>
+						<p class="languages__country-name">Канада </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-by.svg" alt="">
+							<img src="images/flag-cn.svg" alt="">
 						</div>
-						<p class="languages__country-name">Беларусь</p>
+						<p class="languages__country-name">Китай</p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-be.svg" alt="">
+							<img src="images/flag-lv.svg" alt="">
 						</div>
-						<p class="languages__country-name">Бельгия </p>
+						<p class="languages__country-name">Латвия </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-bg.svg" alt="">
+							<img src="images/flag-lt.svg" alt="">
 						</div>
-						<p class="languages__country-name">Болгария </p>
+						<p class="languages__country-name">Литва </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-be.svg" alt="">
+							<img src="images/flag-il.svg" alt="">
 						</div>
-						<p class="languages__country-name">Бельгия </p>
+						<p class="languages__country-name">Израиль </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-bg.svg" alt="">
+							<img src="images/flag-in.svg" alt="">
 						</div>
-						<p class="languages__country-name">Болгария </p>
+						<p class="languages__country-name">Индия</p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-hu.svg" alt="">
+							<img src="images/flag-id.svg" alt="">
 						</div>
-						<p class="languages__country-name">Венгрия </p>
+						<p class="languages__country-name">Индонезия </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-vn.svg" alt="">
+							<img src="images/flag-ir.svg" alt="">
 						</div>
-						<p class="languages__country-name">Вьетнам </p>
+						<p class="languages__country-name">Иран </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-gr.svg" alt="">
+							<img src="images/flag-ie.svg" alt="">
 						</div>
-						<p class="languages__country-name">Греция</p>
+						<p class="languages__country-name">Ирландия </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-ge.svg" alt="">
+							<img src="images/flag-it.svg" alt="">
 						</div>
-						<p class="languages__country-name">Грузия</p>
+						<p class="languages__country-name">Италия </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-gr.svg" alt="">
+							<img src="images/flag-es.svg" alt="">
 						</div>
-						<p class="languages__country-name">Германия</p>
+						<p class="languages__country-name">Испания </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-eg.svg" alt="">
+							<img src="images/flag-lu.svg" alt="">
 						</div>
-						<p class="languages__country-name">Египет</p>
+						<p class="languages__country-name">Люксембург </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-au.svg" alt="">
+							<img src="images/flag-lv.svg" alt="">
 						</div>
-						<p class="languages__country-name">Австралия</p>
+						<p class="languages__country-name">Мальдивы</p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-at.svg" alt="">
+							<img src="images/flag-mx.svg" alt="">
 						</div>
-						<p class="languages__country-name">Австрия </p>
+						<p class="languages__country-name">Мексика </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-by.svg" alt="">
+							<img src="images/flag-np.svg" alt="">
 						</div>
-						<p class="languages__country-name">Беларусь</p>
+						<p class="languages__country-name">Непал</p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-be.svg" alt="">
+							<img src="images/flag-ae.svg" alt="">
 						</div>
-						<p class="languages__country-name">Бельгия </p>
+						<p class="languages__country-name">ОАЕ</p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-bg.svg" alt="">
+							<img src="images/flag-pt.svg" alt="">
 						</div>
-						<p class="languages__country-name">Болгария </p>
+						<p class="languages__country-name">Португалия </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-hu.svg" alt="">
+							<img src="images/flag-ru.svg" alt="">
 						</div>
-						<p class="languages__country-name">Венгрия </p>
+						<p class="languages__country-name">Россия</p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-vn.svg" alt="">
+							<img src="images/flag-ro.svg" alt="">
 						</div>
-						<p class="languages__country-name">Вьетнам </p>
+						<p class="languages__country-name">Румыния </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-gr.svg" alt="">
+							<img src="images/flag-sg.svg" alt="">
 						</div>
-						<p class="languages__country-name">Греция</p>
+						<p class="languages__country-name">Сингапур </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-ge.svg" alt="">
+							<img src="images/flag-si.svg" alt="">
 						</div>
-						<p class="languages__country-name">Грузия</p>
+						<p class="languages__country-name">Словения </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-gr.svg" alt="">
+							<img src="images/flag-us.svg" alt="">
 						</div>
-						<p class="languages__country-name">Германия</p>
+						<p class="languages__country-name">США </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-eg.svg" alt="">
+							<img src="images/flag-th.svg" alt="">
 						</div>
-						<p class="languages__country-name">Египет</p>
+						<p class="languages__country-name">Таиланд </p>
+					</button>
+					<button type="button" class="languages__country show">
+						<div class="flag">
+							<img src="images/flag-tn.svg" alt="">
+						</div>
+						<p class="languages__country-name">Тунис </p>
+					</button>
+					<button type="button" class="languages__country show">
+						<div class="flag">
+							<img src="images/flag-tr.svg" alt="">
+						</div>
+						<p class="languages__country-name">Турция </p>
+					</button>
+					<button type="button" class="languages__country show">
+						<div class="flag">
+							<img src="images/flag-ua.svg" alt="">
+						</div>
+						<p class="languages__country-name">Украина </p>
+					</button>
+					<button type="button" class="languages__country show">
+						<div class="flag">
+							<img src="images/flag-fi.svg" alt="">
+						</div>
+						<p class="languages__country-name">Финляндия </p>
+					</button>
+					<button type="button" class="languages__country show">
+						<div class="flag">
+							<img src="images/flag-fr.svg" alt="">
+						</div>
+						<p class="languages__country-name">Франция </p>
+					</button>
+					<button type="button" class="languages__country show">
+						<div class="flag">
+							<img src="images/flag-hr.svg" alt="">
+						</div>
+						<p class="languages__country-name">Хорватия </p>
+					</button>
+					<button type="button" class="languages__country show">
+						<div class="flag">
+							<img src="images/flag-me.svg" alt="">
+						</div>
+						<p class="languages__country-name">Черногория </p>
+					</button>
+					<button type="button" class="languages__country show">
+						<div class="flag">
+							<img src="images/flag-cz.svg" alt="">
+						</div>
+						<p class="languages__country-name">Чехия </p>
+					</button>
+					<button type="button" class="languages__country show">
+						<div class="flag">
+							<img src="images/flag-ch.svg" alt="">
+						</div>
+						<p class="languages__country-name">Швейцария </p>
+					</button>
+					<button type="button" class="languages__country show">
+						<div class="flag">
+							<img src="images/flag-se.svg" alt="">
+						</div>
+						<p class="languages__country-name">Швеция </p>
+					</button>
+					<button type="button" class="languages__country show">
+						<div class="flag">
+							<img src="images/flag-kr.svg" alt="">
+						</div>
+						<p class="languages__country-name">Южная Корея </p>
+					</button>
+					<button type="button" class="languages__country show">
+						<div class="flag">
+							<img src="images/flag-jp.svg" alt="">
+						</div>
+						<p class="languages__country-name">Япония </p>
 					</button>
 				</div>
 			</div>
@@ -3274,6 +3382,7 @@
 		<div class="languages__rightside">
 			<div class="languages__rightside-head languages__head">
 				<p class="languages__title">Выберите язык</p>
+				<button class="popup-close icon icon-close"></button>
 			</div>
 			<div class="languages__rightside-body">
 				<button type="button" class="languages__lang">English</button>
@@ -3384,7 +3493,7 @@
 							<p class="menu__info-link">03150 Украина, Киев,
 								улица Деловая 5</p>
 						</a>
-						<a href="#" class="menu__info-item">
+						<a href="mailto:Info@ekta.travel.com" class="menu__info-item">
 							<span class="menu__info-icon icon icon-email"></span>
 							<p class="menu__info-link">Info@ekta.travel.com </p>
 						</a>

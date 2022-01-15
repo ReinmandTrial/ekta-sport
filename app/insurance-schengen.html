@@ -163,7 +163,11 @@
 				</div>
 
 
+
 				<div class="tariff-block">
+					<div class="tariff-block__tap">
+						<img src="images/tap.png" alt="">
+					</div>
 					<div class="container">
 						<div class="tariff-block__content">
 							<div class="tariff-block__slider slider-tariffs swiper-container">
@@ -461,7 +465,7 @@
 												</ul>
 											</div>
 										</div>
-										<a href="#" class="card-tariff__btn-buy">Купить 1,50 USD/день</a>
+										<a href="#" class="card-tariff__btn-buy">Купить 0,99 USD/день</a>
 									</div>
 									<div class="slider-tariffs__slide swiper-slide card-tariff active">
 										<p class="card-tariff__title h3">Standart</p>
@@ -754,7 +758,7 @@
 												</ul>
 											</div>
 										</div>
-										<a href="#" class="card-tariff__btn-buy">Купить 0,99 USD/день</a>
+										<a href="#" class="card-tariff__btn-buy">Купить 1,50 USD/день</a>
 									</div>
 									<div class="slider-tariffs__slide swiper-slide card-tariff">
 										<p class="card-tariff__title h3">Max</p>
@@ -1105,19 +1109,48 @@
 											<div class="input__block">
 												<!-- ошибка верификации происходит при добавлении класса "error" к блоку выше -->
 												<p class="input__title">Страна путешествия</p>
-												<div class="input__select js-select js-select--swich">
-													<div class="input__box js-select-head">
-														<input type="text" class="input" placeholder="Выберите страну">
+												<div class="input__select input__select--country js-select js-select--country">
+													<div class="input__box js-select-head js-select-head--country">
+														<p class="input">Выберите страну</p>
+														<div class="input input--filled"></div>
 														<span class="icon icon-triangle-down"></span>
 													</div>
-													<div class="input__select-body js-select-body">
-														<p class="input__select-item js-select-item">sdfsdfsd</p>
-														<p class="input__select-item js-select-item">fsdfsdfs</p>
-														<p class="input__select-item js-select-item">sdfsdf</p>
-														<p class="input__select-item js-select-item">dfdfdfdffsdgfs</p>
-														<p class="input__select-item js-select-item">sdvsd</p>
-														<p class="input__select-item js-select-item">sadsf</p>
-														<p class="input__select-item js-select-item">dfvdf</p>
+													<div class="input__select-body js-select-body--country">
+														<div class="input__select-item js-select-item--country">
+															<div class="flag">
+																<img src="images/flag-au.svg" alt="">
+															</div>
+															Australia
+															<button class="icon icon-close input__select-item-close"></button>
+														</div>
+														<div class="input__select-item js-select-item--country">
+															<div class="flag">
+																<img src="images/flag-at.svg" alt="">
+															</div>
+															Austria
+															<button class="icon icon-close input__select-item-close"></button>
+														</div>
+														<div class="input__select-item js-select-item--country">
+															<div class="flag">
+																<img src="images/flag-by.svg" alt="">
+															</div>
+															Belarus
+															<button class="icon icon-close input__select-item-close"></button>
+														</div>
+														<div class="input__select-item js-select-item--country">
+															<div class="flag">
+																<img src="images/flag-be.svg" alt="">
+															</div>
+															Belgium
+															<button class="icon icon-close input__select-item-close"></button>
+														</div>
+														<div class="input__select-item js-select-item--country">
+															<div class="flag">
+																<img src="images/flag-bg.svg" alt="">
+															</div>
+															Bulgaria
+															<button class="icon icon-close input__select-item-close"></button>
+														</div>
 													</div>
 												</div>
 												<p class="input__error">Укажите одну или несколько стран</p>
@@ -1467,8 +1500,9 @@
 													USD</span>
 											</p>
 										</div>
-										<button type="button"
-											class="form-policy__btn-prev form-policy__btn-prev-to-step-one">Назад</button>
+										<button type="button" class="form-policy__btn-prev form-policy__btn-prev-to-step-one">
+											<span class="icon icon-arrow-right"></span>
+											Назад</button>
 										<button type="button"
 											class="form-policy__btn-next form-policy__btn-to-step-three">Далее</button>
 									</div>
@@ -1484,7 +1518,7 @@
 										</div>
 
 										<div class="form-policy__include">
-											<p class="form-policy__include-title h7">Рекомендуем включить в заявку</p>
+											<p class="form-policy__include-title h7">Рекомендуем включить в полис</p>
 											<div class="form-policy__include-container">
 												<div class="form-policy__include-wrapper">
 													<label class="form-policy__include-item">
@@ -2004,7 +2038,7 @@
 										<button type="button"
 											class="form-policy__btn-prev form-policy__btn-prev-to-step-three">Назад</button>
 										<button type="button"
-											class="form-policy__btn-next form-policy__btn-to-step-five">Далее</button>
+											class="form-policy__btn-next form-policy__btn-to-step-five">Купить</button>
 									</div>
 								</div>
 								<div class="form-policy__step-five">
@@ -2068,20 +2102,20 @@
 															<div class="form-card__input-num input__block">
 																<p class="input__title">Номер карты</p>
 																<div class="input__box">
-																	<input type="text" class="input" placeholder="">
+																	<input type="text" class="input" placeholder="**** **** **** ****">
 																</div>
 															</div>
 															<div class="form-card__input-row">
 																<div class=" form-card__input-term input__block">
 																	<p class="input__title">Срок действия</p>
 																	<div class="input__box">
-																		<input type="text" class="input" placeholder="">
+																		<input type="text" class="input" placeholder="**/**">
 																	</div>
 																</div>
 																<div class=" form-card__input-pass input__block">
 																	<p class="input__title">Код</p>
 																	<div class="input__box">
-																		<input type="text" class="input" placeholder="">
+																		<input type="text" class="input" placeholder="***">
 																		<div class="form-card__info">
 																			<button type="button"
 																				class="form-card__info-icon icon icon-info"></button>
@@ -2109,7 +2143,7 @@
 														<div class=" form-card__input-pass input__block">
 															<p class="input__title">Код</p>
 															<div class="input__box">
-																<input type="text" class="input" placeholder="">
+																<input type="text" class="input" placeholder="***">
 																<div class="form-card__info">
 																	<button type="button"
 																		class="form-card__info-icon icon icon-info"></button>
@@ -2290,39 +2324,67 @@
 
 				<div class="info-block">
 					<div class="container">
-						<p class="info-block__text">Если вы планируете поездку в Испанию, Чехию, Германию и другие страны, входящие в соглашение, потребуется медицинская страховка для шенгенской визы на время пребывания за рубежом. Вам необходимо сделать страховку для шенгенской визы для всех, кто едет, включая маленьких детей.</p>
-						<p class="info-block__text info-block__text_last">Страховая компания EKTA TRAVELING предлагает несколько типов полисов, отличающихся покрытием. Одни подойдут для краткосрочных визитов в европейские страны, другие — для длительного пребывания. Есть предложения для разных категорий клиентов, исходя из предполагаемых риск-факторов. Оформить документ можно на удобный вам срок. При покупке годичной страховки вы уже получаете скидку. Цена на 2 года из расчёта помесячной тарификации будет выгоднее, чем продление краткосрочных полисов.</p>
+						<p class="info-block__text">Если вы планируете поездку в Испанию, Чехию, Германию и другие страны,
+							входящие в соглашение, потребуется медицинская страховка для шенгенской визы на время пребывания за
+							рубежом. Вам необходимо сделать страховку для шенгенской визы для всех, кто едет, включая маленьких
+							детей.</p>
+						<p class="info-block__text info-block__text_last">Страховая компания EKTA TRAVELING предлагает
+							несколько типов полисов, отличающихся покрытием. Одни подойдут для краткосрочных визитов в
+							европейские страны, другие — для длительного пребывания. Есть предложения для разных категорий
+							клиентов, исходя из предполагаемых риск-факторов. Оформить документ можно на удобный вам срок. При
+							покупке годичной страховки вы уже получаете скидку. Цена на 2 года из расчёта помесячной
+							тарификации будет выгоднее, чем продление краткосрочных полисов.</p>
 						<p class="info-block__title h4">Какие риски покрывает страховка для шенгена</p>
-						<p class="info-block__text">Стандартная страховка для получения шенгенской визы включает обязательный набор медуслуг:</p>
+						<p class="info-block__text">Стандартная страховка для получения шенгенской визы включает обязательный
+							набор медуслуг:</p>
 
 						<ul class="choice__list">
 							<li class="choice__list-item">вызов врача, если турист плохо себя чувствует;</li>
 							<li class="choice__list-item">амбулаторное лечение хронических и острых заболеваний;</li>
 							<li class="choice__list-item">содержание в стационаре.</li>
 						</ul>
-						<p class="info-block__text">Также можно включить дополнительные услуги — транспортировку в медицинское учреждение либо в страну проживания, оплату медикаментов, хирургических операций, рецепты, экстренную помощь стоматолога. В некоторых случаях можно брать расширенный полис с покрытием травм, несчастных случаев, репатриацией. </p>
-						<p class="info-block__text">Особое внимание стоит уделить вашим хроническим заболеваниям, аллергическим реакциям, рискам отравлений, сезонным проблемам — тепловым и солнечным ударам, обморожениям, травмам, связанным с оледенением дорожных покрытий.</p>
-						<p class="info-block__text">Если вы планируете заниматься спортом, экстремальным отдыхом, туристическая медицинская страховка для шенгенской визы должна обязательно включать покрытие возможных рисков. Профессиональных спортсменов и вовсе не допустят к соревнованиям без наличия полиса.</p>
-						<p class="info-block__text">Уточнить все имеющиеся требования и точную стоимость страховки для шенгенской визы на год, полгода, месяц, другой срок, вам помогут специалисты компании EKTA TRAVELING.</p>
-						<p class="info-block__text">Ваша туристическая страховка может охватывать также и другие риски. К ним относится отмена либо перенос даты рейса по погодным,  техническим или иным причинам, возврат билетов при форс-мажоре. Ещё один важный пункт, который следует учесть — риск потери багажа.</p>
+						<p class="info-block__text">Также можно включить дополнительные услуги — транспортировку в медицинское
+							учреждение либо в страну проживания, оплату медикаментов, хирургических операций, рецепты,
+							экстренную помощь стоматолога. В некоторых случаях можно брать расширенный полис с покрытием травм,
+							несчастных случаев, репатриацией. </p>
+						<p class="info-block__text">Особое внимание стоит уделить вашим хроническим заболеваниям,
+							аллергическим реакциям, рискам отравлений, сезонным проблемам — тепловым и солнечным ударам,
+							обморожениям, травмам, связанным с оледенением дорожных покрытий.</p>
+						<p class="info-block__text">Если вы планируете заниматься спортом, экстремальным отдыхом,
+							туристическая медицинская страховка для шенгенской визы должна обязательно включать покрытие
+							возможных рисков. Профессиональных спортсменов и вовсе не допустят к соревнованиям без наличия
+							полиса.</p>
+						<p class="info-block__text">Уточнить все имеющиеся требования и точную стоимость страховки для
+							шенгенской визы на год, полгода, месяц, другой срок, вам помогут специалисты компании EKTA
+							TRAVELING.</p>
+						<p class="info-block__text">Ваша туристическая страховка может охватывать также и другие риски. К ним
+							относится отмена либо перенос даты рейса по погодным, техническим или иным причинам, возврат
+							билетов при форс-мажоре. Ещё один важный пункт, который следует учесть — риск потери багажа.</p>
 
 						<div class="post__highlight post__highlight--attention">
 							<p class="post__highlight-title">Важно!</p>
-							<p class="post__highlight-text">Если вы решили оформить страховку для шенгенской визы онлайн, то следует учитывать нюансы конкретного региона, ваши индивидуальные риски. Так в некоторых местах высок риск стихийного бедствия. Если вы едете на горнолыжный курорт, то 
+							<p class="post__highlight-text">Если вы решили оформить страховку для шенгенской визы онлайн, то
+								следует учитывать нюансы конкретного региона, ваши индивидуальные риски. Так в некоторых местах
+								высок риск стихийного бедствия. Если вы едете на горнолыжный курорт, то
 								не стоит исключать травмы и даже привлечение спасателей. </p>
 						</div>
 
-						<p class="info-block__text">Для упрощения задачи вы можете использовать удобный страховой калькулятор, чтобы оценивать свои вероятные расходы, выгоду того или иного предложения. В сети легко отыскать отзывы, оставленные клиентами компании EKTA TRAVELING.</p>
-						<p class="info-block__text">Ниже мы приводим примерные расценки на некоторые медицинские услуги и товары, чтобы вы понимали, насколько важно страховать себя и багаж. Стоимость приведена в евро.</p>
+						<p class="info-block__text">Для упрощения задачи вы можете использовать удобный страховой калькулятор,
+							чтобы оценивать свои вероятные расходы, выгоду того или иного предложения. В сети легко отыскать
+							отзывы, оставленные клиентами компании EKTA TRAVELING.</p>
+						<p class="info-block__text">Ниже мы приводим примерные расценки на некоторые медицинские услуги и
+							товары, чтобы вы понимали, насколько важно страховать себя и багаж. Стоимость приведена в евро.</p>
 
-						
+
 						<div class="post__table table table table--traums">
 							<div class="table__row">
-								<p class="table__col">Визит к узкому специалисту в госпитале Италии (хирург, окулист, пульмонолог, ревматолог и т.д.)</p>
+								<p class="table__col">Визит к узкому специалисту в госпитале Италии (хирург, окулист,
+									пульмонолог, ревматолог и т.д.)</p>
 								<p class="table__col">30 - 60 € в муниципальной и от 120 € в частной клинике</p>
 							</div>
 							<div class="table__row">
-								<p class="table__col">Фотоаппарат (зеркальный) среднего уровня. Для примера возьмём Canon EOS 850D Kit</p>
+								<p class="table__col">Фотоаппарат (зеркальный) среднего уровня. Для примера возьмём Canon EOS
+									850D Kit</p>
 								<p class="table__col max1">900 €</p>
 							</div>
 							<div class="table__row">
@@ -2337,8 +2399,14 @@
 
 						<p class="info-block__title h4">Минимальная сумма которую должен покрывать страховой полис</p>
 
-						<p class="info-block__text">Для въезда установлена минимальная сумма покрытия вашей международной страховки в размере от 30 тысяч евро. Если покрытие вашей электронной мед страховки меньше этой суммы, вас могут просто не впустить.</p>
-						<p class="info-block__text info-block__text_last">Также установлено правило: полис медицинского страхования для шенгенской визы должен действовать для всех стран, через которые вы будете проезжать. Также, учитывая нюансы последних лет, желательно, чтобы минимальная страховка для шенгенской визы включала защиту на случай Covid 19 с учётом возможной госпитализации в стране пребывания.</p>
+						<p class="info-block__text">Для въезда установлена минимальная сумма покрытия вашей международной
+							страховки в размере от 30 тысяч евро. Если покрытие вашей электронной мед страховки меньше этой
+							суммы, вас могут просто не впустить.</p>
+						<p class="info-block__text info-block__text_last">Также установлено правило: полис медицинского
+							страхования для шенгенской визы должен действовать для всех стран, через которые вы будете
+							проезжать. Также, учитывая нюансы последних лет, желательно, чтобы минимальная страховка для
+							шенгенской визы включала защиту на случай Covid 19 с учётом возможной госпитализации в стране
+							пребывания.</p>
 
 					</div>
 
@@ -2351,11 +2419,17 @@
 					<div class="container">
 
 						<p class="info-block__title h4">Кому подойдет годовая медицинская страховка для шенгенской визы</p>
-						<p class="info-block__text">Теперь, разберёмся, для чего нужна  годовая медицинская страховка для шенгенской визы и каким категориям клиентов она понадобится. Нередко люди едут за границу на длительный срок. Кто-то нашёл работу в одном из европейских городов.</p>
-						<p class="info-block__text">Другие являются тревел-блогерами, снимают репортажи из разных городов мира. Третьим нужна страховка в шенгенскую зону 
-							на время обучения в одном из западных вузов. Сюда же стоит отнести тех граждан, которые едут в ЕС, чтобы воссоединиться с членами своих семей.</p>
-						<p class="info-block__text">Понадобится страховка для многократной шенгенской визы спортсменам, которые постоянно тренируются и выступают 
-							за рубежом. К примеру, профессиональным боксёрам, автогонщикам. Все эти категории граждан могут оформить медицинскую страховку для шенгенской визы онлайн быстро и дешево можно на нашем сайте.</p>
+						<p class="info-block__text">Теперь, разберёмся, для чего нужна годовая медицинская страховка для
+							шенгенской визы и каким категориям клиентов она понадобится. Нередко люди едут за границу на
+							длительный срок. Кто-то нашёл работу в одном из европейских городов.</p>
+						<p class="info-block__text">Другие являются тревел-блогерами, снимают репортажи из разных городов
+							мира. Третьим нужна страховка в шенгенскую зону
+							на время обучения в одном из западных вузов. Сюда же стоит отнести тех граждан, которые едут в ЕС,
+							чтобы воссоединиться с членами своих семей.</p>
+						<p class="info-block__text">Понадобится страховка для многократной шенгенской визы спортсменам,
+							которые постоянно тренируются и выступают
+							за рубежом. К примеру, профессиональным боксёрам, автогонщикам. Все эти категории граждан могут
+							оформить медицинскую страховку для шенгенской визы онлайн быстро и дешево можно на нашем сайте.</p>
 					</div>
 
 
@@ -2373,10 +2447,10 @@
 									<img src="images/author-photo1.png" alt="">
 								</div>
 								<div class="info__author-block">
-									<p class="info__author-name">Денис Головко</p>
-									<p class="info__author-function">Руководитель департамента туризма и авиации </p>
-									<p class="info__author-descr">Денис Головко, является руководителем департамента туризма и
-										авиации в страховой компании EKTA TRAVELING.</p>
+									<a href="#" class="info__author-name">Денис Головко</p>
+										<p class="info__author-function">Руководитель департамента туризма и авиации </p>
+										<p class="info__author-descr">Денис Головко, является руководителем департамента туризма и
+											авиации в страховой компании EKTA TRAVELING.</p>
 								</div>
 							</div>
 						</div>
@@ -2526,7 +2600,9 @@
 										<span class="accodion__icon icon icon-plus"></span>
 									</div>
 									<div class="accodion__body">
-										<p class="accodion__text">Когда оформляется страховка на визу в шенген, стоимость зависит от от сроков, включения дополнительных пунктов (спорт, экстрим, ковид и другие риски). Фактически цены на год выгоднее, чем для краткосрочных поездок.</p>
+										<p class="accodion__text">Когда оформляется страховка на визу в шенген, стоимость зависит
+											от от сроков, включения дополнительных пунктов (спорт, экстрим, ковид и другие риски).
+											Фактически цены на год выгоднее, чем для краткосрочных поездок.</p>
 									</div>
 								</div>
 								<div class="questions__item accodion">
@@ -2535,7 +2611,10 @@
 										<span class="accodion__icon icon icon-plus"></span>
 									</div>
 									<div class="accodion__body">
-										<p class="accodion__text">Чтобы купить страховку для визы в Шенген, вам нужно заполнить форму на нашем сайте, указав все требуемые персональные и паспортные данные. Будут указаны условия, стоимость. Далее вам останется лишь дождаться подтверждение и получить полис онлайн.</p>
+										<p class="accodion__text">Чтобы купить страховку для визы в Шенген, вам нужно заполнить
+											форму на нашем сайте, указав все требуемые персональные и паспортные данные. Будут
+											указаны условия, стоимость. Далее вам останется лишь дождаться подтверждение и получить
+											полис онлайн.</p>
 									</div>
 								</div>
 								<div class="questions__item accodion">
@@ -2544,7 +2623,11 @@
 										<span class="accodion__icon icon icon-plus"></span>
 									</div>
 									<div class="accodion__body">
-										<p class="accodion__text">Собираясь купить страховку для шенгенской визы, путешественнику следует учесть, что сумма покрытия должна быть от 30 тыс. евро. Срок действия полиса должен охватывать всё время пребывания за границей, включая дополнительные 15 суток на случай изменения даты выезда. Включаются все страны в зоне действия Шенгенского соглашения. </p>
+										<p class="accodion__text">Собираясь купить страховку для шенгенской визы, путешественнику
+											следует учесть, что сумма покрытия должна быть от 30 тыс. евро. Срок действия полиса
+											должен охватывать всё время пребывания за границей, включая дополнительные 15 суток на
+											случай изменения даты выезда. Включаются все страны в зоне действия Шенгенского
+											соглашения. </p>
 									</div>
 								</div>
 								<div class="questions__item accodion">
@@ -2553,7 +2636,8 @@
 										<span class="accodion__icon icon icon-plus"></span>
 									</div>
 									<div class="accodion__body">
-										<p class="accodion__text">Действующее законодательство стран, входящих в Шенгенскую зону предписывает обязательно оформлять туристам, путешественникам полис страхования.
+										<p class="accodion__text">Действующее законодательство стран, входящих в Шенгенскую зону
+											предписывает обязательно оформлять туристам, путешественникам полис страхования.
 										</p>
 									</div>
 								</div>
@@ -2835,7 +2919,7 @@
 							<p class="menu__info-link">03150 Украина, Киев,
 								улица Деловая 5</p>
 						</a>
-						<a href="#" class="menu__info-item">
+						<a href="mailto:Info@ekta.travel.com" class="menu__info-item">
 							<span class="menu__info-icon icon icon-email"></span>
 							<p class="menu__info-link">Info@ekta.travel.com </p>
 						</a>
@@ -3004,7 +3088,7 @@
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-gr.svg" alt="">
+							<img src="images/flag-de.svg" alt="">
 						</div>
 						<p class="languages__country-name">Германия</p>
 					</button>
@@ -3016,147 +3100,219 @@
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-au.svg" alt="">
+							<img src="images/flag-kz.svg" alt="">
 						</div>
-						<p class="languages__country-name">Австралия</p>
+						<p class="languages__country-name">Казахстан</p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-at.svg" alt="">
+							<img src="images/flag-ca.svg" alt="">
 						</div>
-						<p class="languages__country-name">Австрия </p>
+						<p class="languages__country-name">Канада </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-by.svg" alt="">
+							<img src="images/flag-cn.svg" alt="">
 						</div>
-						<p class="languages__country-name">Беларусь</p>
+						<p class="languages__country-name">Китай</p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-be.svg" alt="">
+							<img src="images/flag-lv.svg" alt="">
 						</div>
-						<p class="languages__country-name">Бельгия </p>
+						<p class="languages__country-name">Латвия </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-bg.svg" alt="">
+							<img src="images/flag-lt.svg" alt="">
 						</div>
-						<p class="languages__country-name">Болгария </p>
+						<p class="languages__country-name">Литва </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-be.svg" alt="">
+							<img src="images/flag-il.svg" alt="">
 						</div>
-						<p class="languages__country-name">Бельгия </p>
+						<p class="languages__country-name">Израиль </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-bg.svg" alt="">
+							<img src="images/flag-in.svg" alt="">
 						</div>
-						<p class="languages__country-name">Болгария </p>
+						<p class="languages__country-name">Индия</p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-hu.svg" alt="">
+							<img src="images/flag-id.svg" alt="">
 						</div>
-						<p class="languages__country-name">Венгрия </p>
+						<p class="languages__country-name">Индонезия </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-vn.svg" alt="">
+							<img src="images/flag-ir.svg" alt="">
 						</div>
-						<p class="languages__country-name">Вьетнам </p>
+						<p class="languages__country-name">Иран </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-gr.svg" alt="">
+							<img src="images/flag-ie.svg" alt="">
 						</div>
-						<p class="languages__country-name">Греция</p>
+						<p class="languages__country-name">Ирландия </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-ge.svg" alt="">
+							<img src="images/flag-it.svg" alt="">
 						</div>
-						<p class="languages__country-name">Грузия</p>
+						<p class="languages__country-name">Италия </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-gr.svg" alt="">
+							<img src="images/flag-es.svg" alt="">
 						</div>
-						<p class="languages__country-name">Германия</p>
+						<p class="languages__country-name">Испания </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-eg.svg" alt="">
+							<img src="images/flag-lu.svg" alt="">
 						</div>
-						<p class="languages__country-name">Египет</p>
+						<p class="languages__country-name">Люксембург </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-au.svg" alt="">
+							<img src="images/flag-lv.svg" alt="">
 						</div>
-						<p class="languages__country-name">Австралия</p>
+						<p class="languages__country-name">Мальдивы</p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-at.svg" alt="">
+							<img src="images/flag-mx.svg" alt="">
 						</div>
-						<p class="languages__country-name">Австрия </p>
+						<p class="languages__country-name">Мексика </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-by.svg" alt="">
+							<img src="images/flag-np.svg" alt="">
 						</div>
-						<p class="languages__country-name">Беларусь</p>
+						<p class="languages__country-name">Непал</p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-be.svg" alt="">
+							<img src="images/flag-ae.svg" alt="">
 						</div>
-						<p class="languages__country-name">Бельгия </p>
+						<p class="languages__country-name">ОАЕ</p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-bg.svg" alt="">
+							<img src="images/flag-pt.svg" alt="">
 						</div>
-						<p class="languages__country-name">Болгария </p>
+						<p class="languages__country-name">Португалия </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-hu.svg" alt="">
+							<img src="images/flag-ru.svg" alt="">
 						</div>
-						<p class="languages__country-name">Венгрия </p>
+						<p class="languages__country-name">Россия</p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-vn.svg" alt="">
+							<img src="images/flag-ro.svg" alt="">
 						</div>
-						<p class="languages__country-name">Вьетнам </p>
+						<p class="languages__country-name">Румыния </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-gr.svg" alt="">
+							<img src="images/flag-sg.svg" alt="">
 						</div>
-						<p class="languages__country-name">Греция</p>
+						<p class="languages__country-name">Сингапур </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-ge.svg" alt="">
+							<img src="images/flag-si.svg" alt="">
 						</div>
-						<p class="languages__country-name">Грузия</p>
+						<p class="languages__country-name">Словения </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-gr.svg" alt="">
+							<img src="images/flag-us.svg" alt="">
 						</div>
-						<p class="languages__country-name">Германия</p>
+						<p class="languages__country-name">США </p>
 					</button>
 					<button type="button" class="languages__country show">
 						<div class="flag">
-							<img src="images/flag-eg.svg" alt="">
+							<img src="images/flag-th.svg" alt="">
 						</div>
-						<p class="languages__country-name">Египет</p>
+						<p class="languages__country-name">Таиланд </p>
+					</button>
+					<button type="button" class="languages__country show">
+						<div class="flag">
+							<img src="images/flag-tn.svg" alt="">
+						</div>
+						<p class="languages__country-name">Тунис </p>
+					</button>
+					<button type="button" class="languages__country show">
+						<div class="flag">
+							<img src="images/flag-tr.svg" alt="">
+						</div>
+						<p class="languages__country-name">Турция </p>
+					</button>
+					<button type="button" class="languages__country show">
+						<div class="flag">
+							<img src="images/flag-ua.svg" alt="">
+						</div>
+						<p class="languages__country-name">Украина </p>
+					</button>
+					<button type="button" class="languages__country show">
+						<div class="flag">
+							<img src="images/flag-fi.svg" alt="">
+						</div>
+						<p class="languages__country-name">Финляндия </p>
+					</button>
+					<button type="button" class="languages__country show">
+						<div class="flag">
+							<img src="images/flag-fr.svg" alt="">
+						</div>
+						<p class="languages__country-name">Франция </p>
+					</button>
+					<button type="button" class="languages__country show">
+						<div class="flag">
+							<img src="images/flag-hr.svg" alt="">
+						</div>
+						<p class="languages__country-name">Хорватия </p>
+					</button>
+					<button type="button" class="languages__country show">
+						<div class="flag">
+							<img src="images/flag-me.svg" alt="">
+						</div>
+						<p class="languages__country-name">Черногория </p>
+					</button>
+					<button type="button" class="languages__country show">
+						<div class="flag">
+							<img src="images/flag-cz.svg" alt="">
+						</div>
+						<p class="languages__country-name">Чехия </p>
+					</button>
+					<button type="button" class="languages__country show">
+						<div class="flag">
+							<img src="images/flag-ch.svg" alt="">
+						</div>
+						<p class="languages__country-name">Швейцария </p>
+					</button>
+					<button type="button" class="languages__country show">
+						<div class="flag">
+							<img src="images/flag-se.svg" alt="">
+						</div>
+						<p class="languages__country-name">Швеция </p>
+					</button>
+					<button type="button" class="languages__country show">
+						<div class="flag">
+							<img src="images/flag-kr.svg" alt="">
+						</div>
+						<p class="languages__country-name">Южная Корея </p>
+					</button>
+					<button type="button" class="languages__country show">
+						<div class="flag">
+							<img src="images/flag-jp.svg" alt="">
+						</div>
+						<p class="languages__country-name">Япония </p>
 					</button>
 				</div>
 			</div>
@@ -3164,6 +3320,7 @@
 		<div class="languages__rightside">
 			<div class="languages__rightside-head languages__head">
 				<p class="languages__title">Выберите язык</p>
+				<button class="popup-close icon icon-close"></button>
 			</div>
 			<div class="languages__rightside-body">
 				<button type="button" class="languages__lang">English</button>
@@ -3172,7 +3329,6 @@
 			</div>
 		</div>
 	</div>
-
 	</main>
 	<!-- MAIN end -->
 
@@ -3274,7 +3430,7 @@
 							<p class="menu__info-link">03150 Украина, Киев,
 								улица Деловая 5</p>
 						</a>
-						<a href="#" class="menu__info-item">
+						<a href="mailto:Info@ekta.travel.com" class="menu__info-item">
 							<span class="menu__info-icon icon icon-email"></span>
 							<p class="menu__info-link">Info@ekta.travel.com </p>
 						</a>

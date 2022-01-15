@@ -164,7 +164,11 @@
 				</div>
 
 
+
 				<div class="tariff-block">
+					<div class="tariff-block__tap">
+						<img src="images/tap.png" alt="">
+					</div>
 					<div class="container">
 						<div class="tariff-block__content">
 							<div class="tariff-block__slider slider-tariffs swiper-container">
@@ -462,7 +466,7 @@
 												</ul>
 											</div>
 										</div>
-										<a href="#" class="card-tariff__btn-buy">Купить 1,50 USD/день</a>
+										<a href="#" class="card-tariff__btn-buy">Купить 0,99 USD/день</a>
 									</div>
 									<div class="slider-tariffs__slide swiper-slide card-tariff active">
 										<p class="card-tariff__title h3">Standart</p>
@@ -755,7 +759,7 @@
 												</ul>
 											</div>
 										</div>
-										<a href="#" class="card-tariff__btn-buy">Купить 0,99 USD/день</a>
+										<a href="#" class="card-tariff__btn-buy">Купить 1,50 USD/день</a>
 									</div>
 									<div class="slider-tariffs__slide swiper-slide card-tariff">
 										<p class="card-tariff__title h3">Max</p>
@@ -1106,19 +1110,48 @@
 											<div class="input__block">
 												<!-- ошибка верификации происходит при добавлении класса "error" к блоку выше -->
 												<p class="input__title">Страна путешествия</p>
-												<div class="input__select js-select js-select--swich">
-													<div class="input__box js-select-head">
-														<input type="text" class="input" placeholder="Выберите страну">
+												<div class="input__select input__select--country js-select js-select--country">
+													<div class="input__box js-select-head js-select-head--country">
+														<p class="input">Выберите страну</p>
+														<div class="input input--filled"></div>
 														<span class="icon icon-triangle-down"></span>
 													</div>
-													<div class="input__select-body js-select-body">
-														<p class="input__select-item js-select-item">sdfsdfsd</p>
-														<p class="input__select-item js-select-item">fsdfsdfs</p>
-														<p class="input__select-item js-select-item">sdfsdf</p>
-														<p class="input__select-item js-select-item">dfdfdfdffsdgfs</p>
-														<p class="input__select-item js-select-item">sdvsd</p>
-														<p class="input__select-item js-select-item">sadsf</p>
-														<p class="input__select-item js-select-item">dfvdf</p>
+													<div class="input__select-body js-select-body--country">
+														<div class="input__select-item js-select-item--country">
+															<div class="flag">
+																<img src="images/flag-au.svg" alt="">
+															</div>
+															Australia
+															<button class="icon icon-close input__select-item-close"></button>
+														</div>
+														<div class="input__select-item js-select-item--country">
+															<div class="flag">
+																<img src="images/flag-at.svg" alt="">
+															</div>
+															Austria
+															<button class="icon icon-close input__select-item-close"></button>
+														</div>
+														<div class="input__select-item js-select-item--country">
+															<div class="flag">
+																<img src="images/flag-by.svg" alt="">
+															</div>
+															Belarus
+															<button class="icon icon-close input__select-item-close"></button>
+														</div>
+														<div class="input__select-item js-select-item--country">
+															<div class="flag">
+																<img src="images/flag-be.svg" alt="">
+															</div>
+															Belgium
+															<button class="icon icon-close input__select-item-close"></button>
+														</div>
+														<div class="input__select-item js-select-item--country">
+															<div class="flag">
+																<img src="images/flag-bg.svg" alt="">
+															</div>
+															Bulgaria
+															<button class="icon icon-close input__select-item-close"></button>
+														</div>
 													</div>
 												</div>
 												<p class="input__error">Укажите одну или несколько стран</p>
@@ -1468,8 +1501,9 @@
 													USD</span>
 											</p>
 										</div>
-										<button type="button"
-											class="form-policy__btn-prev form-policy__btn-prev-to-step-one">Назад</button>
+										<button type="button" class="form-policy__btn-prev form-policy__btn-prev-to-step-one">
+											<span class="icon icon-arrow-right"></span>
+											Назад</button>
 										<button type="button"
 											class="form-policy__btn-next form-policy__btn-to-step-three">Далее</button>
 									</div>
@@ -1485,7 +1519,7 @@
 										</div>
 
 										<div class="form-policy__include">
-											<p class="form-policy__include-title h7">Рекомендуем включить в заявку</p>
+											<p class="form-policy__include-title h7">Рекомендуем включить в полис</p>
 											<div class="form-policy__include-container">
 												<div class="form-policy__include-wrapper">
 													<label class="form-policy__include-item">
@@ -2005,7 +2039,7 @@
 										<button type="button"
 											class="form-policy__btn-prev form-policy__btn-prev-to-step-three">Назад</button>
 										<button type="button"
-											class="form-policy__btn-next form-policy__btn-to-step-five">Далее</button>
+											class="form-policy__btn-next form-policy__btn-to-step-five">Купить</button>
 									</div>
 								</div>
 								<div class="form-policy__step-five">
@@ -2069,20 +2103,20 @@
 															<div class="form-card__input-num input__block">
 																<p class="input__title">Номер карты</p>
 																<div class="input__box">
-																	<input type="text" class="input" placeholder="">
+																	<input type="text" class="input" placeholder="**** **** **** ****">
 																</div>
 															</div>
 															<div class="form-card__input-row">
 																<div class=" form-card__input-term input__block">
 																	<p class="input__title">Срок действия</p>
 																	<div class="input__box">
-																		<input type="text" class="input" placeholder="">
+																		<input type="text" class="input" placeholder="**/**">
 																	</div>
 																</div>
 																<div class=" form-card__input-pass input__block">
 																	<p class="input__title">Код</p>
 																	<div class="input__box">
-																		<input type="text" class="input" placeholder="">
+																		<input type="text" class="input" placeholder="***">
 																		<div class="form-card__info">
 																			<button type="button"
 																				class="form-card__info-icon icon icon-info"></button>
@@ -2110,7 +2144,7 @@
 														<div class=" form-card__input-pass input__block">
 															<p class="input__title">Код</p>
 															<div class="input__box">
-																<input type="text" class="input" placeholder="">
+																<input type="text" class="input" placeholder="***">
 																<div class="form-card__info">
 																	<button type="button"
 																		class="form-card__info-icon icon icon-info"></button>
@@ -2291,23 +2325,28 @@
 
 				<div class="info-block">
 					<div class="container">
-						<p class="info-block__text info-block__text_1">Отправляясь в путешествие, мало кто задумывается о проблемах со
+						<p class="info-block__text info-block__text_1">Отправляясь в путешествие, мало кто задумывается о
+							проблемах со
 							здоровьем и о важности страхования. Об этом вспоминают, когда возникает страховой случай. Именно
 							тогда приходит осознание серьезности этого процесса. Особенно остро это ощущается
 							с наступлением пандемии коронавируса.</p>
-						<p class="info-block__text info-block__text_2">При отсутствии страховки для путешествий с покрытием covid-19 все
+						<p class="info-block__text info-block__text_2">При отсутствии страховки для путешествий с покрытием
+							covid-19 все
 							расходы на лечение придется нести туристу. Следует понимать, что цена медицинской помощи за
 							границей значительно выше, чем в местных медучреждениях. Оформление страховки для путешествий
 							далеко не прихоть, а необходимая мера предосторожности. Подробнее о ее покупке и цене можно узнать
 							ниже.</p>
-						<p class="info-block__title info-block__title_1 h4">Страховка от ковид для поездки за границу: на что обратить внимание
+						<p class="info-block__title info-block__title_1 h4">Страховка от ковид для поездки за границу: на что
+							обратить внимание
 							при выборе страхового полиса</p>
 
-						<p class="info-block__text info-block__text_3">В связи с пандемией, охватившей весь мир, выехать за границу невозможно
+						<p class="info-block__text info-block__text_3">В связи с пандемией, охватившей весь мир, выехать за
+							границу невозможно
 							без наличия мед страховки от covid для путешествий. Данный полис может спасти туриста от расходов в
 							случае заражения коронавирусом.</p>
 
-						<p class="info-block__text info-block__text_4">При наступлении страхового случая выплата покроет медицинские расходы.
+						<p class="info-block__text info-block__text_4">При наступлении страхового случая выплата покроет
+							медицинские расходы.
 							Важно оформить полис на территории своего государства до отъезда.</p>
 
 						<div class="post__highlight post__highlight--attention">
@@ -2317,16 +2356,19 @@
 								клиентам до 85 лет, что существенно расширяет возможности людям, которые желают выехать за
 								рубеж.</p>
 						</div>
-						<p class="info-block__title info-block__title_2 h4">Какой полис ВЗР выбрать: стандартный или расширенный</p>
+						<p class="info-block__title info-block__title_2 h4">Какой полис ВЗР выбрать: стандартный или
+							расширенный</p>
 
-						<p class="info-block__text info-block__text_5">Страховка от ковид за рубеж от нашей компании имеет два типа –
+						<p class="info-block__text info-block__text_5">Страховка от ковид за рубеж от нашей компании имеет два
+							типа –
 							стандартную и расширенную. Любой полис для путешествий вступает в действие через 7 дней после его
 							оформления. Они отличаются не только ценой, но и выплатами, предусмотренными условиями договора.
 							Практически все пункты, по которым осуществляется возмещение расходов, имеют разницу в 2 раза,
 							что делает пакет «Расширенный» наиболее выгодным. Кроме того, он распространяется на случай
 							возникновения негативных последствий вакцины.</p>
 
-						<p class="info-block__text info-block__text_6">Очевидно, что любая страховка туриста от covid сможет помочь
+						<p class="info-block__text info-block__text_6">Очевидно, что любая страховка туриста от covid сможет
+							помочь
 							путешественникам преодолеть это заболевание вдалеке от дома. Однако именно расширенный пакет
 							надежно защитит их от любых проявлений недуга.</p>
 
@@ -2338,24 +2380,30 @@
 
 					<div class="container">
 
-						<p class="info-block__title info-block__title_3 h4">Страховка тура от невыезда и невылета из-за коронавируса</p>
+						<p class="info-block__title info-block__title_3 h4">Страховка тура от невыезда и невылета из-за
+							коронавируса</p>
 
 
 
-						<p class="info-block__text info-block__text_7">К сожалению, вирус covid-19 вносит неожиданные изменения в планы людей.
+						<p class="info-block__text info-block__text_7">К сожалению, вирус covid-19 вносит неожиданные
+							изменения в планы людей.
 							Особенно неприятно, когда отмена путешествия происходит из-за выявленного вируса. Во избежание
 							больших финансовых потерь «ЕКТА TRAVELING» предлагает своим клиентам туристическую страховку от
 							ковида без франшизы. В случае обнаружения вируса больной может получить компенсацию своих расходов
 							в размере, установленном договором.</p>
-						<p class="info-block__text info-block__text_8">При наступлении страхового случая выплата покроет медицинские расходы.
+						<p class="info-block__text info-block__text_8">При наступлении страхового случая выплата покроет
+							медицинские расходы.
 							Важно оформить полис на территории своего государства до отъезда.</p>
 
-						<p class="info-block__title info-block__title_4 h4">Преимущества покупки страхового полиса в ЕКТА TRAVELING</p>
-						<p class="info-block__text info-block__text_9">Страховая компания более 9 лет предоставляет услуги страхования и
+						<p class="info-block__title info-block__title_4 h4">Преимущества покупки страхового полиса в ЕКТА
+							TRAVELING</p>
+						<p class="info-block__text info-block__text_9">Страховая компания более 9 лет предоставляет услуги
+							страхования и
 							заработала множество положительных отзывов. За это время был сформирован профессиональный
 							коллектив, который разработал различные программы страхования максимально комфортные для клиентов,
 							включающие покрытие ковид.</p>
-						<p class="info-block__text info-block__text_10">Туристическое страхование в нашей компании имеет следующие
+						<p class="info-block__text info-block__text_10">Туристическое страхование в нашей компании имеет
+							следующие
 							преимущества:</p>
 
 						<ul class="choice__list">
@@ -2373,7 +2421,8 @@
 							<li class="choice__list-item">покрытие страховки при поездке по турпутевке в любую страну мира.
 							</li>
 						</ul>
-						<p class="info-block__text info-block__text_11">Компания «ЕКТА TRAVELING» гарантирует выплату денежной компенсации по
+						<p class="info-block__text info-block__text_11">Компания «ЕКТА TRAVELING» гарантирует выплату денежной
+							компенсации по
 							страховкам для путешествий.</p>
 					</div>
 
@@ -2382,8 +2431,10 @@
 					</div>
 
 					<div class="container">
-						<p class="info-block__title info-block__title_5 h4">Страховка с покрытием COVID-19 для поездок по всему миру</p>
-						<p class="info-block__text info-block__text_12">Основные направления, которые популярны среди туристов всего мира:</p>
+						<p class="info-block__title info-block__title_5 h4">Страховка с покрытием COVID-19 для поездок по
+							всему миру</p>
+						<p class="info-block__text info-block__text_12">Основные направления, которые популярны среди туристов
+							всего мира:</p>
 
 						<div class="post__table table table table--traums">
 							<div class="table__row table__row--head">
@@ -2392,57 +2443,84 @@
 							</div>
 							<div class="table__row">
 								<p class="table__col">Грузия</p>
-								<p class="table__col">Туристы имеют право на въезд при негативном результате ПЦР-теста, сделанного не позднее, чем за 72 часа и документ о вакцинировании. Туристическая страховка с покрытием ковид обязательна.</p>
+								<p class="table__col">Туристы имеют право на въезд при негативном результате ПЦР-теста,
+									сделанного не позднее, чем за 72 часа и документ о вакцинировании. Туристическая страховка с
+									покрытием ковид обязательна.</p>
 							</div>
 							<div class="table__row">
 								<p class="table__col">Доминикана</p>
-								<p class="table__col max1">COVID сертификат о вакцинировании, негативный ПЦР-тест за 72 часа. Страхование для путешествий от ковида обязательно.
+								<p class="table__col max1">COVID сертификат о вакцинировании, негативный ПЦР-тест за 72 часа.
+									Страхование для путешествий от ковида обязательно.
 								</p>
 							</div>
 							<div class="table__row">
 								<p class="table__col">Кипр</p>
-								<p class="table__col">Иностранцы имеют право на въезд при негативном результат ПЦР-теста, сделанного не позднее, чем за 72 часа. Туристическая страховка требуется, желательно ее оформить и купить перед путешествием. COVID сертификат.</p>
+								<p class="table__col">Иностранцы имеют право на въезд при негативном результат ПЦР-теста,
+									сделанного не позднее, чем за 72 часа. Туристическая страховка требуется, желательно ее
+									оформить и купить перед путешествием. COVID сертификат.</p>
 							</div>
 							<div class="table__row">
 								<p class="table__col">США</p>
-								<p class="table__col max2">Туристы имеют право на въезд при негативного ПЦР-тесте, сделанном не позднее, чем за 72 часа. Туристическая страховка строго обязательна, оформить ее необходимо до путешествия.</p>
+								<p class="table__col max2">Туристы имеют право на въезд при негативного ПЦР-тесте, сделанном не
+									позднее, чем за 72 часа. Туристическая страховка строго обязательна, оформить ее необходимо
+									до путешествия.</p>
 							</div>
 							<div class="table__row">
 								<p class="table__col">Греция</p>
-								<p class="table__col">Имеют право на въезд лица при наличии негативного ПЦР-теста, сделанного не позднее, чем 
-									за 72 часа, документа о вакцинировании или справки о перенесенном заболевании в течение последних 6 месяцев. Туристический страховой полис с покрытием ковид не обязателен, 
+								<p class="table__col">Имеют право на въезд лица при наличии негативного ПЦР-теста, сделанного не
+									позднее, чем
+									за 72 часа, документа о вакцинировании или справки о перенесенном заболевании в течение
+									последних 6 месяцев. Туристический страховой полис с покрытием ковид не обязателен,
 									но рекомендуется.</p>
 							</div>
 							<div class="table__row">
 								<p class="table__col">Турция</p>
-								<p class="table__col">Иностранцы имеют право на въезд при негативном ПЦР-тесте, сделанном не позднее, чем 
-									за 72 часа. Туристическая страховка с покрытием ковид обязательна, ее можно оформить перед путешествием или купить в аэропорту.</p>
+								<p class="table__col">Иностранцы имеют право на въезд при негативном ПЦР-тесте, сделанном не
+									позднее, чем
+									за 72 часа. Туристическая страховка с покрытием ковид обязательна, ее можно оформить перед
+									путешествием или купить в аэропорту.</p>
 							</div>
 							<div class="table__row">
 								<p class="table__col">Болгария</p>
-								<p class="table__col">Туристы имеют право на въезд при наличии негативного ПЦР-теста, сделанного не позднее, чем за 72 часа, документа о вакцинировании или справки о перенесенном заболевании в течение последних 6 месяцев. Туристическая страховка с покрытием ковид не обязательна.</p>
+								<p class="table__col">Туристы имеют право на въезд при наличии негативного ПЦР-теста, сделанного
+									не позднее, чем за 72 часа, документа о вакцинировании или справки о перенесенном заболевании
+									в течение последних 6 месяцев. Туристическая страховка с покрытием ковид не обязательна.</p>
 							</div>
 							<div class="table__row">
 								<p class="table__col">Египет</p>
-								<p class="table__col">Имеют право на въезд граждане при наличии негативного ПЦР-теста, сделанного не позднее, чем за 72 часа, или документа о вакцинировании, выполненной не ранее 14 дней. Туристическая страховка с покрытием ковид обязательна, необходимо купить перед путешествием.</p>
+								<p class="table__col">Имеют право на въезд граждане при наличии негативного ПЦР-теста,
+									сделанного не позднее, чем за 72 часа, или документа о вакцинировании, выполненной не ранее
+									14 дней. Туристическая страховка с покрытием ковид обязательна, необходимо купить перед
+									путешествием.</p>
 							</div>
 							<div class="table__row">
 								<p class="table__col">Дубай (ОАЭ)</p>
-								<p class="table__col">Иностранцы имеют право на въезд при наличии негативного ПЦР-теста, сделанного не позднее, чем за 72 часа. Туристическая страховка с покрытием ковид обязательна, ее необходимо купить до начала путешествия.</p>
+								<p class="table__col">Иностранцы имеют право на въезд при наличии негативного ПЦР-теста,
+									сделанного не позднее, чем за 72 часа. Туристическая страховка с покрытием ковид обязательна,
+									ее необходимо купить до начала путешествия.</p>
 							</div>
 						</div>
 
 						<p class="info-block__title info-block__title_6 h4">Страховка от ковид для поездки в Украину</p>
-						<p class="info-block__text info-block__text_13">Для того чтобы иностранцы могли попасть в Украину, они должны иметь документ, подтверждающий прохождение полного курса вакцинации, или результаты негативного ПЦР-теста. При этом обязательным условием въезда на территорию Украины является наличие страховки для путешествий с покрытием covid.</p>
-	
-						
+						<p class="info-block__text info-block__text_13">Для того чтобы иностранцы могли попасть в Украину, они
+							должны иметь документ, подтверждающий прохождение полного курса вакцинации, или результаты
+							негативного ПЦР-теста. При этом обязательным условием въезда на территорию Украины является наличие
+							страховки для путешествий с покрытием covid.</p>
+
+
 						<div class="post__highlight post__highlight--attention">
 							<p class="post__highlight-title">Внимание!</p>
-							<p class="post__highlight-text">Иностранцы, прибывшие из России, Великобритании, Индии или Португалии, должны пройти экспресс-тест на антиген коронавируса. Это обязательное условие даже с документом о вакцинации или негативным результатом ПЦР-теста.</p>
+							<p class="post__highlight-text">Иностранцы, прибывшие из России, Великобритании, Индии или
+								Португалии, должны пройти экспресс-тест на антиген коронавируса. Это обязательное условие даже с
+								документом о вакцинации или негативным результатом ПЦР-теста.</p>
 						</div>
-	
-						<p class="info-block__title info-block__title_7 h4">Страховка для шенгена и безвиза с покрытием ковид-19</p>
-						<p class="info-block__text info-block__text_14">Для путешествий в страны шенгена и безвиза необходимо купить туристическую страховку с покрытием ковид. Это является таким же обязательным условием, как и наличие биометрического паспорта. Страховая сумма должна быть не менее 30000 евро. Время действия страховки для путешествий должно составлять количество дней пребывания +15 суток.</p>
+
+						<p class="info-block__title info-block__title_7 h4">Страховка для шенгена и безвиза с покрытием
+							ковид-19</p>
+						<p class="info-block__text info-block__text_14">Для путешествий в страны шенгена и безвиза необходимо
+							купить туристическую страховку с покрытием ковид. Это является таким же обязательным условием, как
+							и наличие биометрического паспорта. Страховая сумма должна быть не менее 30000 евро. Время действия
+							страховки для путешествий должно составлять количество дней пребывания +15 суток.</p>
 
 					</div>
 
@@ -2459,10 +2537,10 @@
 									<img src="images/author-photo1.png" alt="">
 								</div>
 								<div class="info__author-block">
-									<p class="info__author-name">Денис Головко</p>
-									<p class="info__author-function">Руководитель департамента туризма и авиации </p>
-									<p class="info__author-descr">Денис Головко, является руководителем департамента туризма и
-										авиации в страховой компании EKTA TRAVELING.</p>
+									<a href="#" class="info__author-name">Денис Головко</p>
+										<p class="info__author-function">Руководитель департамента туризма и авиации </p>
+										<p class="info__author-descr">Денис Головко, является руководителем департамента туризма и
+											авиации в страховой компании EKTA TRAVELING.</p>
 								</div>
 							</div>
 						</div>
@@ -2608,11 +2686,13 @@
 							<div class="questions__body">
 								<div class="questions__item accodion">
 									<div class="accodion__head">
-										<p class="accodion__title">У меня положительный ПЦР тест. Что делать, если оформлена страховка от невыезда из-за ковид?</p>
+										<p class="accodion__title">У меня положительный ПЦР тест. Что делать, если оформлена
+											страховка от невыезда из-за ковид?</p>
 										<span class="accodion__icon icon icon-plus"></span>
 									</div>
 									<div class="accodion__body">
-										<p class="accodion__text">Страховка покроет расходы, связанные с отменой выезда из-за ковид.</p>
+										<p class="accodion__text">Страховка покроет расходы, связанные с отменой выезда из-за
+											ковид.</p>
 									</div>
 								</div>
 								<div class="questions__item accodion">
@@ -2621,7 +2701,8 @@
 										<span class="accodion__icon icon icon-plus"></span>
 									</div>
 									<div class="accodion__body">
-										<p class="accodion__text">Страховой полис в компании «ЕКТА TRAVELING» можно оформить и купить только в онлайн режиме.</p>
+										<p class="accodion__text">Страховой полис в компании «ЕКТА TRAVELING» можно оформить и
+											купить только в онлайн режиме.</p>
 									</div>
 								</div>
 								<div class="questions__item accodion">
@@ -2630,7 +2711,8 @@
 										<span class="accodion__icon icon icon-plus"></span>
 									</div>
 									<div class="accodion__body">
-										<p class="accodion__text">При наличии документов, подтверждающих заражение ковид-19, компания гарантирует выплату страховки, цена которой предусмотрена договором.</p>
+										<p class="accodion__text">При наличии документов, подтверждающих заражение ковид-19,
+											компания гарантирует выплату страховки, цена которой предусмотрена договором.</p>
 									</div>
 								</div>
 								<div class="questions__item accodion">
@@ -2639,7 +2721,9 @@
 										<span class="accodion__icon icon icon-plus"></span>
 									</div>
 									<div class="accodion__body">
-										<p class="accodion__text">Страховка должна быть оформлена в страховой компании, имеющей все разрешающие документы. Слишком низкая цена страховки для путешествий может говорить о нечестности страховщика.</p>
+										<p class="accodion__text">Страховка должна быть оформлена в страховой компании, имеющей
+											все разрешающие документы. Слишком низкая цена страховки для путешествий может говорить
+											о нечестности страховщика.</p>
 									</div>
 								</div>
 								<div class="questions__item accodion">
@@ -2657,16 +2741,19 @@
 										<span class="accodion__icon icon icon-plus"></span>
 									</div>
 									<div class="accodion__body">
-										<p class="accodion__text">В компании «ЕКТА TRAVEL» лица до 85 лет могут купить страховку от ковид.</p>
+										<p class="accodion__text">В компании «ЕКТА TRAVEL» лица до 85 лет могут купить страховку
+											от ковид.</p>
 									</div>
 								</div>
 								<div class="questions__item accodion">
 									<div class="accodion__head">
-										<p class="accodion__title">Нужна ли страховка от коронавируса путешествующим по безвизу?</p>
+										<p class="accodion__title">Нужна ли страховка от коронавируса путешествующим по безвизу?
+										</p>
 										<span class="accodion__icon icon icon-plus"></span>
 									</div>
 									<div class="accodion__body">
-										<p class="accodion__text">При посещении стран безвиза и шенгена обязательно наличие туристической страховки с покрытием covid-19.</p>
+										<p class="accodion__text">При посещении стран безвиза и шенгена обязательно наличие
+											туристической страховки с покрытием covid-19.</p>
 									</div>
 								</div>
 								<div class="questions__item accodion">
@@ -2675,7 +2762,8 @@
 										<span class="accodion__icon icon icon-plus"></span>
 									</div>
 									<div class="accodion__body">
-										<p class="accodion__text">Практически во всех странах мира обязательно наличие страхового полиса ковид-19, что связано с высокой стоимостью медицинских услуг.</p>
+										<p class="accodion__text">Практически во всех странах мира обязательно наличие страхового
+											полиса ковид-19, что связано с высокой стоимостью медицинских услуг.</p>
 									</div>
 								</div>
 								<div class="questions__item accodion">
@@ -2684,7 +2772,9 @@
 										<span class="accodion__icon icon icon-plus"></span>
 									</div>
 									<div class="accodion__body">
-										<p class="accodion__text">Цена страховки напрямую зависит от пакета, в которых предусмотрены определенные суммы возмещения затрат и покрытие негативного воздействия вакцины.</p>
+										<p class="accodion__text">Цена страховки напрямую зависит от пакета, в которых
+											предусмотрены определенные суммы возмещения затрат и покрытие негативного воздействия
+											вакцины.</p>
 									</div>
 								</div>
 
@@ -2968,7 +3058,7 @@
 								</a>
 								<a href="#" class="menu__info-item">
 									<span class="menu__info-icon icon icon-email"></span>
-									<p class="menu__info-link">Info@ekta.travel.com </p>
+									<a href="mailto:Info@ekta.travel.com" class="menu__info-link">Info@ekta.travel.com </a>
 								</a>
 							</div>
 
@@ -3136,7 +3226,7 @@
 							</button>
 							<button type="button" class="languages__country show">
 								<div class="flag">
-									<img src="images/flag-gr.svg" alt="">
+									<img src="images/flag-de.svg" alt="">
 								</div>
 								<p class="languages__country-name">Германия</p>
 							</button>
@@ -3148,147 +3238,219 @@
 							</button>
 							<button type="button" class="languages__country show">
 								<div class="flag">
-									<img src="images/flag-au.svg" alt="">
+									<img src="images/flag-kz.svg" alt="">
 								</div>
-								<p class="languages__country-name">Австралия</p>
+								<p class="languages__country-name">Казахстан</p>
 							</button>
 							<button type="button" class="languages__country show">
 								<div class="flag">
-									<img src="images/flag-at.svg" alt="">
+									<img src="images/flag-ca.svg" alt="">
 								</div>
-								<p class="languages__country-name">Австрия </p>
+								<p class="languages__country-name">Канада </p>
 							</button>
 							<button type="button" class="languages__country show">
 								<div class="flag">
-									<img src="images/flag-by.svg" alt="">
+									<img src="images/flag-cn.svg" alt="">
 								</div>
-								<p class="languages__country-name">Беларусь</p>
+								<p class="languages__country-name">Китай</p>
 							</button>
 							<button type="button" class="languages__country show">
 								<div class="flag">
-									<img src="images/flag-be.svg" alt="">
+									<img src="images/flag-lv.svg" alt="">
 								</div>
-								<p class="languages__country-name">Бельгия </p>
+								<p class="languages__country-name">Латвия </p>
 							</button>
 							<button type="button" class="languages__country show">
 								<div class="flag">
-									<img src="images/flag-bg.svg" alt="">
+									<img src="images/flag-lt.svg" alt="">
 								</div>
-								<p class="languages__country-name">Болгария </p>
+								<p class="languages__country-name">Литва </p>
 							</button>
 							<button type="button" class="languages__country show">
 								<div class="flag">
-									<img src="images/flag-be.svg" alt="">
+									<img src="images/flag-il.svg" alt="">
 								</div>
-								<p class="languages__country-name">Бельгия </p>
+								<p class="languages__country-name">Израиль </p>
 							</button>
 							<button type="button" class="languages__country show">
 								<div class="flag">
-									<img src="images/flag-bg.svg" alt="">
+									<img src="images/flag-in.svg" alt="">
 								</div>
-								<p class="languages__country-name">Болгария </p>
+								<p class="languages__country-name">Индия</p>
 							</button>
 							<button type="button" class="languages__country show">
 								<div class="flag">
-									<img src="images/flag-hu.svg" alt="">
+									<img src="images/flag-id.svg" alt="">
 								</div>
-								<p class="languages__country-name">Венгрия </p>
+								<p class="languages__country-name">Индонезия </p>
 							</button>
 							<button type="button" class="languages__country show">
 								<div class="flag">
-									<img src="images/flag-vn.svg" alt="">
+									<img src="images/flag-ir.svg" alt="">
 								</div>
-								<p class="languages__country-name">Вьетнам </p>
+								<p class="languages__country-name">Иран </p>
 							</button>
 							<button type="button" class="languages__country show">
 								<div class="flag">
-									<img src="images/flag-gr.svg" alt="">
+									<img src="images/flag-ie.svg" alt="">
 								</div>
-								<p class="languages__country-name">Греция</p>
+								<p class="languages__country-name">Ирландия </p>
 							</button>
 							<button type="button" class="languages__country show">
 								<div class="flag">
-									<img src="images/flag-ge.svg" alt="">
+									<img src="images/flag-it.svg" alt="">
 								</div>
-								<p class="languages__country-name">Грузия</p>
+								<p class="languages__country-name">Италия </p>
 							</button>
 							<button type="button" class="languages__country show">
 								<div class="flag">
-									<img src="images/flag-gr.svg" alt="">
+									<img src="images/flag-es.svg" alt="">
 								</div>
-								<p class="languages__country-name">Германия</p>
+								<p class="languages__country-name">Испания </p>
 							</button>
 							<button type="button" class="languages__country show">
 								<div class="flag">
-									<img src="images/flag-eg.svg" alt="">
+									<img src="images/flag-lu.svg" alt="">
 								</div>
-								<p class="languages__country-name">Египет</p>
+								<p class="languages__country-name">Люксембург </p>
 							</button>
 							<button type="button" class="languages__country show">
 								<div class="flag">
-									<img src="images/flag-au.svg" alt="">
+									<img src="images/flag-lv.svg" alt="">
 								</div>
-								<p class="languages__country-name">Австралия</p>
+								<p class="languages__country-name">Мальдивы</p>
 							</button>
 							<button type="button" class="languages__country show">
 								<div class="flag">
-									<img src="images/flag-at.svg" alt="">
+									<img src="images/flag-mx.svg" alt="">
 								</div>
-								<p class="languages__country-name">Австрия </p>
+								<p class="languages__country-name">Мексика </p>
 							</button>
 							<button type="button" class="languages__country show">
 								<div class="flag">
-									<img src="images/flag-by.svg" alt="">
+									<img src="images/flag-np.svg" alt="">
 								</div>
-								<p class="languages__country-name">Беларусь</p>
+								<p class="languages__country-name">Непал</p>
 							</button>
 							<button type="button" class="languages__country show">
 								<div class="flag">
-									<img src="images/flag-be.svg" alt="">
+									<img src="images/flag-ae.svg" alt="">
 								</div>
-								<p class="languages__country-name">Бельгия </p>
+								<p class="languages__country-name">ОАЕ</p>
 							</button>
 							<button type="button" class="languages__country show">
 								<div class="flag">
-									<img src="images/flag-bg.svg" alt="">
+									<img src="images/flag-pt.svg" alt="">
 								</div>
-								<p class="languages__country-name">Болгария </p>
+								<p class="languages__country-name">Португалия </p>
 							</button>
 							<button type="button" class="languages__country show">
 								<div class="flag">
-									<img src="images/flag-hu.svg" alt="">
+									<img src="images/flag-ru.svg" alt="">
 								</div>
-								<p class="languages__country-name">Венгрия </p>
+								<p class="languages__country-name">Россия</p>
 							</button>
 							<button type="button" class="languages__country show">
 								<div class="flag">
-									<img src="images/flag-vn.svg" alt="">
+									<img src="images/flag-ro.svg" alt="">
 								</div>
-								<p class="languages__country-name">Вьетнам </p>
+								<p class="languages__country-name">Румыния </p>
 							</button>
 							<button type="button" class="languages__country show">
 								<div class="flag">
-									<img src="images/flag-gr.svg" alt="">
+									<img src="images/flag-sg.svg" alt="">
 								</div>
-								<p class="languages__country-name">Греция</p>
+								<p class="languages__country-name">Сингапур </p>
 							</button>
 							<button type="button" class="languages__country show">
 								<div class="flag">
-									<img src="images/flag-ge.svg" alt="">
+									<img src="images/flag-si.svg" alt="">
 								</div>
-								<p class="languages__country-name">Грузия</p>
+								<p class="languages__country-name">Словения </p>
 							</button>
 							<button type="button" class="languages__country show">
 								<div class="flag">
-									<img src="images/flag-gr.svg" alt="">
+									<img src="images/flag-us.svg" alt="">
 								</div>
-								<p class="languages__country-name">Германия</p>
+								<p class="languages__country-name">США </p>
 							</button>
 							<button type="button" class="languages__country show">
 								<div class="flag">
-									<img src="images/flag-eg.svg" alt="">
+									<img src="images/flag-th.svg" alt="">
 								</div>
-								<p class="languages__country-name">Египет</p>
+								<p class="languages__country-name">Таиланд </p>
+							</button>
+							<button type="button" class="languages__country show">
+								<div class="flag">
+									<img src="images/flag-tn.svg" alt="">
+								</div>
+								<p class="languages__country-name">Тунис </p>
+							</button>
+							<button type="button" class="languages__country show">
+								<div class="flag">
+									<img src="images/flag-tr.svg" alt="">
+								</div>
+								<p class="languages__country-name">Турция </p>
+							</button>
+							<button type="button" class="languages__country show">
+								<div class="flag">
+									<img src="images/flag-ua.svg" alt="">
+								</div>
+								<p class="languages__country-name">Украина </p>
+							</button>
+							<button type="button" class="languages__country show">
+								<div class="flag">
+									<img src="images/flag-fi.svg" alt="">
+								</div>
+								<p class="languages__country-name">Финляндия </p>
+							</button>
+							<button type="button" class="languages__country show">
+								<div class="flag">
+									<img src="images/flag-fr.svg" alt="">
+								</div>
+								<p class="languages__country-name">Франция </p>
+							</button>
+							<button type="button" class="languages__country show">
+								<div class="flag">
+									<img src="images/flag-hr.svg" alt="">
+								</div>
+								<p class="languages__country-name">Хорватия </p>
+							</button>
+							<button type="button" class="languages__country show">
+								<div class="flag">
+									<img src="images/flag-me.svg" alt="">
+								</div>
+								<p class="languages__country-name">Черногория </p>
+							</button>
+							<button type="button" class="languages__country show">
+								<div class="flag">
+									<img src="images/flag-cz.svg" alt="">
+								</div>
+								<p class="languages__country-name">Чехия </p>
+							</button>
+							<button type="button" class="languages__country show">
+								<div class="flag">
+									<img src="images/flag-ch.svg" alt="">
+								</div>
+								<p class="languages__country-name">Швейцария </p>
+							</button>
+							<button type="button" class="languages__country show">
+								<div class="flag">
+									<img src="images/flag-se.svg" alt="">
+								</div>
+								<p class="languages__country-name">Швеция </p>
+							</button>
+							<button type="button" class="languages__country show">
+								<div class="flag">
+									<img src="images/flag-kr.svg" alt="">
+								</div>
+								<p class="languages__country-name">Южная Корея </p>
+							</button>
+							<button type="button" class="languages__country show">
+								<div class="flag">
+									<img src="images/flag-jp.svg" alt="">
+								</div>
+								<p class="languages__country-name">Япония </p>
 							</button>
 						</div>
 					</div>
@@ -3296,6 +3458,7 @@
 				<div class="languages__rightside">
 					<div class="languages__rightside-head languages__head">
 						<p class="languages__title">Выберите язык</p>
+						<button class="popup-close icon icon-close"></button>
 					</div>
 					<div class="languages__rightside-body">
 						<button type="button" class="languages__lang">English</button>
@@ -3304,7 +3467,6 @@
 					</div>
 				</div>
 			</div>
-
 		</main>
 		<!-- MAIN end -->
 
@@ -3408,7 +3570,7 @@
 							</a>
 							<a href="#" class="menu__info-item">
 								<span class="menu__info-icon icon icon-email"></span>
-								<p class="menu__info-link">Info@ekta.travel.com </p>
+								<a href="mailto:Info@ekta.travel.com" class="menu__info-link">Info@ekta.travel.com </a>
 							</a>
 						</div>
 

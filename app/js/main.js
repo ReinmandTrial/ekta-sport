@@ -38,6 +38,12 @@ $('.burger-icon').on('click', function () {
 $('.burger__close').on('click', function () {
    $('.burger').hide();
 });
+$(document).on('click', function (e) {
+   if (!$(e.target).closest(".burger").length && !$(e.target).closest(".burger-icon").length) {
+      $('.burger').hide();
+   }
+   e.stopPropagation();
+});
 // Бургер конец
 
 // Выбор языка
@@ -52,7 +58,16 @@ $('.languages__country').on('click', function () {
 function langClose() {
    $('.languages').removeClass('open')
 };
-$('.languages__close').on('click', langClose);
+$('.languages__close, .popup-close').on('click', langClose);
+
+
+$(document).on('click', function (e) {
+   if (!$(e.target).closest(".languages").length && !$(e.target).closest(".btn-popup-languages").length) {
+
+      langClose();
+   }
+   e.stopPropagation();
+});
 $('.languages__lang').on('click', function () {
 
    // if($('.languages__leftside').hasClass('selected')){
@@ -121,14 +136,16 @@ $('.js-promocode').on('click', function () {
 // промокод конец
 
 // dropdowns
-$('.js-select-head').on('click', function () {
+$('.js-select-head').on('click', function (e) {
    var btn = $(this);
    var block = btn.closest(".js-select");
 
-   if (!block.hasClass('open')) {
-      $('.js-select').removeClass('open');
+   if (!$(e.target).closest(" .js-select-head .js-select-item, .js-select-head .js-select-item--country").length) {
+      if (!block.hasClass('open')) {
+         $('.js-select').removeClass('open');
+      }
+      block.toggleClass('open');
    }
-   block.toggleClass('open');
 });
 $(document).on('click', function (e) {
    if (!$(e.target).closest(".js-select").length) {
@@ -145,7 +162,47 @@ $('.js-select--swich .js-select-body .js-select-item').on('click', function () {
    block.toggleClass('open');
    block.find('.js-select-head p').text(thisText);
    block.find('.js-select-head input').val(thisText);
+   $(this).closest('.input__block').addClass('--fill');
 });
+
+
+$('.js-select--country .js-select-body--country .js-select-item--country').on('click', function () {
+   btn = $(this);
+   block = btn.closest('.js-select');
+
+   block.find('.input').hide();
+   block.find('.input.input--filled').css('display', 'flex');
+
+   btn.clone().appendTo(block.find('.input--filled'))
+
+   block.toggleClass('open');
+   $(this).closest('.input__block').addClass('--fill');
+});
+
+$('body').on('click', '.input__select-item-close', function () {
+   $(this).closest('.input__select-item').remove();
+
+   var count = 0;
+   $($('.input.input--filled').find('.input__select-item')).each(function () {
+      count++;
+   })
+   if (count < 1) {
+      block.find('.input').show();
+      block.find('.input.input--filled').css('display', 'none');
+      block.closest('.input__block').removeClass('--fill');
+   }
+});
+
+$('input.input').on('click keyup', function () {
+   if ($(this).val() != '') {
+      $(this).closest('.input__block').addClass('--fill');
+   } else {
+      $(this).closest('.input__block').removeClass('--fill');
+
+   }
+})
+
+
 // $('.js-select--swich .js-select-several .js-select-item').on('click', function () {
 //    btn = $(this);
 //    block = btn.closest('.js-select--swich');
@@ -180,13 +237,16 @@ $('.form-policy__btn-to-step-two').on('click', function () {
    $(this).closest('.form-policy').find('.form-policy__step-two').show();
    $('.policy-form__steps').removeClass('policy-form__steps--one')
    $('.policy-form__steps').addClass('policy-form__steps--two')
+   $(this).closest('.policy-form').addClass('fixed')
 });
 $('.form-policy__btn-prev-to-step-one').on('click', function () {
    $(this).closest('.form-policy').find('.form-policy__step-two').hide();
    $(this).closest('.form-policy').find('.form-policy__step-one').show();
    $('.policy-form__steps').removeClass('policy-form__steps--two')
    $('.policy-form__steps').addClass('policy-form__steps--one')
+   $(this).closest('.policy-form').removeClass('fixed')
 });
+
 $('.form-policy__btn-to-step-three').on('click', function () {
    $(this).closest('.form-policy').find('.form-policy__step-two').hide();
    $(this).closest('.form-policy').find('.form-policy__step-three').show();
@@ -261,6 +321,10 @@ $(".form-policy__toggle-item").on('click', function () {
    }
 
 })
+
+
+
+
 
 // Туристы старт
 $('.js-add-tourist').on('click', function () {
@@ -394,7 +458,7 @@ $('.popup-close').on('click', function () {
 
 // Слайдеры
 
-if ($(document).width() <= 1210) {
+if ($(window).width() <= 1210) {
 
    new Swiper('.slider-most-interesting', {
       slidesPerView: 'auto',

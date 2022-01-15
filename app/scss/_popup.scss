@@ -186,8 +186,17 @@
 }
 
 .popup-write-to-us {
+   .popup-close.icon {
+      font-size: 10px;
+      padding: 5px;
+      position: absolute;
+      top: 15px;
+      right: 16px;
+      color: $gray;
+   }
    .popup__content {
-      padding: 30px 15px;
+      position: relative;
+      padding: 55px 15px 25px;
       align-self: flex-end;
       width: 100%;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 11.98%, #ffffff 100%);

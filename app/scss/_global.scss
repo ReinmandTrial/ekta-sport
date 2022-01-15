@@ -131,7 +131,7 @@ textarea {
 	position: relative;
 	z-index: 20;
 	@media (max-width: 575.98px) {
-		height: 114px;
+		height: unset;
 		box-shadow: 0px 10px 10px rgba(143, 155, 179, 0.1);
 		backdrop-filter: blur(4px);
 	}
@@ -148,6 +148,9 @@ textarea {
 		padding: 16px 0;
 		@media (max-width: 991.98px) {
 			column-gap: unset;
+		}
+		@media (max-width: 575.98px) {
+			padding: 23px 0;
 		}
 	}
 
@@ -321,7 +324,7 @@ textarea {
 		background: $white;
 	}
 	50% {
-		background: $blue;
+		background: #219653;
 	}
 }
 
@@ -408,10 +411,11 @@ textarea {
 	top: 0;
 	right: 0;
 	left: 0;
-	box-shadow: 0px 10px 10px rgba(34, 43, 69, 0.1);
+	box-shadow: 0px 10px 10px rgba(34, 43, 69, 0.1), 0 50vh 10px rgba(34, 43, 69, 0.4);
 	z-index: 200;
-	height: 100%;
+	// height: 100%;
 	overflow-y: auto;
+	max-height: 100%;
 	display: none;
 	&__bg {
 		position: absolute;
@@ -435,7 +439,7 @@ textarea {
 		// height: 100%;
 		position: relative;
 		z-index: 210;
-		padding: 55px 0 145px;
+		padding: 55px 0 45px;
 		@media (max-width: 575.98px) {
 			padding: 0px 0 30px;
 		}
@@ -694,6 +698,9 @@ textarea {
 		}
 		&--adress .menu__info-link {
 			max-width: 170px;
+			@media (max-width: 575.98px) {
+				max-width: none;
+			}
 		}
 	}
 
@@ -787,12 +794,28 @@ textarea {
 	top: 0;
 	left: 0;
 	right: 0;
-	height: 100vh;
+	// height: 100vh;
+	max-height: 100%;
 	background: $white;
 	z-index: 400;
 	display: none;
+	overflow-y: auto;
+	box-shadow: 0px 10px 10px rgba(34, 43, 69, 0.1), 0 600px 10px rgba(34, 43, 69, 0.4);
 	&.open {
 		display: flex;
+	}
+	.popup-close {
+		position: absolute;
+		bottom: 0;
+		right: calc((100vw - 1180px) / 2);
+		font-size: 21px;
+		padding: 10px;
+		@media (max-width: 1210px) {
+			right: 15px;
+		}
+		@media (max-width: 767.98px) {
+			display: none;
+		}
 	}
 	&__leftside {
 		width: 65%;
@@ -814,6 +837,7 @@ textarea {
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-end;
+		position: relative;
 		@media (max-width: 767.98px) {
 			align-items: center;
 		}
@@ -1282,17 +1306,20 @@ input {
 .input {
 	padding: 12px 40px 12px 21px;
 	width: 100%;
-	border: 2px solid $mainColor;
+	border: 1px solid $mainColor;
 	border-radius: 20px;
 	font-size: 16px;
+	background: rgba(255, 255, 255, 0.5);
 	&::placeholder {
 		color: #74798a;
 	}
+
 	&__block {
 		margin: 0 17px;
 		&.error {
 			.input {
 				border-color: $red;
+				border-width: 2px;
 			}
 			.input__box {
 				.icon {
@@ -1306,6 +1333,15 @@ input {
 		&.success {
 			.input__success {
 				display: block;
+			}
+		}
+		&.--fill {
+			.input {
+				padding: 11px 39px 11px 20px;
+				border: 2px solid $mainColor;
+			}
+			.input__select-body {
+				border-width: 2px;
 			}
 		}
 	}
@@ -1371,12 +1407,40 @@ input {
 				border-radius: 20px 20px 0 0;
 			}
 		}
+		&--country {
+			.input__select-item {
+				font-weight: 600;
+				display: flex;
+				align-items: center;
+				column-gap: 5px;
+			}
+
+			.input--filled {
+				display: none;
+				padding-top: 4px !important ;
+				padding-bottom: 4px !important;
+				flex-wrap: wrap;
+				gap: 3px;
+			}
+			.js-select-head .input__select-item {
+				padding: 6px 8px;
+				background: #edf1f7;
+				border-radius: 20px;
+				width: max-content;
+				flex: none;
+				&-close {
+					display: block !important;
+					position: static !important;
+					transform: none !important;
+				}
+			}
+		}
 	}
 	&__select-body {
 		overflow: hidden;
 		display: none;
 		position: absolute;
-		border: 2px solid $mainColor;
+		border: 1px solid $mainColor;
 		z-index: 90;
 		left: 0;
 		top: calc(100% - 2px);
@@ -1384,6 +1448,9 @@ input {
 		width: 100%;
 		background: #ffffff;
 		border-radius: 0 0 20px 20px;
+		.input__select-item-close {
+			display: none;
+		}
 	}
 
 	&__select-item {
@@ -1392,6 +1459,11 @@ input {
 		cursor: pointer;
 		&:hover {
 			background: #e4e7ed;
+		}
+		&-close {
+			font-size: 12px !important;
+			padding: 6px !important;
+			color: #8f9bb3 !important;
 		}
 	}
 
@@ -1447,6 +1519,9 @@ input {
 	&__several {
 		padding-left: 25px;
 		margin-top: 3px;
+		span {
+			color: #044481;
+		}
 	}
 	&__several-item {
 		font-size: 14px;
@@ -2075,6 +2150,7 @@ p.input {
 	background: #ffffff;
 	box-shadow: inset -8.90123px -8.90123px 8.90123px rgba(236, 235, 235, 0.7),
 		inset 13.3518px 13.3518px 8.90123px rgba(174, 174, 192, 0.1);
+
 	border-radius: 20px;
 	// z-index: 10;
 	position: static;
