@@ -443,6 +443,12 @@ $('.btn-popup-write-to-us').on('click', function () {
 $('.btn-popup-sms').on('click', function () {
    $('.popup-sms').fadeIn();
 });
+$('.btn-popup-phone').on('click', function () {
+   $('.popup-phone').fadeIn();
+});
+$('.btn-popup-message').on('click', function () {
+   $('.popup-message').fadeIn();
+});
 //нажатие вне body
 $(document).on('click', function (e) {
    if (!$(e.target).closest(".popup__content").length && !$(e.target).closest(".btn-popup").length) {

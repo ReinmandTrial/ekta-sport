@@ -221,19 +221,29 @@
             <div class="thank-you-qoestions">
                <div class="container">
                   <div class="thank-you-qoestions__content">
-                     <div class="thank-you-qoestions__img">
-                        <img src="images/ty-email.png" alt="">
-                     </div>
-                     <div class="thank-you-qoestions__wrapper">
-                        <div class="thank-you-qoestions__text-block">
-                           <p class="thank-you-qoestions__title">Не получили полис?</p>
-                           <p class="thank-you-qoestions__descr">По ошибке письмо могло попасть в папку СПАМ или
-                              РЕКЛАМА,
-                              нажмите на кнопку "не спам" и добавьте наш email в список контактов, тогда письма точно
-                              не потеряются.</p>
-                           <p class="thank-you-qoestions__descr">Напишите в нашу службу поддержки или позвоните на
-                              бесплатный номер</p>
+                     <div class="thank-you-qoestions__main">
+                        <div class="thank-you-qoestions__img">
+                           <img src="images/ty-email.png" alt="">
                         </div>
+                        <div class="thank-you-qoestions__wrapper">
+                           <div class="thank-you-qoestions__text-block">
+                              <p class="thank-you-qoestions__title">Не получили полис?</p>
+                              <p class="thank-you-qoestions__descr">По ошибке письмо могло попасть в папку СПАМ или
+                                 РЕКЛАМА,
+                                 нажмите на кнопку "не спам" и добавьте наш email в список контактов, тогда письма точно
+                                 не потеряются.</p>
+                              <p class="thank-you-qoestions__descr">Напишите в нашу службу поддержки или позвоните на
+                                 бесплатный номер</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="thank-you-qoestions__connection">
+                        <button type="button" class="connection-trigger btn-popup btn-popup-phone">
+                           <span class="icon icon-phone-reverse"></span>
+                        </button>
+                        <button type="button" class="connection-trigger btn-popup btn-popup-message">
+                           <span class="icon icon-message"></span>
+                        </button>
                      </div>
 
                   </div>
@@ -256,9 +266,74 @@
    <!-- CONTENT end -->
 
    <!-- POPUP  -->
-   <div class="popup">
+   <div class="popup popup-phone">
       <div class="popup__body">
          <div class="popup__content">
+            <button type="button" class="popup-close icon icon-close"></button>
+            <h3 class="popup-phone__title h7">Мы перезвоним вам в течении 1 минуты</h3>
+            <form class="popup-phone__form">
+               <div class="popup-phone__inputs">
+                  <div class="popup-phone__input input__block">
+                     <!-- ошибка верификации происходит при добавлении класса "error" к блоку выше -->
+                     <div class="input__box">
+                        <input type="text" class="input" placeholder="Имя">
+                     </div>
+                     <p class="input__error">Введите имя, используя только буквы латинского
+                        алфавита
+                        без
+                        спецсимволов (Например: IVAN)</p>
+                  </div>
+                  <div class="popup-phone__input input__block">
+                     <!-- ошибка верификации происходит при добавлении класса "error" к блоку выше -->
+                     <div class="input__box">
+                        <input type="text" class="input" placeholder="ХХ ХХХ ХХХХ ">
+                     </div>
+                     <p class="input__error">sdfsdf</p>
+                  </div>
+               </div>
+               <button type="button" class="popup-phone__btn-send btn">Жду звонка</button>
+            </form>
+         </div>
+      </div>
+   </div>
+   <!-- POPUP END  -->
+   <!-- POPUP  -->
+   <div class="popup popup-message">
+      <div class="popup-message__content">
+
+
+         <div class="popup-message__head">
+            <h5 class="popup-message__title">Онлайн консультант</h5>
+            <button type="button" class="popup-close icon icon-close"></button>
+         </div>
+         <div class="popup-message__body">
+            <div class="popup-message__message">
+               <a href="#" class="popup-message__message-photo">
+                  <img src="images/consult-irina.png" alt="">
+               </a>
+               <div class="popup-message__message-block">
+                  <h6 class="popup-message__message-name">Консультант Ирина</h6>
+                  <p class="popup-message__message-text">
+                     Добрый день! Я Ирина, готова ответить на все ваши вопросы.
+                  </p>
+               </div>
+            </div>
+            <div class="popup-message__message popup-message__message--out">
+               <div class="popup-message__message-block">
+                  <p class="popup-message__message-text">
+                     Добрый день! Хочу оформить страховку
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div class="popup-message__footer">
+            <div class="popup-phone__input input__block">
+               <!-- ошибка верификации происходит при добавлении класса "error" к блоку выше -->
+               <div class="input__box">
+                  <input type="text" class="input" placeholder="Уточните, пожалуйста вопрос">
+                  <span class="icon icon-paper-plane"></span>
+               </div>
+            </div>
          </div>
       </div>
    </div>

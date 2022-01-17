@@ -2,9 +2,9 @@
 
 @font-face {
   font-family: "#{$icomoon-font-family}";
-  src: url("../fonts/icon/#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?3m9jec") format("truetype"),
-    url("../fonts/icon/#{$icomoon-font-path}/#{$icomoon-font-family}.woff?3m9jec") format("woff"),
-    url("../fonts/icon/#{$icomoon-font-path}/#{$icomoon-font-family}.svg?3m9jec##{$icomoon-font-family}") format("svg");
+  src: url("../fonts/icon/#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?yi2i7t") format("truetype"),
+    url("../fonts/icon/#{$icomoon-font-path}/#{$icomoon-font-family}.woff?yi2i7t") format("woff"),
+    url("../fonts/icon/#{$icomoon-font-path}/#{$icomoon-font-family}.svg?yi2i7t##{$icomoon-font-family}") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-paper-plane {
+  &:before {
+    content: $icon-paper-plane;
+  }
+}
 .icon-thermometer-plus {
   &:before {
     content: $icon-thermometer-plus;
