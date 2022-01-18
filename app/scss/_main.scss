@@ -53,21 +53,21 @@
          flex-direction: row;
          justify-content: space-around;
       }
-      &:nth-child(2) {
-         max-width: 200px;
-      }
-      &:nth-child(3) {
-         max-width: 180px;
-      }
-      &:nth-child(4) {
-         max-width: 170px;
-      }
-      &:nth-child(5) {
-         max-width: 250px;
-      }
-      &:nth-child(6) {
-         max-width: 158px;
-      }
+      // &:nth-child(2) {
+      //    max-width: 200px;
+      // }
+      // &:nth-child(3) {
+      //    max-width: 180px;
+      // }
+      // &:nth-child(4) {
+      //    max-width: 170px;
+      // }
+      // &:nth-child(5) {
+      //    max-width: 250px;
+      // }
+      // &:nth-child(6) {
+      //    max-width: 158px;
+      // }
    }
 
    &__img {
@@ -339,8 +339,8 @@
          height: 100%;
          object-fit: contain;
       }
-      svg path:hover{
-         fill: #C5CEE0;
+      svg path:hover {
+         fill: #c5cee0;
       }
       @media (max-width: 767.98px) {
          margin: 0 -60px -155px -70px;
@@ -403,6 +403,23 @@
       background: #e4e7ed;
       @media (max-width: 575.98px) {
          font-weight: 700;
+      }
+   }
+   &__btn-to-country {
+      padding: 11px 30px;
+      background: #2e3a59;
+      border: 1px solid #2e3a59;
+      border-radius: 20px;
+      color: $white;
+      max-width: 350px;
+      width: 100%;
+      margin: 30px auto 0;
+      display: block;
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+      @media (min-width: 992px) {
+         display: none;
       }
    }
 }
@@ -4281,6 +4298,10 @@
 }
 
 .page-country {
+   .banner__bg {
+      bottom: unset;
+      height: 922px;
+   }
    &__descr {
       margin-bottom: 70px;
    }
@@ -8146,6 +8167,22 @@
 
 //insurance-baggage START========================================================================================================================================================
 .insurance-baggage {
+   .thank-you__policy-form .form-policy__secure {
+      @media (min-width: 992px) {
+
+         margin-top: unset;
+         margin-right: 30px;
+      }
+   }
+   .form-policy__row:not(:last-child) {
+      margin-bottom: 30px;
+   }
+   .thank-you__policy-form .input__block .check-block {
+      margin-top: unset;
+   }
+   .thank-you__policy-form .form-policy__btn-pay {
+      font-size: 22px;
+   }
    .card-tariff__content {
       display: flex;
       align-items: center;
