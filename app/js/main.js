@@ -243,6 +243,12 @@ for (let anchor of anchors) {
 }
 //плавная прокрутка якоря конец
 
+// custon scroll
+// new SimpleBar(document.getElementById('scroll-popup-read-more'));
+// new SimpleBar($('js-scroll'));
+
+// custon scroll end
+
 
 // действия в форме полиса
 $('.form-policy__btn-to-step-two').on('click', function () {

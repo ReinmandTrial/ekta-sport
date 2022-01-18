@@ -11,6 +11,16 @@
    }
 }
 
+.burger-icon {
+   color: $mainColor;
+}
+
+.icon-triangle-down {
+   color: $mainColor;
+}
+.languages__country-name {
+   color: $mainColor;
+}
 // OPTIONS========================================================================================================================================================
 .options {
    //display: none;
@@ -3455,11 +3465,8 @@
    }
 
    &__slide {
+      margin-right: 15px;
       width: calc((100% - 30px) / 3);
-      @media (min-width: 1211px) {
-         margin-right: 15px;
-         // column-gap: 15px;
-      }
       @media (max-width: 1209.98px) {
          width: 383px;
       }
@@ -4378,6 +4385,65 @@
 // }
 
 //PARACHUTING START========================================================================================================================================================
+.tariff-block {
+   position: relative;
+   &__tap {
+      position: absolute;
+      top: -65px;
+      left: calc(50% + 55px);
+      @media (min-width: 992px) {
+         display: none;
+      }
+      animation: tap 2s ease-in-out infinite;
+   }
+   &__content {
+      padding: 60px 0;
+      @media (max-width: 575.98px) {
+         padding: 60px 0 30px;
+      }
+   }
+
+   &__slider {
+   }
+}
+@keyframes tap {
+   0% {
+      // transform: translateX(0%) rotate(-60deg);
+      transform: translateX(0%);
+   }
+   50% {
+      transform: translateX(-150%) rotate(0deg);
+   }
+   100% {
+      transform: translateX(0%);
+      // transform: translateX(0%) rotate(-60deg);
+   }
+}
+.slider-tariffs {
+   padding: 200px;
+   margin: -200px;
+   &__wrapper {
+      padding: 200px;
+      margin: -200px;
+      @media (min-width: 1211px) {
+         // column-gap: 15px;
+      }
+   }
+
+   &__slide {
+      width: calc((100% - 30px) / 3);
+      @media (min-width: 1211px) {
+         margin-right: 15px;
+         // column-gap: 15px;
+      }
+      @media (max-width: 1209.98px) {
+         width: 383px;
+      }
+      @media (max-width: 575.98px) {
+         width: 282px;
+      }
+   }
+}
 
 .page-parachuting {
    .banner__title {
@@ -11085,7 +11151,99 @@
       }
    }
 }
+//insurance-baggage START========================================================================================================================================================
+.insurance-baggage {
+   .thank-you__policy-form .form-policy__secure {
+      @media (min-width: 992px) {
+         margin-top: unset;
+         margin-right: 30px;
+      }
+   }
+   .form-policy__row:not(:last-child) {
+      margin-bottom: 30px;
+   }
+   .thank-you__policy-form .input__block .check-block {
+      margin-top: unset;
+   }
+   .thank-you__policy-form .form-policy__btn-pay {
+      font-size: 22px;
+   }
+   .card-tariff__content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-height: 540px;
+      max-width: 383px;
+      padding: 25px 0px 50px 0px;
+   }
 
+   .card-tariff__descr {
+      font-size: 18px;
+      @media (max-width: 575.98px) {
+         font-size: 14px;
+      }
+   }
+
+   .banner__title {
+      color: $mainColor;
+      @media (max-width: 575.98px) {
+         margin-top: 60px;
+         margin-bottom: 50px;
+      }
+   }
+
+   .info-block {
+      &__text {
+         margin-bottom: 20px;
+         @media (max-width: 575.98px) {
+            margin-bottom: 10px;
+         }
+         &_last {
+            margin-bottom: 70px;
+            @media (max-width: 575.98px) {
+               margin-bottom: 40px;
+            }
+         }
+      }
+      &__title {
+         margin-bottom: 30px;
+         @media (max-width: 575.98px) {
+            margin-bottom: 20px;
+         }
+      }
+      &__img {
+         margin-bottom: 70px;
+         @media (max-width: 575.98px) {
+            margin-bottom: 40px;
+         }
+      }
+   }
+
+   .table {
+      margin-bottom: 20px;
+      @media (max-width: 575.98px) {
+         margin-bottom: 20px;
+      }
+      &__row {
+      }
+      &__row--head {
+         background: #c5cee0;
+      }
+      &__col {
+         @media (max-width: 575.98px) {
+            padding: 5px;
+         }
+         &:first-child {
+            background: #edf1f7;
+            width: 110%;
+         }
+      }
+   }
+   .table__col--center {
+      background: #c5cee0 !important;
+   }
+}
+//insurance-baggage  END ========================================================================================================================================================
 //PAGE PRICE START========================================================================================================================================================
 
 .page-price {
@@ -11540,6 +11698,10 @@
 .page-country-canada {
    .banner__title {
       color: #fff;
+   }
+
+   .policy-form {
+      margin-bottom: 90px;
    }
 }
 
