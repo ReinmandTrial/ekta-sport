@@ -123,6 +123,19 @@ $('#search-contry-input').keyup(function () {
 
    searchForItems(filter, ul, li, i, max);
 });
+
+if ($(window).width() < 992) {
+   $('.world-map__item').on('click', function () {
+
+      link = $(this).attr('href');
+      console.log(link);
+
+
+      $(this).closest('.world-map__nav').find('.world-map__btn-to-country').attr('href', link);
+
+      return false;
+   })
+}
 // Поиск по элементам конец
 
 // промокод
@@ -575,6 +588,20 @@ $('.card-tariff__item-head').on('click', function () {
    $(this).closest('.card-tariff__item').find('.card-tariff__item-icon').toggleClass('icon-minus-circle');
 })
 
+$('.card-tariff__pointer').on('click', function () {
+   $(this).closest('.card-tariff').find('.card-tariff__content').show();
+   $(this).closest('.banner__content').find('.card-tariff__hide').css('display', 'block');
+   $(this).closest('.card-tariff').find('.card-tariff__pointer').hide();
+   $(this).closest('.card-tariff').find('.card-tariff__short-info').hide();
+})
+$('.card-tariff__hide').on('click', function () {
+   $(this).closest('.banner__content').find('.card-tariff__content').hide();
+   $(this).closest('.banner__content').find('.card-tariff__pointer').show();
+   $(this).closest('.banner__content').find('.card-tariff__short-info').show();
+   $(this).closest('.banner__content').find('.card-tariff__hide').hide();
+
+})
+
 $(".countries-tabs__head-item").on('click', function () {
    // aleft('l')
    if (!$(this).hasClass("active")) {
@@ -869,3 +896,6 @@ $('.js-star-item').on('click', function () {
 $('.item-faq__btn-answer').on('click', function () {
    $(this).closest('.item-faq').addClass('active');
 })
+
+
+
