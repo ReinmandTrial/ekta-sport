@@ -192,18 +192,32 @@ $('.js-select--country .js-select-body--country .js-select-item--country').on('c
    $(this).closest('.input__block').addClass('--fill');
 });
 
-$('body').on('click', '.input__select-item-close', function () {
+$('.input__select-item-close').on('click', function () {
+   var count = 0;
+   $($('.input.input--filled').find('.input__select-item')).each(function () {
+      count++;
+   })
+   console.log(count);
+
+   if (count <= 1) {
+      block.find('.input').show();
+      block.find('.input.input--filled').css('display', 'none');
+      block.closest('.input__block').removeClass('--fill');
+   }
    $(this).closest('.input__select-item').remove();
+});
+$('body').on('click', '.input__select-item-close', function () {
 
    var count = 0;
    $($('.input.input--filled').find('.input__select-item')).each(function () {
       count++;
    })
-   if (count < 1) {
+   if (count <= 1) {
       block.find('.input').show();
       block.find('.input.input--filled').css('display', 'none');
       block.closest('.input__block').removeClass('--fill');
    }
+   $(this).closest('.input__select-item').remove();
 });
 
 $('input.input').on('click keyup', function () {

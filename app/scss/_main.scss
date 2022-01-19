@@ -449,8 +449,10 @@
       overflow-y: auto;
       z-index: 1000;
       margin-bottom: unset;
-      .policy-form__content {
-         padding-bottom: 50px;
+      background: #edf1f7 !important;
+      margin-top: unset !important;
+      .policy-form__content { 
+         padding : 50px 0;
       }
    }
    &__title {
@@ -3168,6 +3170,13 @@
       margin: 0;
       max-width: 425px;
       width: 100%;
+      &.--fill{
+         .input{
+            padding: 7px 21px;
+
+
+         }
+      }
       .input {
          padding: 8px 22px;
          background: rgba(255, 255, 255, 0.5);
@@ -11706,3 +11715,38 @@
 }
 
 //CANADA END========================================================================================================================================================
+
+.page-country-georgia{
+   .banner__title {
+      color: #fff;
+   }
+   .policy-form {
+      margin-bottom: 90px;
+   }
+   .gift{
+      margin-bottom: 70px;
+   }
+}
+.page-country-maldives{
+  .gift{
+      color: $mainColor !important;
+   }
+   .gift__btn-send{
+      background: $mainColor;
+      border: 1px solid $mainColor;
+   }
+    .gift .input{
+       color: $mainColor !important;
+      border: 1px solid $mainColor;
+
+       &::placeholder{
+          color: $gray !important;
+       }
+    }
+}
+
+.page-country-czech{
+   .banner__title {
+      color: #fff;
+   }
+}
