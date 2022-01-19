@@ -4,14 +4,14 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Главная</title>
-   <link rel="stylesheet" href="css/style.min.css">
+   <title></title>
+   <link rel="stylesheet" href="../css/style.min.css">
 </head>
 
 <body>
 
    <!-- WRAPPER start -->
-   <div class="wrapper page-country page-country-eng">
+   <div class="wrapper page-country page-country-israel">
 
 
 
@@ -29,7 +29,7 @@
                   <div class="container">
                      <div class="header__content">
                         <a href="#" class="header__logo">
-                           <img src="images/logo.png" alt="">
+                           <img src="../images/logo.png" alt="">
                         </a>
                         <div class="header__rightside">
                            <div class="header__call">
@@ -49,7 +49,7 @@
                            </div>
                            <div class="lang btn-popup-languages">
                               <div class="flag">
-                                 <img src="images/flag-ru.svg" alt="">
+                                 <img src="../images/flag-ru.svg" alt="">
                               </div>
                               <p class="lang__text">Русский</p>
                               <span class="icon icon-triangle-down"></span>
@@ -73,7 +73,7 @@
                         <span class="breadcrumbs__divide icon icon-triangle-right"></span>
                         <a href="#" class="breadcrumbs__link breadcrumbs__link--bold">Страны </a>
                         <span class="breadcrumbs__divide icon icon-triangle-right"></span>
-                        <a href="#" class="breadcrumbs__link ">Великобритания </a>
+                        <a href="#" class="breadcrumbs__link ">Израиль</a>
                      </div>
                   </div>
                </div>
@@ -81,7 +81,7 @@
 
                <div class="container">
                   <div class="banner__content">
-                     <p class="banner__title h3">Страховка для поездки в Великобританию</p>
+                     <p class="banner__title h3">Страховка для поездки в Израиль</p>
                      <div class="banner__slider slider-tariffs swiper-container">
                         <div class="slider-tariffs__wrapper swiper-wrapper">
                            <div class="slider-tariffs__slide swiper-slide card-tariff">
@@ -986,10 +986,10 @@
                   </div>
                </div>
                <div class="banner__bg">
-                  <img src="images/country-eng.png" alt="">
+                  <img src="../images/country/Israel/Israel-bg.jpg" alt="">
                </div>
                <div class="banner__bg--mobile">
-                  <img src="images/country-eng--mobile.png" alt="">
+                  <img src="../images/country/Israel/Israel-bg-mob.jpg" alt="">
                </div>
             </div>
             <!-- banner end -->
@@ -1031,49 +1031,358 @@
                                     </label>
                                     <p class="input__error">Укажите даты начала и окончания</p>
                                  </div>
-                                 <div class="input__block">
+                                 <div class="input__block --fill">
                                     <!-- ошибка верификации происходит при добавлении класса "error" к блоку выше -->
                                     <p class="input__title">Страна путешествия</p>
                                     <div class="input__select input__select--country js-select js-select--country">
                                        <div class="input__box js-select-head js-select-head--country">
-                                          <p class="input">Выберите страну</p>
-                                          <div class="input input--filled"></div>
+                                          <p class="input" style="display: none;">Выберите страну</p>
+                                          <div class="input input--filled" style="display: flex;">
+                                             <div class="input__select-item js-select-item--country">
+                                                <div class="flag">
+                                                   <img src="../images/flag-il.svg" alt="">
+                                                </div>
+                                                Israel
+                                                <button class="icon icon-close input__select-item-close"></button>
+                                             </div>
+                                          </div>
                                           <span class="icon icon-triangle-down"></span>
                                        </div>
-                                       <div class="input__select-body js-select-body--country">
+                                       <div class="input__select-body js-select-body--country js-scroll">
                                           <div class="input__select-item js-select-item--country">
                                              <div class="flag">
-                                                <img src="images/flag-au.svg" alt="">
+                                                <img src="../images/flag-au.svg" alt="">
                                              </div>
                                              Australia
                                              <button class="icon icon-close input__select-item-close"></button>
                                           </div>
                                           <div class="input__select-item js-select-item--country">
                                              <div class="flag">
-                                                <img src="images/flag-at.svg" alt="">
+                                                <img src="../images/flag-at.svg" alt="">
                                              </div>
                                              Austria
                                              <button class="icon icon-close input__select-item-close"></button>
                                           </div>
                                           <div class="input__select-item js-select-item--country">
                                              <div class="flag">
-                                                <img src="images/flag-by.svg" alt="">
+                                                <img src="../images/flag-by.svg" alt="">
                                              </div>
                                              Belarus
                                              <button class="icon icon-close input__select-item-close"></button>
                                           </div>
                                           <div class="input__select-item js-select-item--country">
                                              <div class="flag">
-                                                <img src="images/flag-be.svg" alt="">
+                                                <img src="../images/flag-be.svg" alt="">
                                              </div>
                                              Belgium
                                              <button class="icon icon-close input__select-item-close"></button>
                                           </div>
                                           <div class="input__select-item js-select-item--country">
                                              <div class="flag">
-                                                <img src="images/flag-bg.svg" alt="">
+                                                <img src="../images/flag-bg.svg" alt="">
                                              </div>
                                              Bulgaria
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-ca.svg" alt="">
+                                             </div>
+                                             Canada
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-cn.svg" alt="">
+                                             </div>
+                                             China
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-hr.svg" alt="">
+                                             </div>
+                                             Croatia
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-cz.svg" alt="">
+                                             </div>
+                                             Czech
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-eg.svg" alt="">
+                                             </div>
+                                             Egypt
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-fi.svg" alt="">
+                                             </div>
+                                             Finland
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-fr.svg" alt="">
+                                             </div>
+                                             France
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-ge.svg" alt="">
+                                             </div>
+                                             Georgia
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-de.svg" alt="">
+                                             </div>
+                                             Germany
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-gb.svg" alt="">
+                                             </div>
+                                             Great Breetain
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-gr.svg" alt="">
+                                             </div>
+                                             Greece
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-hu.svg" alt="">
+                                             </div>
+                                             Hungary
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-in.svg" alt="">
+                                             </div>
+                                             India
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-id.svg" alt="">
+                                             </div>
+                                             Indonesia
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-ir.svg" alt="">
+                                             </div>
+                                             Iran
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-ie.svg" alt="">
+                                             </div>
+                                             Ireland
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-il.svg" alt="">
+                                             </div>
+                                             Israel
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-it.svg" alt="">
+                                             </div>
+                                             Italy
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-jp.svg" alt="">
+                                             </div>
+                                             Japan
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-kz.svg" alt="">
+                                             </div>
+                                             Kazakhstan
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-lv.svg" alt="">
+                                             </div>
+                                             Latvia
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-lt.svg" alt="">
+                                             </div>
+                                             Lithuania
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-lu.svg" alt="">
+                                             </div>
+                                             Luxembourg
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-mv.svg" alt="">
+                                             </div>
+                                             Maldives
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-mx.svg" alt="">
+                                             </div>
+                                             Mexico
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-me.svg" alt="">
+                                             </div>
+                                             Montenegro
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-np.svg" alt="">
+                                             </div>
+                                             Nepal
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-ae.svg" alt="">
+                                             </div>
+                                             OAU
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-pt.svg" alt="">
+                                             </div>
+                                             Portugal
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-ro.svg" alt="">
+                                             </div>
+                                             Romania
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-ru.svg" alt="">
+                                             </div>
+                                             Russia
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-sg.svg" alt="">
+                                             </div>
+                                             Singapore
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-si.svg" alt="">
+                                             </div>
+                                             Slovenia
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-kr.svg" alt="">
+                                             </div>
+                                             South Korea
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-es.svg" alt="">
+                                             </div>
+                                             Spain
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-se.svg" alt="">
+                                             </div>
+                                             Sweden
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-ch.svg" alt="">
+                                             </div>
+                                             Switzerland
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-th.svg" alt="">
+                                             </div>
+                                             Thailand
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-tn.svg" alt="">
+                                             </div>
+                                             Tunisia
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-tr.svg" alt="">
+                                             </div>
+                                             Turkey
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-us.svg" alt="">
+                                             </div>
+                                             USA
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-ua.svg" alt="">
+                                             </div>
+                                             Ukraine
+                                             <button class="icon icon-close input__select-item-close"></button>
+                                          </div>
+                                          <div class="input__select-item js-select-item--country">
+                                             <div class="flag">
+                                                <img src="../images/flag-vn.svg" alt="">
+                                             </div>
+                                             Vietnam
                                              <button class="icon icon-close input__select-item-close"></button>
                                           </div>
                                        </div>
@@ -2020,7 +2329,7 @@
                                     <div class="form-card">
                                        <div class="form-card__front">
                                           <div class="form-card__bg-front">
-                                             <img src="images/card-mask.png" alt="">
+                                             <img src="../images/card-mask.png" alt="">
                                           </div>
                                           <div class="form-card__inputs">
                                              <div class="form-card__input-num input__block">
@@ -2053,16 +2362,16 @@
                                           </div>
                                           <div class="form-card__cards">
                                              <div class="form-card__mastercard">
-                                                <img src="images/mastercard-simple.png" alt="">
+                                                <img src="../images/mastercard-simple.png" alt="">
                                              </div>
                                              <div class="form-card__visa">
-                                                <img src="images/visa-simple.png" alt="">
+                                                <img src="../images/visa-simple.png" alt="">
                                              </div>
                                           </div>
                                        </div>
                                        <div class="form-card__back">
                                           <div class="form-card__bg-back">
-                                             <img src="images/card-mask-back.png" alt="">
+                                             <img src="../images/card-mask-back.png" alt="">
                                           </div>
                                           <div class=" form-card__input-pass input__block">
                                              <p class="input__title">Код</p>
@@ -2083,19 +2392,19 @@
                                  <div class="form-policy__toggle-item-body">
                                     <button class="form-policy__payment-btn">
                                        Оплатить через
-                                       <img src="images/gpay.png" alt="">
+                                       <img src="../images/gpay.png" alt="">
                                     </button>
                                     <div class="form-policy__secure--mobile">
-                                       <img src="images/secure.png" alt="">
+                                       <img src="../images/secure.png" alt="">
                                     </div>
                                  </div>
                                  <div class="form-policy__toggle-item-body">
                                     <button class="form-policy__payment-btn">
                                        Оплатить через
-                                       <img src="images/apay.png" alt="">
+                                       <img src="../images/apay.png" alt="">
                                     </button>
                                     <div class="form-policy__secure--mobile">
-                                       <img src="images/secure.png" alt="">
+                                       <img src="../images/secure.png" alt="">
                                     </div>
                                  </div>
                               </div>
@@ -2110,7 +2419,7 @@
                         <div class="form-policy__bottom-line">
                            <p class="form-policy__num-of-step">Шаг 2 из 3</p>
                            <div class="form-policy__secure">
-                              <img src="images/secure.png" alt="">
+                              <img src="../images/secure.png" alt="">
                            </div>
                         </div>
                      </div>
@@ -2127,42 +2436,42 @@
 
                         <a href="#" class="pages-types__item">
                            <div class="pages-types__item-bg">
-                              <img src="images/country-eng-type-img1.png" alt="">
+                              <img src="../images/country-eng-type-img1.png" alt="">
                            </div>
                            <p class="pages-types__item-descr">Германия</p>
                         </a>
                         <a href="#" class="pages-types__item">
                            <div class="pages-types__item-bg">
-                              <img src="images/country-eng-type-img2.png" alt="">
+                              <img src="../images/country-eng-type-img2.png" alt="">
                            </div>
                            <p class="pages-types__item-descr">Канада</p>
                         </a>
                         <a href="#" class="pages-types__item">
                            <div class="pages-types__item-bg">
-                              <img src="images/country-eng-type-img3.png" alt="">
+                              <img src="../images/country-eng-type-img3.png" alt="">
                            </div>
                            <p class="pages-types__item-descr">Франция</p>
                         </a>
                         <a href="#" class="pages-types__item">
                            <div class="pages-types__item-bg">
-                              <img src="images/country-eng-type-img4.png" alt="">
+                              <img src="../images/country-eng-type-img4.png" alt="">
                            </div>
                            <p class="pages-types__item-descr">ОАЭ</p>
                         </a>
                         <a href="#" class="pages-types__item">
                            <div class="pages-types__item-bg">
-                              <img src="images/countries-visa-type1.png" alt="">
+                              <img src="../images/country-eng-type-img8.png" alt="">
                            </div>
-                           <p class="pages-types__item-descr">Шенген</p>
+                           <p class="pages-types__item-descr">США</p>
                         </a>
                         <a href="#" class="pages-types__item">
                            <div class="pages-types__item-bg">
-                              <img src="images/country-eng-type-img6.png" alt="">
+                              <img src="../images/country-eng-type-img6.png" alt="">
                            </div>
                            <p class="pages-types__item-descr">Грузия</p>
                         </a>
                      </div>
-                     <button type="button" class="pages-types__btn-more btn btn-gray">Смотреть все</button>
+                     <button type="button" class="pages-types__btn-more btn btn-gray">Смотреть все страны</button>
                   </div>
                </div>
             </div>
@@ -2171,116 +2480,78 @@
                <div class="container">
                   <div class="page-country__descr-content post">
                      <div class="post__block">
-                        <p class="post__text">Если в ваших планах путешествие в Лондон, вам понадобится страховка в
-                           Великобританию, покрывающая все основные риски. Компания EKTA TRAVELING предлагает несколько
-                           интересных и выгодных продуктов в данной сфере. На нашем сайте у вас есть удобная возможность
-                           оформить полис онлайн. В этом случае все форс-мажорные обстоятельства, внесённые в документ,
-                           страхующий ваше путешествие, будут оплачены по условиям договора. </p>
-                        <p class="post__text">Доступные цены предлагаемых пакетов, множество положительных отзывов,
-                           простая схема получения — вот лишь несколько причин, почему люди, планируя выезд на отдых за
-                           рубеж, выбирают именно нашу страховую компанию.</p>
+                        <p class="post__text"> Если в течение 2021-2022 вы планируете выезд и вам нужна страховка в
+                           Израиль, оформить полис вам помогут специалисты компании EKTA TRAVELING. Услуги страхования
+                           туристов предоставляются в режиме онлайн.
+                           Когда вам понадобится туристическая страховка за рубеж с покрытием всех наиболее вероятных
+                           расходов, достаточно будет выбрать один из пакетов, представленных на сайте нашей СК. </p>
+                        <p class="post__text">Простой и удобный сервис позволяет оформить страховку в Израиль буквально
+                           за несколько минут, прямо на экране вашего компьютера или гаджета. Предоставив необходимые
+                           документы, вы получите полис в виде скачиваемого файла. Далее, если необходимо, мед страховка
+                           в Израиль может быть распечатана на бумаге. </p>
                      </div>
                      <div class="post__block">
-                        <p class="post__title h4">Основной полис для туристических и иных поездок</p>
-                        <p class="post__text">Хорошая страховка в Великобританию учитывает не только основные
-                           вероятности, но и те риски, которые характерны для конкретного региона, а также особенности
-                           вашей деятельности. Так спортсмены и любители экстрима (включая походы в горы), вносят в свой
-                           полис страхования дополнительные пункты. Однако получить травму или стать жертвой несчастного
-                           случая можно не только в процессе активного отдыха, но и на обычной экскурсии. Не исключены
-                           также ДТП.</p>
-                        <p class="post__text">Далеко не всегда базовый полис страхования может покрыть все расходы. Что
-                           может быть внесено в расширенный пакет?</p>
-                        <ul class="post__list">
-                           <li class="post__list-item">доставка к месту лечения; </li>
-                           <li class="post__list-item">поисковые операции; </li>
-                           <li class="post__list-item">дополнительные стоматологические услуги; </li>
-                           <li class="post__list-item">помощь и консультация беременным; </li>
-                           <li class="post__list-item">репатриация. </li>
-                        </ul>
-                        <p class="post__text">С полным списком покрытия для Великобритании можно ознакомиться в описании
-                           к каждому из предлагаемых пакетов. .</p>
-                     </div>
-                     <div class="post__block">
-                        <p class="post__title h4">Страхование здоровья и жизни путешественника с покрытием по ковид в
-                           Великобритании</p>
-                        <p class="post__text">Особое внимание нужно уделить рискам, которые связаны с общим состоянием
-                           здоровья, хроническим заболеваниям, аллергиям. Не забываем о сезонных инфекциях. Когда
-                           оформляется страховка для визы в Великобританию, всё это следует внести в полис.</p>
-                        <p class="post__text">Путешественник, планирующий поездку за границу в 2021-2022 годах, должен
-                           обязательно застраховаться от коронавируса Covid-19. Поэтому медицинская страховка для
-                           поездки в Великобританию должна включать все основные затраты:</p>
-                        <ul class="post__list">
-                           <li class="post__list-item">диагностика инфекции; </li>
-                           <li class="post__list-item">обращение за медицинской помощью; </li>
-                           <li class="post__list-item">получение рецепта и покупка медикаментов; </li>
-                           <li class="post__list-item">содержание в стационаре, если потребуется. </li>
-                        </ul>
-                        <div class="post__highlight post__highlight--be-noted">
+                        <p class="post__title h4">Что входит в полис медицинской страховки</p>
+                        <p class="post__text">Перед выездом за границу путешественник должен застраховаться от основных
+                           рисков, связанных со здоровьем. Базовая медицинская страховка в Израиль обязательно должна
+                           включать покрытие по Covid-19. Здесь стоит уточнить, что страховка для поездки в Израиль
+                           должна покрывать не только лечение ковид, но и пребывание в стационаре, если это потребуется.
+                        </p>
+                        <div class="post__highlight post__highlight--attention">
                            <p class="post__highlight-title">Важно!</p>
-                           <p class="post__highlight-text">Для жителей большинства стран в Великобритании действует
-                              десятидневный карантин после въезда. Также к мерам по противодействию распространению
-                              ковида относится обязательный тест ПЦР. Чтобы избежать карантинизации, необходимо пройти
-                              полный курс вакцинации одной из вакцин, признанных в этой стране. </p>
+                           <p class="post__highlight-text"> Въезд не ограничен для привитых гостей, которые
+                              вакцинировались как минимум за 14 дней до поездки и не пребывали
+                              в странах “красной” зоны.</p>
                         </div>
-                        <p class="post__text">Страхование здоровья позволяет избежать значительных затрат на медицинское
-                           обслуживание. Ведь в Англии эти услуги стоят дороже, чем во многих странах мира.</p>
-                        <p class="post__text">Вот некоторые цены на медобслуживание в клиниках Великобритании:</p>
+                        <p class="post__text">Перед выездом за границу путешественник должен застраховаться от основных
+                           рисков, связанных со здоровьем. Базовая медицинская страховка в Израиль обязательно должна
+                           включать покрытие по Covid-19. Здесь стоит уточнить, что страховка для поездки в Израиль
+                           должна покрывать не только лечение ковид, но и пребывание в стационаре, если это потребуется.
+                        </p>
+                        <p class="post__text"> Помимо этого мед страховка для въезда в Израиль должна покрывать
+                           несчастные случаи. В некоторых ситуациях человека требуется отвезти в клинику или даже
+                           отправить на родину. В цену входит диагностика, лечение, вызов врача, консультация
+                           по телефону, получение рецепта и приобретение медикаментов, оказание неотложной
+                           стоматологической помощи.</p>
                         <div class="post__table table table table--price">
                            <div class="table__row table__row--head">
-                              <p class="table__col table__col--center">Услуга</p>
-                              <p class="table__col ">Стоимость в фунтах по состоянию на 2021 год
-                                 (может меняться, варьируется в зависимости от уровня клиники)</p>
+                              <p class="table__col table__col--center">Услуги</p>
+                              <p class="table__col  table__col--center">Расценки в долларах США</p>
                            </div>
                            <div class="table__row">
-                              <p class="table__col">Консультация гинеколога+осмотр </p>
-                              <p class="table__col">130 </p>
+                              <p class="table__col">КТ, МРТ </p>
+                              <p class="table__col">800 - 1000</p>
                            </div>
                            <div class="table__row">
-                              <p class="table__col"> Консультация врача-аллерголога</p>
-                              <p class="table__col">100 (без учёта рецептов и препаратов) </p>
+                              <p class="table__col">Вызов врача на дом </p>
+                              <p class="table__col">20 - 30</p>
                            </div>
                            <div class="table__row">
-                              <p class="table__col">Консультация терапевта и УЗИ брюшной полости </p>
-                              <p class="table__col">190 </p>
-                           </div>
-                           <div class="table__row">
-                              <p class="table__col">Помощь врача-травматолога </p>
-                              <p class="table__col">от 100 </p>
-                           </div>
-                           <div class="table__row">
-                              <p class="table__col">Кардиолог (консультация, УЗИ и ЭКГ) </p>
-                              <p class="table__col">230 </p>
-                           </div>
-                           <div class="table__row">
-                              <p class="table__col">Общий анализ крови и биохимия </p>
-                              <p class="table__col"> 100</p>
+                              <p class="table__col">Лечение корневого канала зуба (1 зуб)</p>
+                              <p class="table__col">300 + анестезия</p>
                            </div>
                         </div>
-                        <p class="post__text">И это лишь базовые вещи — рекомендации, диагностическое обследование и
-                           т.д. Если вам понадобится лечь в больницу с оплатой пребывания в палате или приобрести
-                           медикаменты, стоимость получится ощутимо выше. </p>
-                        <p class="post__text">По статистике чаще всего за помощью врачей во время поездки обращаются
-                           пассажиры с детьми. Травмы, проблемы
-                           с пищеварением, отравления и респираторные — лишь небольшой список того, с чем можно
-                           столкнуться, если едете с детьми. </p>
                      </div>
+
+
+
                   </div>
                </div>
             </div>
 
             <div class="gift">
                <div class="gift__bg">
-                  <img src="images/gift-rules.png" alt="">
+                  <img src="../images/country/Israel/Israel-img.jpg" alt="">
                </div>
                <div class="gift__bg--mobile">
-                  <img src="images/gift-rules--mobile.png" alt="">
+                  <img src="../images/country/Israel/Israel-img-mob.jpg" alt="">
                </div>
                <div class="container">
                   <div class="gift__content">
-                     <p class="gift__title h4">Узнать правила въезда в Великобританию</p>
+                     <p class="gift__title h4">Узнать правила въезда в Израиль</p>
                      <span class="gift__divide"></span>
-                     <p class="gift__descr">Для того чтобы узнать правила въезда в Великобританию введите ваш email и
-                        нажмите кнопку, получить на почту</p>
+                     <p class="gift__descr">Для того чтобы узнать правила въезда в Израиль введите ваш email и нажмите
+                        кнопку, получить на почту</p>
                      <form class="gift__form">
                         <div class="gift__input input__block">
                            <p class="input__title">Ваш email</p>
@@ -2300,33 +2571,55 @@
                <div class="container">
                   <div class="page-country__descr-content post">
                      <div class="post__block">
-                        <div class="post__block">
-                           <p class="post__title h4"> Невылет, невыезд в Великобританию</p>
-                           <p class="post__text">Помимо рисков для здоровья, страховка для поездки в Великобританию
-                              может включать покрытие ущерба, связанного с отменой или переносом рейсов. Вернуть деньги
-                              за билеты, оплаченную аренду жилья, техники или иные расходы, поможет специальный полис.
-                              Более того — страхуется невыезд и сдача билетов по самым разным причинам. К примеру, у вас
-                              заболел родственник или нужно ехать на похороны бабушки. </p>
+                        <p class="post__title h4">Дополнительные риски для здоровья или жизни</p>
+                        <p class="post__text"> К дополнительным категориям, страхуемым опционально, относятся случаи,
+                           связанные с активным отдыхом, экстремальными развлечениями и спортом. Если вы планируете
+                           отдых на море, с погружением на глубину, ваша медицинская страховка для поездки в Израиль
+                           должна оформляться с дополнительными пунктами. Аналогично при катании на яхте, водном
+                           мотоцикле и т.д.</p>
+                        <div class="post__highlight post__highlight--attention">
+                           <p class="post__highlight-title">Важно!</p>
+                           <p class="post__highlight-text">Учитывая напряженную обстановку в стране, рекомендовано
+                              включить опасность терроризма в полис.В особенности это касается сектора Газа и
+                              прилегающих территорий. </p>
                         </div>
+
                      </div>
                      <div class="post__block">
-                        <div class="post__block">
-                           <p class="post__title h4"> Гражданская ответственность для поездки в Великобританию</p>
-                           <p class="post__text">Если вы арендуете автомобиль, иную технику, то страховка в Британию
-                              должна включать покрытие ответственности
-                              за повреждение этого имущества, а также ущерба, нанесённого третьим лицам. К примеру, если
-                              вы столкнётесь с другим авто или что-то повредите по дороге, платить будете не из своего
-                              кармана. Сюда можно включить взятое в прокате снаряжение и многое другое. </p>
-                        </div>
+                        <p class="post__title h4">Покрытие потери багажа</p>
+                        <p class="post__text"> Ещё цена страховки в Израиль может включать возмещение материального
+                           ущерба в случае, если ваши вещи потеряют или повредят в аэропорту, на вокзале. Такие случаи —
+                           редкость, но исключать их не стоит. </p>
                      </div>
                      <div class="post__block">
-                        <div class="post__block">
-                           <p class="post__title h4"> Проблемы с багажом в аэропортах Великобритании</p>
-                           <p class="post__text"> Представьте себе ситуацию: вы прибыли в аэропорт Хитроу, ждёте, когда
-                              вам отдадут чемоданы и сумки, но ничего не происходит. Вы обращаетесь к сотрудникам, и
-                              выясняете, что они не могут найти ваш багаж. Однако, если ваша страховка в Лондон
-                              покрывала подобные риски, неприятностей будет намного меньше. Страховать можно потерю,
-                              кражу, повреждение или уничтожение вещей по причинам, которые от вас не зависели.</p>
+                        <p class="post__title h4">Гражданская ответственность</p>
+                        <p class="post__text"> Если вы собираетесь арендовать авто или другую технику, рекомендуется
+                           купить страховку в Израиль, которая бы покрывала вашу ответственность за её повреждение или
+                           уничтожение. Также страхование может включать возмещение ущерба третьим лицам.</p>
+                        <p class="post__text"> Ваша туристическая медицинская страховка для выезда в Израиль обойдётся
+                           недорого, если оформлять её в компании EKTA. Тарифы полностью прозрачны. Вы не оплачиваете те
+                           услуги, которые вам не требуются и пункты покрытия, не актуальные для конкретной поездки. В
+                           сети легко найти отзывы о нашей работе. </p>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+
+
+            <div class="info__author">
+               <div class="container">
+                  <div class="info__author-content">
+                     <p class="info__author-title h4">Об авторе</p>
+                     <div class="info__author-person">
+                        <div class="info__author-photo">
+                           <img src="../images/author-photo1.png" alt="">
+                        </div>
+                        <div class="info__author-block">
+                           <a href="#" class="info__author-name">Денис Головко</a>
+                           <p class="info__author-function">Руководитель департамента туризма и авиации </p>
+                           <p class="info__author-descr">Денис Головко, является руководителем департамента туризма и
+                              авиации в страховой компании EKTA TRAVELING.</p>
                         </div>
                      </div>
                   </div>
@@ -2341,11 +2634,11 @@
                         <div class="slider-most-interesting__wrapper swiper-wrapper">
                            <a href="#" class="slider-most-interesting__slide swiper-slide card-article">
                               <div class="card-article__img">
-                                 <img src="images/card-article-img1.png" alt="">
+                                 <img src="../images/card-article-img1.png" alt="">
                               </div>
                               <div class="card-article__info">
                                  <div class="card-article__info-photo">
-                                    <img src="images/card-article-photo1.png" alt="">
+                                    <img src="../images/card-article-photo1.png" alt="">
                                  </div>
                                  <div class="card-article__info-container">
                                     <div class="card-article__info-block">
@@ -2377,11 +2670,11 @@
                            </a>
                            <a href="#" class="slider-most-interesting__slide swiper-slide card-article">
                               <div class="card-article__img">
-                                 <img src="images/card-article-img2.png" alt="">
+                                 <img src="../images/card-article-img2.png" alt="">
                               </div>
                               <div class="card-article__info">
                                  <div class="card-article__info-photo">
-                                    <img src="images/card-article-photo2.png" alt="">
+                                    <img src="../images/card-article-photo2.png" alt="">
                                  </div>
                                  <div class="card-article__info-container">
                                     <div class="card-article__info-block">
@@ -2413,11 +2706,11 @@
                            </a>
                            <a href="#" class="slider-most-interesting__slide swiper-slide card-article">
                               <div class="card-article__img">
-                                 <img src="images/card-article-img3.png" alt="">
+                                 <img src="../images/card-article-img3.png" alt="">
                               </div>
                               <div class="card-article__info">
                                  <div class="card-article__info-photo">
-                                    <img src="images/card-article-photo3.png" alt="">
+                                    <img src="../images/card-article-photo3.png" alt="">
                                  </div>
                                  <div class="card-article__info-container">
                                     <div class="card-article__info-block">
@@ -2467,7 +2760,7 @@
                            <button type="button" class="write-review__btn-send btn btn-gray">Оставить отзыв</button>
                         </form>
                         <div class="write-review__img">
-                           <img src="images/phone-inst.png" alt="">
+                           <img src="../images/phone-inst.png" alt="">
                         </div>
                      </div>
                      <div class="write-review__left slider-reviews swiper-container">
@@ -2475,25 +2768,25 @@
                            <div class="slider-reviews__slide swiper-slide card-review">
                               <div class="card-review__person">
                                  <div class="card-review__photo">
-                                    <img src="images/card-review-img1.png" alt="">
+                                    <img src="../images/card-review-img1.png" alt="">
                                  </div>
                                  <div class="card-review__person-content">
                                     <p class="card-review__name">Ярина Ковальчук</p>
                                     <div class="card-review__stars">
                                        <div class="card-review__stars-item">
-                                          <img src="images/star.svg" alt="">
+                                          <img src="../images/star.svg" alt="">
                                        </div>
                                        <div class="card-review__stars-item">
-                                          <img src="images/star.svg" alt="">
+                                          <img src="../images/star.svg" alt="">
                                        </div>
                                        <div class="card-review__stars-item">
-                                          <img src="images/star.svg" alt="">
+                                          <img src="../images/star.svg" alt="">
                                        </div>
                                        <div class="card-review__stars-item">
-                                          <img src="images/star.svg" alt="">
+                                          <img src="../images/star.svg" alt="">
                                        </div>
                                        <div class="card-review__stars-item">
-                                          <img src="images/star.svg" alt="">
+                                          <img src="../images/star.svg" alt="">
                                        </div>
                                     </div>
                                     <p class="card-review__from">Отзыв с Trustpilot</p>
@@ -2508,25 +2801,25 @@
                            <div class="slider-reviews__slide swiper-slide card-review">
                               <div class="card-review__person">
                                  <div class="card-review__photo">
-                                    <img src="images/card-review-img2.png" alt="">
+                                    <img src="../images/card-review-img2.png" alt="">
                                  </div>
                                  <div class="card-review__person-content">
                                     <p class="card-review__name">Антон буйков</p>
                                     <div class="card-review__stars">
                                        <div class="card-review__stars-item">
-                                          <img src="images/star.svg" alt="">
+                                          <img src="../images/star.svg" alt="">
                                        </div>
                                        <div class="card-review__stars-item">
-                                          <img src="images/star.svg" alt="">
+                                          <img src="../images/star.svg" alt="">
                                        </div>
                                        <div class="card-review__stars-item">
-                                          <img src="images/star.svg" alt="">
+                                          <img src="../images/star.svg" alt="">
                                        </div>
                                        <div class="card-review__stars-item">
-                                          <img src="images/star.svg" alt="">
+                                          <img src="../images/star.svg" alt="">
                                        </div>
                                        <div class="card-review__stars-item">
-                                          <img src="images/star.svg" alt="">
+                                          <img src="../images/star.svg" alt="">
                                        </div>
                                     </div>
                                     <p class="card-review__from">Отзыв с Trustpilot</p>
@@ -2540,25 +2833,25 @@
                            <div class="slider-reviews__slide swiper-slide card-review">
                               <div class="card-review__person">
                                  <div class="card-review__photo">
-                                    <img src="images/card-review-img3.png" alt="">
+                                    <img src="../images/card-review-img3.png" alt="">
                                  </div>
                                  <div class="card-review__person-content">
                                     <p class="card-review__name">Алина Михайлова</p>
                                     <div class="card-review__stars">
                                        <div class="card-review__stars-item">
-                                          <img src="images/star.svg" alt="">
+                                          <img src="../images/star.svg" alt="">
                                        </div>
                                        <div class="card-review__stars-item">
-                                          <img src="images/star.svg" alt="">
+                                          <img src="../images/star.svg" alt="">
                                        </div>
                                        <div class="card-review__stars-item">
-                                          <img src="images/star.svg" alt="">
+                                          <img src="../images/star.svg" alt="">
                                        </div>
                                        <div class="card-review__stars-item">
-                                          <img src="images/star.svg" alt="">
+                                          <img src="../images/star.svg" alt="">
                                        </div>
                                        <div class="card-review__stars-item">
-                                          <img src="images/star.svg" alt="">
+                                          <img src="../images/star.svg" alt="">
                                        </div>
                                     </div>
                                     <p class="card-review__from">Отзыв с Trustpilot</p>
@@ -2581,39 +2874,54 @@
 
             <div class="questions">
                <div class="questions__bg">
-                  <img src="images/questions-bg.png" alt="">
+                  <img src="../images/questions-bg.png" alt="">
                </div>
                <div class="container">
                   <div class="questions__content">
-                     <p class="questions__title h4">Ответы на вопросы</p>
+                     <p class="questions__title h4">Вопросы, касающиеся оформления:</p>
                      <div class="questions__body">
                         <div class="questions__item accodion">
                            <div class="accodion__head">
-                              <p class="accodion__title">Нужна ли страховка в Великобританию?</p>
+                              <p class="accodion__title">Нужна ли страховка для Израиля?</p>
                               <span class="accodion__icon icon icon-plus"></span>
                            </div>
                            <div class="accodion__body">
-                              <p class="accodion__text">Это обязательное требование для всех приезжающих.</p>
+                              <p class="accodion__text">Купить страховку для путешествия в Израиль нужно любому, кто
+                                 въезжает на территорию этой страны. </p>
                            </div>
                         </div>
                         <div class="questions__item accodion">
                            <div class="accodion__head">
-                              <p class="accodion__title">Есть ли страховка от неполучения визы в Великобританию?</p>
+                              <p class="accodion__title">Правила въезда в Израиль.</p>
                               <span class="accodion__icon icon icon-plus"></span>
                            </div>
                            <div class="accodion__body">
-                              <p class="accodion__text">Да, вы можете застраховать отмену поездки из-за невыдачи
-                                 разрешения на въезд. </p>
+                              <p class="accodion__text">Нужно за 24 часа до прибытия заполнить декларацию въезжающего.
+                                 Также потребуется ПЦР-тест на коронавирус, сделанный не позже, чем за 72 часа до
+                                 вылета. Повторное тестирование проводится в аэропорту. Правило действует для всех,
+                                 включая вакцинированных и переболевших. </p>
                            </div>
                         </div>
                         <div class="questions__item accodion">
                            <div class="accodion__head">
-                              <p class="accodion__title">Нужна ли страховка животным в Великобританию?</p>
+                              <p class="accodion__title">Сколько стоит страховка в Израиль?</p>
                               <span class="accodion__icon icon icon-plus"></span>
                            </div>
                            <div class="accodion__body">
-                              <p class="accodion__text">Да, паспорт, страховка, данные о прививках и актуальная справка
-                                 о состоянии здоровья являются обязательным набором документов.</p>
+                              <p class="accodion__text">Если планируете сделать страховку в Израиль, точная стоимость
+                                 зависит от лимита, количества пунктов покрытия и других факторов. </p>
+                           </div>
+                        </div>
+                        <div class="questions__item accodion">
+                           <div class="accodion__head">
+                              <p class="accodion__title">Нужна ли виза в Израиль?</p>
+                              <span class="accodion__icon icon icon-plus"></span>
+                           </div>
+                           <div class="accodion__body">
+                              <p class="accodion__text">Зависит от гражданства гостя. Граждане некоторых стран могут до
+                                 90 дней пребывать на израильской территории без визы. Внимательно изучите информацию о
+                                 визовом режиме для вашей страны. Так для туристов может оформляться гостевая виза
+                                 сроком до 3 месяцев. </p>
                            </div>
                         </div>
                      </div>
@@ -2801,14 +3109,14 @@
 
    <div class="burger">
       <div class="burger__bg">
-         <img src="images/map.png" alt="">
+         <img src="../images/map.png" alt="">
       </div>
       <div class="container">
          <div class="burger__content">
             <div class="burger__head js-search-panel-block">
                <div class="burger__lang lang btn-popup-languages">
                   <div class="flag">
-                     <img src="images/flag-ru.svg" alt="">
+                     <img src="../images/flag-ru.svg" alt="">
                   </div>
                   <p class="lang__text">Русский</p>
                   <span class="icon icon-triangle-down"></span>
@@ -2843,25 +3151,25 @@
                <div class="menu__section menu__messengers">
                   <a href="#" class="menu__messengers-item">
                      <div class="menu__messengers-img">
-                        <img src="images/messenger.svg" alt="">
+                        <img src="../images/messenger.svg" alt="">
                      </div>
                      <p class="menu__messengers-text">Messenger</p>
                   </a>
                   <a href="#" class="menu__messengers-item">
                      <div class="menu__messengers-img">
-                        <img src="images/whatsapp.svg" alt="">
+                        <img src="../images/whatsapp.svg" alt="">
                      </div>
                      <p class="menu__messengers-text">Whatsapp</p>
                   </a>
                   <a href="#" class="menu__messengers-item">
                      <div class="menu__messengers-img">
-                        <img src="images/telegram.svg" alt="">
+                        <img src="../images/telegram.svg" alt="">
                      </div>
                      <p class="menu__messengers-text">Telegram</p>
                   </a>
                   <a href="#" class="menu__messengers-item">
                      <div class="menu__messengers-img">
-                        <img src="images/viber.svg" alt="">
+                        <img src="../images/viber.svg" alt="">
                      </div>
                      <p class="menu__messengers-text">Viber</p>
                   </a>
@@ -2872,25 +3180,25 @@
                   <div class="menu__socials-items">
                      <a href="#" class="menu__socials-item">
                         <div class="menu__socials-img">
-                           <img src="images/inst.svg" alt="">
+                           <img src="../images/inst.svg" alt="">
                         </div>
                         <p class="menu__socials-text">Instagram</p>
                      </a>
                      <a href="#" class="menu__socials-item">
                         <div class="menu__socials-img">
-                           <img src="images/twitter.svg" alt="">
+                           <img src="../images/twitter.svg" alt="">
                         </div>
                         <p class="menu__socials-text">Twitter</p>
                      </a>
                      <a href="#" class="menu__socials-item">
                         <div class="menu__socials-img">
-                           <img src="images/linkedin.svg" alt="">
+                           <img src="../images/linkedin.svg" alt="">
                         </div>
                         <p class="menu__socials-text">Linkedin</p>
                      </a>
                      <a href="#" class="menu__socials-item">
                         <div class="menu__socials-img">
-                           <img src="images/facebook.svg" alt="">
+                           <img src="../images/facebook.svg" alt="">
                         </div>
                         <p class="menu__socials-text">Facebook</p>
                      </a>
@@ -2973,22 +3281,22 @@
 
                <div class="menu__support">
                   <div class="menu__support-item item menu__support-item-border item menu__support-item-gpay">
-                     <img src="images/gpay.png" alt="">
+                     <img src="../images/gpay.png" alt="">
                   </div>
                   <div class="menu__support-item item menu__support-item-border item menu__support-item-apay">
-                     <img src="images/apay.png" alt="">
+                     <img src="../images/apay.png" alt="">
                   </div>
                   <div class="menu__support-item item menu__support-item-border item menu__support-item-mastercard">
-                     <img src="images/mastercard.png" alt="">
+                     <img src="../images/mastercard.png" alt="">
                   </div>
                   <div class="menu__support-item item menu__support-item-border">
-                     <img src="images/visa.png" alt="">
+                     <img src="../images/visa.png" alt="">
                   </div>
                   <div class="menu__support-item item">
-                     <img src="images/ssl.png" alt="">
+                     <img src="../images/ssl.png" alt="">
                   </div>
                   <div class="menu__support-item item">
-                     <img src="images/norton.png" alt="">
+                     <img src="../images/norton.png" alt="">
                   </div>
                </div>
             </div>
@@ -3012,289 +3320,289 @@
             <div id="search-lang-results" class="languages__leftside-wrapper js-search-for-items-results">
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-au.svg" alt="">
+                     <img src="../images/flag-au.svg" alt="">
                   </div>
                   <p class="languages__country-name">Австралия</p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-at.svg" alt="">
+                     <img src="../images/flag-at.svg" alt="">
                   </div>
                   <p class="languages__country-name">Австрия </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-by.svg" alt="">
+                     <img src="../images/flag-by.svg" alt="">
                   </div>
                   <p class="languages__country-name">Беларусь</p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-be.svg" alt="">
+                     <img src="../images/flag-be.svg" alt="">
                   </div>
                   <p class="languages__country-name">Бельгия </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-bg.svg" alt="">
+                     <img src="../images/flag-bg.svg" alt="">
                   </div>
                   <p class="languages__country-name">Болгария </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-gb.svg" alt="">
+                     <img src="../images/flag-gb.svg" alt="">
                   </div>
                   <p class="languages__country-name">Великобритания</p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-hu.svg" alt="">
+                     <img src="../images/flag-hu.svg" alt="">
                   </div>
                   <p class="languages__country-name">Венгрия </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-vn.svg" alt="">
+                     <img src="../images/flag-vn.svg" alt="">
                   </div>
                   <p class="languages__country-name">Вьетнам </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-gr.svg" alt="">
+                     <img src="../images/flag-gr.svg" alt="">
                   </div>
                   <p class="languages__country-name">Греция</p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-ge.svg" alt="">
+                     <img src="../images/flag-ge.svg" alt="">
                   </div>
                   <p class="languages__country-name">Грузия</p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-de.svg" alt="">
+                     <img src="../images/flag-de.svg" alt="">
                   </div>
                   <p class="languages__country-name">Германия</p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-eg.svg" alt="">
+                     <img src="../images/flag-eg.svg" alt="">
                   </div>
                   <p class="languages__country-name">Египет</p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-kz.svg" alt="">
+                     <img src="../images/flag-kz.svg" alt="">
                   </div>
                   <p class="languages__country-name">Казахстан</p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-ca.svg" alt="">
+                     <img src="../images/flag-ca.svg" alt="">
                   </div>
                   <p class="languages__country-name">Канада </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-cn.svg" alt="">
+                     <img src="../images/flag-cn.svg" alt="">
                   </div>
                   <p class="languages__country-name">Китай</p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-lv.svg" alt="">
+                     <img src="../images/flag-lv.svg" alt="">
                   </div>
                   <p class="languages__country-name">Латвия </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-lt.svg" alt="">
+                     <img src="../images/flag-lt.svg" alt="">
                   </div>
                   <p class="languages__country-name">Литва </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-il.svg" alt="">
+                     <img src="../images/flag-il.svg" alt="">
                   </div>
                   <p class="languages__country-name">Израиль </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-in.svg" alt="">
+                     <img src="../images/flag-in.svg" alt="">
                   </div>
                   <p class="languages__country-name">Индия</p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-id.svg" alt="">
+                     <img src="../images/flag-id.svg" alt="">
                   </div>
                   <p class="languages__country-name">Индонезия </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-ir.svg" alt="">
+                     <img src="../images/flag-ir.svg" alt="">
                   </div>
                   <p class="languages__country-name">Иран </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-ie.svg" alt="">
+                     <img src="../images/flag-ie.svg" alt="">
                   </div>
                   <p class="languages__country-name">Ирландия </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-it.svg" alt="">
+                     <img src="../images/flag-it.svg" alt="">
                   </div>
                   <p class="languages__country-name">Италия </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-es.svg" alt="">
+                     <img src="../images/flag-es.svg" alt="">
                   </div>
                   <p class="languages__country-name">Испания </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-lu.svg" alt="">
+                     <img src="../images/flag-lu.svg" alt="">
                   </div>
                   <p class="languages__country-name">Люксембург </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-lv.svg" alt="">
+                     <img src="../images/flag-lv.svg" alt="">
                   </div>
                   <p class="languages__country-name">Мальдивы</p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-mx.svg" alt="">
+                     <img src="../images/flag-mx.svg" alt="">
                   </div>
                   <p class="languages__country-name">Мексика </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-np.svg" alt="">
+                     <img src="../images/flag-np.svg" alt="">
                   </div>
                   <p class="languages__country-name">Непал</p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-ae.svg" alt="">
+                     <img src="../images/flag-ae.svg" alt="">
                   </div>
                   <p class="languages__country-name">ОАЕ</p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-pt.svg" alt="">
+                     <img src="../images/flag-pt.svg" alt="">
                   </div>
                   <p class="languages__country-name">Португалия </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-ru.svg" alt="">
+                     <img src="../images/flag-ru.svg" alt="">
                   </div>
                   <p class="languages__country-name">Россия</p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-ro.svg" alt="">
+                     <img src="../images/flag-ro.svg" alt="">
                   </div>
                   <p class="languages__country-name">Румыния </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-sg.svg" alt="">
+                     <img src="../images/flag-sg.svg" alt="">
                   </div>
                   <p class="languages__country-name">Сингапур </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-si.svg" alt="">
+                     <img src="../images/flag-si.svg" alt="">
                   </div>
                   <p class="languages__country-name">Словения </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-us.svg" alt="">
+                     <img src="../images/flag-us.svg" alt="">
                   </div>
                   <p class="languages__country-name">США </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-th.svg" alt="">
+                     <img src="../images/flag-th.svg" alt="">
                   </div>
                   <p class="languages__country-name">Таиланд </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-tn.svg" alt="">
+                     <img src="../images/flag-tn.svg" alt="">
                   </div>
                   <p class="languages__country-name">Тунис </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-tr.svg" alt="">
+                     <img src="../images/flag-tr.svg" alt="">
                   </div>
                   <p class="languages__country-name">Турция </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-ua.svg" alt="">
+                     <img src="../images/flag-ua.svg" alt="">
                   </div>
                   <p class="languages__country-name">Украина </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-fi.svg" alt="">
+                     <img src="../images/flag-fi.svg" alt="">
                   </div>
                   <p class="languages__country-name">Финляндия </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-fr.svg" alt="">
+                     <img src="../images/flag-fr.svg" alt="">
                   </div>
                   <p class="languages__country-name">Франция </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-hr.svg" alt="">
+                     <img src="../images/flag-hr.svg" alt="">
                   </div>
                   <p class="languages__country-name">Хорватия </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-me.svg" alt="">
+                     <img src="../images/flag-me.svg" alt="">
                   </div>
                   <p class="languages__country-name">Черногория </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-cz.svg" alt="">
+                     <img src="../images/flag-cz.svg" alt="">
                   </div>
                   <p class="languages__country-name">Чехия </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-ch.svg" alt="">
+                     <img src="../images/flag-ch.svg" alt="">
                   </div>
                   <p class="languages__country-name">Швейцария </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-se.svg" alt="">
+                     <img src="../images/flag-se.svg" alt="">
                   </div>
                   <p class="languages__country-name">Швеция </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-kr.svg" alt="">
+                     <img src="../images/flag-kr.svg" alt="">
                   </div>
                   <p class="languages__country-name">Южная Корея </p>
                </button>
                <button type="button" class="languages__country show">
                   <div class="flag">
-                     <img src="images/flag-jp.svg" alt="">
+                     <img src="../images/flag-jp.svg" alt="">
                   </div>
                   <p class="languages__country-name">Япония </p>
                </button>
@@ -3320,16 +3628,16 @@
    <!-- FOOTER start  -->
    <footer class="footer">
       <div class="footer__bg">
-         <img src="images/map.png" alt="">
+         <img src="../images/map.png" alt="">
       </div>
       <div class="container">
          <div class="footer__content">
             <div class="footer__logo">
-               <img src="images/logo.png" alt="">
+               <img src="../images/logo.png" alt="">
             </div>
             <div class="footer__lang lang btn-popup-languages">
                <div class="flag">
-                  <img src="images/flag-ru.svg" alt="">
+                  <img src="../images/flag-ru.svg" alt="">
                </div>
                <p class="lang__text">Русский</p>
                <span class="icon icon-triangle-down"></span>
@@ -3355,25 +3663,25 @@
                <div class="menu__section menu__messengers">
                   <a href="#" class="menu__messengers-item">
                      <div class="menu__messengers-img">
-                        <img src="images/messenger.svg" alt="">
+                        <img src="../images/messenger.svg" alt="">
                      </div>
                      <p class="menu__messengers-text">Messenger</p>
                   </a>
                   <a href="#" class="menu__messengers-item">
                      <div class="menu__messengers-img">
-                        <img src="images/whatsapp.svg" alt="">
+                        <img src="../images/whatsapp.svg" alt="">
                      </div>
                      <p class="menu__messengers-text">Whatsapp</p>
                   </a>
                   <a href="#" class="menu__messengers-item">
                      <div class="menu__messengers-img">
-                        <img src="images/telegram.svg" alt="">
+                        <img src="../images/telegram.svg" alt="">
                      </div>
                      <p class="menu__messengers-text">Telegram</p>
                   </a>
                   <a href="#" class="menu__messengers-item">
                      <div class="menu__messengers-img">
-                        <img src="images/viber.svg" alt="">
+                        <img src="../images/viber.svg" alt="">
                      </div>
                      <p class="menu__messengers-text">Viber</p>
                   </a>
@@ -3384,25 +3692,25 @@
                   <div class="menu__socials-items">
                      <a href="#" class="menu__socials-item">
                         <div class="menu__socials-img">
-                           <img src="images/inst.svg" alt="">
+                           <img src="../images/inst.svg" alt="">
                         </div>
                         <p class="menu__socials-text">Instagram</p>
                      </a>
                      <a href="#" class="menu__socials-item">
                         <div class="menu__socials-img">
-                           <img src="images/twitter.svg" alt="">
+                           <img src="../images/twitter.svg" alt="">
                         </div>
                         <p class="menu__socials-text">Twitter</p>
                      </a>
                      <a href="#" class="menu__socials-item">
                         <div class="menu__socials-img">
-                           <img src="images/linkedin.svg" alt="">
+                           <img src="../images/linkedin.svg" alt="">
                         </div>
                         <p class="menu__socials-text">Linkedin</p>
                      </a>
                      <a href="#" class="menu__socials-item">
                         <div class="menu__socials-img">
-                           <img src="images/facebook.svg" alt="">
+                           <img src="../images/facebook.svg" alt="">
                         </div>
                         <p class="menu__socials-text">Facebook</p>
                      </a>
@@ -3485,22 +3793,22 @@
 
                <div class="menu__support">
                   <div class="menu__support-item item menu__support-item-border item menu__support-item-gpay">
-                     <img src="images/gpay.png" alt="">
+                     <img src="../images/gpay.png" alt="">
                   </div>
                   <div class="menu__support-item item menu__support-item-border item menu__support-item-apay">
-                     <img src="images/apay.png" alt="">
+                     <img src="../images/apay.png" alt="">
                   </div>
                   <div class="menu__support-item item menu__support-item-border item menu__support-item-mastercard">
-                     <img src="images/mastercard.png" alt="">
+                     <img src="../images/mastercard.png" alt="">
                   </div>
                   <div class="menu__support-item item menu__support-item-border">
-                     <img src="images/visa.png" alt="">
+                     <img src="../images/visa.png" alt="">
                   </div>
                   <div class="menu__support-item item">
-                     <img src="images/ssl.png" alt="">
+                     <img src="../images/ssl.png" alt="">
                   </div>
                   <div class="menu__support-item item">
-                     <img src="images/norton.png" alt="">
+                     <img src="../images/norton.png" alt="">
                   </div>
                </div>
             </div>
@@ -3523,13 +3831,13 @@
 
 
    <!-- SCRIPTS start  -->
-   <script src="js/jquery.js"></script>
-   <script src="js/moment.min.js"></script>
-   <script src="js/simplebar.js"></script>
-   <script src="js/swiper-bundle.min.js"></script>
-   <script src="js/daterangepicker.js"></script>
-   <script src="js/main.js"></script>
-   <!-- <script src="js/main.min.js"></script> -->
+   <script src="../js/jquery.js"></script>
+   <script src="../js/moment.min.js"></script>
+   <script src="../js/simplebar.js"></script>
+   <script src="../js/swiper-bundle.min.js"></script>
+   <script src="../js/daterangepicker.js"></script>
+   <script src="../js/main.js"></script>
+   <!-- <script src="../js/main.min.js"></script> -->
 
 
 
