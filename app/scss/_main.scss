@@ -14,7 +14,7 @@
 .burger-icon {
 	color: $mainColor;
 }
-
+gi
 .icon-triangle-down {
 	color: $mainColor;
 }
@@ -4349,7 +4349,10 @@
 
 	.questions__sub-title {
 		margin-top: -30px;
-		margin-bottom: 30px;
+		margin-bottom: 40px;
+		@media (max-width: 575.98px){
+			margin-top: -10px;
+		}
 	}
 }
 
