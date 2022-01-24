@@ -2125,8 +2125,16 @@ gi .icon-triangle-down {
    @media (max-width: 767.98px) {
       height: 60px;
    }
+   @media (max-width: 1210px){
+      margin-left: -15px;
+      margin-right: -15px;
+   }
    &__wrapper {
       align-items: center;
+   }
+   .swiper-slide{
+      display:flex;
+      width:max-content;
    }
    &__slide {
       display: block;
@@ -2135,21 +2143,9 @@ gi .icon-triangle-down {
       display: flex;
       align-items: center;
       justify-content: center;
-      // &.slider-partners__slide--consolidator {
-      //    filter: grayscale(0.2) saturate(30%) hue-rotate(370deg);
-      //    .consolidator {
-      //       &__stop1 {
-      //          stop-color: #c60fe9;
-      //       }
-
-      //       &__stop2 {
-      //          stop-color: #0c6af7;
-      //       }
-      //       &__stop3 {
-      //          stop-color: #2be4fc;
-      //       }
-      //    }
-      // }
+      @media (min-width: 768px) {
+         margin-right: 60px;
+      } 
       &--mobile {
          width: 352px;
          height: 49px;
@@ -2302,7 +2298,7 @@ gi .icon-triangle-down {
             }
          }
          &.slider-partners__slide--bees {
-            width: 100%;
+            width: 100vw;
 
             & svg {
                width: 93px;
@@ -2311,7 +2307,7 @@ gi .icon-triangle-down {
          }
 
          &.slider-partners__slide--it-tour {
-            width: 50%;
+            width: 50vw;
 
             & svg {
                width: 85px;
@@ -2320,7 +2316,7 @@ gi .icon-triangle-down {
          }
 
          &.slider-partners__slide--tui {
-            width: 50%;
+            width: 50vw;
 
             & svg {
                width: 69px;
@@ -2329,7 +2325,7 @@ gi .icon-triangle-down {
          }
 
          &.slider-partners__slide--workport {
-            width: 50%;
+            width: 50vw;
 
             & svg {
                width: 116px;
@@ -2338,7 +2334,7 @@ gi .icon-triangle-down {
          }
 
          &.slider-partners__slide--consolidator {
-            width: 50%;
+            width: 50vw;
 
             & svg {
                width: 147px;
@@ -2351,7 +2347,7 @@ gi .icon-triangle-down {
          }
 
          &.slider-partners__slide--lufthansa {
-            width: 100%;
+            width: 100vw;
 
             & svg {
                width: 328px;
@@ -2360,7 +2356,7 @@ gi .icon-triangle-down {
          }
 
          &.slider-partners__slide--farvater {
-            width: 50%;
+            width: 50vw;
 
             & svg {
                width: 150px;
@@ -2369,7 +2365,7 @@ gi .icon-triangle-down {
          }
 
          &.slider-partners__slide--tripmydream {
-            width: 100%;
+            width: 100vw;
 
             & svg {
                width: 235px;
@@ -5260,13 +5256,31 @@ gi .icon-triangle-down {
       transition: 0.1s ease;
       // height: 23px;
       word-break: break-all;
-      &:hover {
-         background: #044481;
-         color: $white;
+      position: relative;
+      transition: 0.4s ease-in-out; 
+      &::before {
+         transition: 0.4s ease-in-out;
+         transition: 0.4s ease-in-out;
+         content: "";
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         height: 0px;
+         width: 100%;   background: #044481;
       }
+      &:hover {
+         .countries-tabs__item-text{
+
+            color: $white !important;
+         }
+         &::before {
+            height: 28px;
+         }
+      } 
       margin-bottom: 23px;
       .flag {
-         flex: none;
+         flex: none;position: relative;z-index: 10;
          img {
             width: 20px;
             height: 14px;
@@ -5288,6 +5302,8 @@ gi .icon-triangle-down {
    }
 
    &__item-text {
+         transition: 0.4s ease-in-out;
+      position: relative;z-index: 10;
    }
 }
 

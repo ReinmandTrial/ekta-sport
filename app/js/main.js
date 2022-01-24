@@ -608,15 +608,19 @@ new Swiper('.slider-partners ', {
    spaceBetween: 60,
    loop: true,
    freeMode: true,
-   speed: 3250,
+   speed: 20000,
    waitForTransition: false,
    autoplay: {
       delay: 0,
       disableOnInteraction: false,
    },
    breakpoints: {
+      992:{
+         speed: 20000,
+      },
       768: {
          spaceBetween: 60,
+         speed: 25000,
       },
       320: {
          spaceBetween: 0,

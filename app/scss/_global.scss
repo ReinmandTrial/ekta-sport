@@ -1655,6 +1655,10 @@ p.input {
 		font-size: 24px;
 		@media (max-width: 575.98px) {
 			font-size: 18px;
+			svg{
+
+				width: 13px;height: 14px;
+			}
 		}
 	}
 
