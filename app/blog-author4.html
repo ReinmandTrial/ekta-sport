@@ -11,7 +11,7 @@
 <body>
 
    <!-- WRAPPER start -->
-   <div class="wrapper page-faq">
+   <div class="wrapper page-blog page-blog-author">
 
 
 
@@ -22,7 +22,7 @@
          <div class="content">
 
             <!-- banner -->
-            <div class="faq">
+            <div class="banner">
 
                <!-- HEADER start  -->
                <header class="header">
@@ -71,847 +71,197 @@
                      <div class="breadcrumbs__content">
                         <a href="index.html" class="breadcrumbs__home icon icon-home"></a>
                         <span class="breadcrumbs__divide icon icon-triangle-right"></span>
-                        <a href="#" class="breadcrumbs__link">FAQ </a>
+                        <a href="blog-authors.html" class="breadcrumbs__link breadcrumbs__link--bold">Авторы</a>
+                        <span class="breadcrumbs__divide icon icon-triangle-right"></span>
+                        <a href="#" class="breadcrumbs__link">Элина Зотова</a>
                      </div>
                   </div>
                </div>
                <!-- breadcrumbs end -->
 
+               <div class="banner__bg">
+                  <img src="images/page-author__bg.png" alt="">
+               </div>
+               <div class="banner__bg--mobile">
+                  <img src="images/page-author__bg--mobile.png" alt="">
+               </div>
+            </div>
+            <!-- banner end -->
+
+
+            <div class="page-blog-author__main">
                <div class="container">
-                  <div class="faq__content">
-                     <h2 class="faq__title h4">Задать вопрос</h2>
-
-                     <div class="faq__new faq-new">
-                        <div class="faq-new__inputs-block">
-                           <div class="faq-new__inputs">
-                              <div class="faq-new__input input__block">
-                                 <!-- ошибка верификации происходит при добавлении класса "error" к блоку выше -->
-                                 <p class="input__title">Ваше имя</p>
-                                 <div class="input__box">
-                                    <input type="text" class="input" placeholder="Введите имя">
-                                    <span class="icon icon-check"></span>
-                                    <span class="icon icon-close"></span>
-                                 </div>
-                                 <p class="input__error">Введите имя, используя только буквы латинского алфавита
-                                    без
-                                    спецсимволов (Например: IVAN)</p>
+                  <div class="page-blog-author__content">
+                     <div class="page-blog-author__person block-author">
+                        <div class="block-author__photo">
+                           <img src="images/author-article-photo4.png" alt="">
+                        </div>
+                        <div class="block-author__text-block">
+                           <div class="block-author__block">
+                              <div class="block-author__photo block-author__photo--mobile">
+                                 <img src="images/author-article-photo4.png" alt="">
                               </div>
-                              <div class="faq-new__input input__block">
-                                 <!-- ошибка верификации происходит при добавлении класса "error" к блоку выше -->
-                                 <p class="input__title">Email</p>
-                                 <div class="input__box">
-                                    <input type="text" class="input" placeholder="Введите email">
-                                    <span class="icon icon-check"></span>
-                                    <span class="icon icon-close"></span>
-                                 </div>
-                                 <p class="input__error"> </p>
+                              <div class="block-author__info">
+                                 <h3 class="block-author__name h4">Элина Зотова</h3>
+                                 <p class="block-author__descr">Блогер, путешественница, работает в IT. Проводит за
+                                    границей приблизительно 300 дней в году.</p>
                               </div>
                            </div>
-                           <div class="faq-new__input input__block">
-                              <p class="input__title">Ваш вопрос</p>
-                              <textarea class="faq-new__textarea input" placeholder="Ваш вопрос*"></textarea>
+                           <div class="block-author__tags blog-tags">
+                              <h4 class="blog-tags__title">Пишет о:</h4>
+                              <div class="blog-tags__container">
+                                 <a href="#" class="blog-tags__item">Бюджетный отдых</a>
+                                 <a href="#" class="blog-tags__item">Париж</a>
+                                 <a href="#" class="blog-tags__item">Лайфхаки</a>
+                                 <a href="#" class="blog-tags__item">США</a>
+                                 <a href="#" class="blog-tags__item">Пляжный отдых</a>
+                                 <a href="#" class="blog-tags__item">Лайфхаки</a>
+                                 <a href="#" class="blog-tags__item">Бюджетный отдых</a>
+                                 <a href="#" class="blog-tags__item">Париж</a>
+                                 <a href="#" class="blog-tags__item">Европа</a>
+                                 <a href="#" class="blog-tags__item">Лайфхаки</a>
+                                 <a href="#" class="blog-tags__item">Семейный отдых</a>
+                                 <a href="#" class="blog-tags__item">Лайфхаки</a>
+                              </div>
                            </div>
                         </div>
-                        <button type="button" class="faq-new__btn-send btn btn-blue">Задать вопрос</button>
                      </div>
-
-                     <h5 class="faq__subtitle">Вопросы наших клиентов</h5>
-                     <p class="faq__descr">Тут вы можете найти ответ на ваш вопрос, или получите ответ заполнив форму
-                        выше</p>
-
-                     <div class="faq__container">
-                        <div class="faq__block">
-                           <div class="faq__item item-faq">
-                              <div class="item-faq__head">
-                                 <div class="item-faq__top-line">
-                                    <p class="item-faq__name">Денис Игнатенко</p>
-                                    <div class="item-faq__data">
-                                       <p class="item-faq__date">23.07.21 </p>
-                                       <p class="item-faq__time">10:00</p>
-                                    </div>
+                     <div class="page-blog-author__info post">
+                        <h4 class="post__title page-blog-author__info-title">Об авторе:</h4>
+                        <p class="post__text">Элина всегда путешествует с мужем. Вместе они посетили уже более 43 стран.
+                        </p>
+                        <p class="post__text">Ребята рассказывают, что любовь к поездкам началась еще в студенческом
+                           возрасте, когда денег особо не было, а путешествовать очень хотелось. В то время студенты
+                           искали дешевые перелеты, бюджетные гостиницы, а также различные лайфхаки, как сэкономить в
+                           поездке. По словам девушки, многие из них тогда не работали, поэтому приходилось придумывать
+                           свои. </p>
+                        <p class="post__text">Сейчас Элин имеет колоссальный опыт путешествий и в блоге старается помочь
+                           как начинающим, так и бывалым туристам.</p>
+                     </div>
+                     <div class="page-blog-section__block">
+                        <div class="page-blog-section__slider blog-slider swiper-container">
+                           <div class="blog-slider__wrapper swiper-wrapper">
+                              <div class="blog-slider__slide swiper-slide card-blog-post">
+                                 <div class="card-blog-post__img">
+                                    <img src="images/card-blog-post-img4.png" alt="">
                                  </div>
-                                 <h6 class="item-faq__title">Что такое франшиза?</h6>
-                                 <button type="button" class="item-faq__btn-answer">1 ответ</button>
-                              </div>
-                              <div class="item-faq__body">
-                                 <div class="item-faq__answer">
-                                    <div class="item-faq__answer-photo">
-                                       <img src="images/ekta-cons.png" alt="">
+                                 <div class="card-blog-post__info">
+                                    <div class="card-blog-post__photo">
+                                       <img src="images/card-blog-post__photo4.png" alt="">
                                     </div>
-                                    <div class="item-faq__answer-text">
-                                       <div class="item-faq__top-line">
-                                          <p class="item-faq__name">Консультант Ирина <span class="not-mobile">EKTA
-                                                TRAVELING</span></p>
-                                          <div class="item-faq__data">
-                                             <p class="item-faq__date">23.07.21 </p>
-                                             <p class="item-faq__time">11:00</p>
+                                    <div class="card-blog-post__info-container">
+                                       <p class="card-blog-post__name">Владимир Вернадский</p>
+                                       <div class="card-blog-post__info-block">
+                                          <div class="card-blog-post__info-item">
+                                             <span class="icon icon-calendar"></span>
+                                             21.07.2021
+                                          </div>
+                                          <div class="card-blog-post__info-item">
+                                             <span class="icon icon-timer"></span>
+                                             10 мин
+                                          </div>
+                                          <div class="card-blog-post__info-item">
+                                             <span class="icon icon-heart"></span>
+                                             132
+                                          </div>
+                                          <div class="card-blog-post__info-item">
+                                             <span class="icon icon-eye-blank"></span>
+                                             12 450
                                           </div>
                                        </div>
-                                       <div class="item-faq__answer-descr">
-                                          <p>Это сумма, которую клиент должен оплатить при наступлении страхового
-                                             случая. Пример: Плата за лечение в больнице — 1 000 USD. Франшиза по тарифу
-                                             START — 25%. Значит, клиент платит 250 USD, а страховая компания — 750 USD.
-                                             Таким образом, сумма делится между клиентом и страховой согласно условиям
-                                             тарифного плана.</p>
-                                          <p>Тарифы STANDART и MAX идут без франшизы. Следовательно, страховая компания
-                                             самостоятельно оплачивает лечение пострадавшего. Клиенту платить ничего не
-                                             нужно.</p>
-                                       </div>
-
-                                    </div>
-
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="faq__item item-faq">
-                              <div class="item-faq__head">
-                                 <div class="item-faq__top-line">
-                                    <p class="item-faq__name">Карина </p>
-                                    <div class="item-faq__data">
-                                       <p class="item-faq__date">23.07.21 </p>
-                                       <p class="item-faq__time">10:00</p>
                                     </div>
                                  </div>
-                                 <h6 class="item-faq__title">Можно ли оформить страховой полис, находясь за границей?
-                                 </h6>
-                                 <button type="button" class="item-faq__btn-answer">1 ответ</button>
+                                 <div class="card-blog-post__text-block">
+                                    <h6 class="card-blog-post__title">Lorem ipsum dolor sit amet, fgdhs
+                                       consectetur adipiscing elit</h6>
+                                    <p class="card-blog-post__descr">Sed ut perspiciatis, unde omnis iste natus error
+                                       sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque
+                                       ipsa.......</p>
+                                 </div>
                               </div>
-                              <div class="item-faq__body">
-                                 <div class="item-faq__answer">
-                                    <div class="item-faq__answer-photo">
-                                       <img src="images/ekta-cons.png" alt="">
+                              <div class="blog-slider__slide swiper-slide card-blog-post">
+                                 <div class="card-blog-post__img">
+                                    <img src="images/card-blog-post-img2.png" alt="">
+                                 </div>
+                                 <div class="card-blog-post__info">
+                                    <div class="card-blog-post__photo">
+                                       <img src="images/card-blog-post__photo6.png" alt="">
                                     </div>
-                                    <div class="item-faq__answer-text">
-                                       <div class="item-faq__top-line">
-                                          <p class="item-faq__name">Консультант Ирина EKTA TRAVELING</p>
-                                          <div class="item-faq__data">
-                                             <p class="item-faq__date">23.07.21 </p>
-                                             <p class="item-faq__time">11:00</p>
+                                    <div class="card-blog-post__info-container">
+                                       <p class="card-blog-post__name">Владимир Вернадский</p>
+                                       <div class="card-blog-post__info-block">
+                                          <div class="card-blog-post__info-item">
+                                             <span class="icon icon-calendar"></span>
+                                             21.07.2021
+                                          </div>
+                                          <div class="card-blog-post__info-item">
+                                             <span class="icon icon-timer"></span>
+                                             10 мин
+                                          </div>
+                                          <div class="card-blog-post__info-item">
+                                             <span class="icon icon-heart"></span>
+                                             132
+                                          </div>
+                                          <div class="card-blog-post__info-item">
+                                             <span class="icon icon-eye-blank"></span>
+                                             12 450
                                           </div>
                                        </div>
-                                       <div class="item-faq__answer-descr">
-                                          <p>Тут возможны 2 варианта: </p>
-                                          <p>Да, если вы уже находитесь за границей и хотите оформить страховку для
-                                             поездки в другую страну. Сделать это можно онлайн на сайте компании и
-                                             оплатить картой.
-                                             2.Нет, если вы хотите приобрести туристический страховой полис для страны,
-                                             в которую прибыли. Такой полис будет недействительным</p>
-                                       </div>
-
-                                    </div>
-
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="faq__item item-faq">
-                              <div class="item-faq__head">
-                                 <div class="item-faq__top-line">
-                                    <p class="item-faq__name">Екатерина</p>
-                                    <div class="item-faq__data">
-                                       <p class="item-faq__date">23.07.21 </p>
-                                       <p class="item-faq__time">10:00</p>
                                     </div>
                                  </div>
-                                 <h6 class="item-faq__title">В каких странах действует страховка?</h6>
-                                 <button type="button" class="item-faq__btn-answer">1 ответ</button>
+                                 <div class="card-blog-post__text-block">
+                                    <h6 class="card-blog-post__title">Lorem ipsum dolor sit amet, fgdhs
+                                       consectetur adipiscing elit</h6>
+                                    <p class="card-blog-post__descr">Sed ut perspiciatis, unde omnis iste natus error
+                                       sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque
+                                       ipsa.......</p>
+                                 </div>
                               </div>
-                              <div class="item-faq__body">
-                                 <div class="item-faq__answer">
-                                    <div class="item-faq__answer-photo">
-                                       <img src="images/ekta-cons.png" alt="">
+                              <div class="blog-slider__slide swiper-slide card-blog-post">
+                                 <div class="card-blog-post__img">
+                                    <img src="images/card-blog-post-img3.png" alt="">
+                                 </div>
+                                 <div class="card-blog-post__info">
+                                    <div class="card-blog-post__photo">
+                                       <img src="images/card-blog-post__photo1.png" alt="">
                                     </div>
-                                    <div class="item-faq__answer-text">
-                                       <div class="item-faq__top-line">
-                                          <p class="item-faq__name">Консультант Ирина EKTA TRAVELING</p>
-                                          <div class="item-faq__data">
-                                             <p class="item-faq__date">23.07.21 </p>
-                                             <p class="item-faq__time">11:00</p>
+                                    <div class="card-blog-post__info-container">
+                                       <p class="card-blog-post__name">Владимир Вернадский</p>
+                                       <div class="card-blog-post__info-block">
+                                          <div class="card-blog-post__info-item">
+                                             <span class="icon icon-calendar"></span>
+                                             21.07.2021
+                                          </div>
+                                          <div class="card-blog-post__info-item">
+                                             <span class="icon icon-timer"></span>
+                                             10 мин
+                                          </div>
+                                          <div class="card-blog-post__info-item">
+                                             <span class="icon icon-heart"></span>
+                                             132
+                                          </div>
+                                          <div class="card-blog-post__info-item">
+                                             <span class="icon icon-eye-blank"></span>
+                                             12 450
                                           </div>
                                        </div>
-                                       <div class="item-faq__answer-descr">
-                                          <p>“EKTA TRAVELING” международная компания, поэтому наша страховка действует
-                                             по всему миру.</p>
-
-                                       </div>
-
-                                    </div>
-
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="faq__item item-faq">
-                              <div class="item-faq__head">
-                                 <div class="item-faq__top-line">
-                                    <p class="item-faq__name">Тоня Радченко</p>
-                                    <div class="item-faq__data">
-                                       <p class="item-faq__date">23.07.21 </p>
-                                       <p class="item-faq__time">10:00</p>
                                     </div>
                                  </div>
-                                 <h6 class="item-faq__title">Когда начинает действовать страховой полис?</h6>
-                                 <button type="button" class="item-faq__btn-answer">1 ответ</button>
-                              </div>
-                              <div class="item-faq__body">
-                                 <div class="item-faq__answer">
-                                    <div class="item-faq__answer-photo">
-                                       <img src="images/ekta-cons.png" alt="">
-                                    </div>
-                                    <div class="item-faq__answer-text">
-                                       <div class="item-faq__top-line">
-                                          <p class="item-faq__name">Консультант Ирина EKTA TRAVELING</p>
-                                          <div class="item-faq__data">
-                                             <p class="item-faq__date">23.07.21 </p>
-                                             <p class="item-faq__time">11:00</p>
-                                          </div>
-                                       </div>
-                                       <div class="item-faq__answer-descr">
-                                          <p>Действие страхового полиса начинается с момента, как только вы пересекли
-                                             границу.</p>
-
-                                       </div>
-
-                                    </div>
-
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="faq__item item-faq">
-                              <div class="item-faq__head">
-                                 <div class="item-faq__top-line">
-                                    <p class="item-faq__name">Анатолий</p>
-                                    <div class="item-faq__data">
-                                       <p class="item-faq__date">23.07.21 </p>
-                                       <p class="item-faq__time">10:00</p>
-                                    </div>
-                                 </div>
-                                 <h6 class="item-faq__title">Если я гражданин другой страны, могу ли я купить страховку?
-                                 </h6>
-                                 <button type="button" class="item-faq__btn-answer">1 ответ</button>
-                              </div>
-                              <div class="item-faq__body">
-                                 <div class="item-faq__answer">
-                                    <div class="item-faq__answer-photo">
-                                       <img src="images/ekta-cons.png" alt="">
-                                    </div>
-                                    <div class="item-faq__answer-text">
-                                       <div class="item-faq__top-line">
-                                          <p class="item-faq__name">Консультант Ирина EKTA TRAVELING</p>
-                                          <div class="item-faq__data">
-                                             <p class="item-faq__date">23.07.21 </p>
-                                             <p class="item-faq__time">11:00</p>
-                                          </div>
-                                       </div>
-                                       <div class="item-faq__answer-descr">
-                                          <p>Да, страховку от “EKTA TRAVELING” может купить гражданин любой страны</p>
-                                          <p>Также страховка доступна иностранцам для въезда в Украину.</p>
-                                       </div>
-
-                                    </div>
-
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="faq__item item-faq">
-                              <div class="item-faq__head">
-                                 <div class="item-faq__top-line">
-                                    <p class="item-faq__name">Также страховка доступна иностранцам для въезда в Украину.
-                                    </p>
-                                    <div class="item-faq__data">
-                                       <p class="item-faq__date">23.07.21 </p>
-                                       <p class="item-faq__time">10:00</p>
-                                    </div>
-                                 </div>
-                                 <h6 class="item-faq__title">На каком языке заполнять личную информацию?</h6>
-                                 <button type="button" class="item-faq__btn-answer">1 ответ</button>
-                              </div>
-                              <div class="item-faq__body">
-                                 <div class="item-faq__answer">
-                                    <div class="item-faq__answer-photo">
-                                       <img src="images/ekta-cons.png" alt="">
-                                    </div>
-                                    <div class="item-faq__answer-text">
-                                       <div class="item-faq__top-line">
-                                          <p class="item-faq__name">Консультант Ирина EKTA TRAVELING</p>
-                                          <div class="item-faq__data">
-                                             <p class="item-faq__date">23.07.21 </p>
-                                             <p class="item-faq__time">11:00</p>
-                                          </div>
-                                       </div>
-                                       <div class="item-faq__answer-descr">
-                                          <p>Личную информацию нужно заполнять латинскими буквами, как это указано в
-                                             вашем загранпаспорте.</p>
-
-                                       </div>
-
-                                    </div>
-
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="faq__item item-faq">
-                              <div class="item-faq__head">
-                                 <div class="item-faq__top-line">
-                                    <p class="item-faq__name">Ваня</p>
-                                    <div class="item-faq__data">
-                                       <p class="item-faq__date">23.07.21 </p>
-                                       <p class="item-faq__time">10:00</p>
-                                    </div>
-                                 </div>
-                                 <h6 class="item-faq__title">Что делать, если неверно ввели данные при оформлении
-                                    страховки?</h6>
-                                 <button type="button" class="item-faq__btn-answer">1 ответ</button>
-                              </div>
-                              <div class="item-faq__body">
-                                 <div class="item-faq__answer">
-                                    <div class="item-faq__answer-photo">
-                                       <img src="images/ekta-cons.png" alt="">
-                                    </div>
-                                    <div class="item-faq__answer-text">
-                                       <div class="item-faq__top-line">
-                                          <p class="item-faq__name">Консультант Ирина EKTA TRAVELING</p>
-                                          <div class="item-faq__data">
-                                             <p class="item-faq__date">23.07.21 </p>
-                                             <p class="item-faq__time">11:00</p>
-                                          </div>
-                                       </div>
-                                       <div class="item-faq__answer-descr">
-                                          <p>Отмените операцию или обновите страницу и выйдите из диалогового окна
-                                             программы или платформы. Если такой возможности нет, сообщите об этом
-                                             страховой по номеру 0 800 305 122. Компания поможет вам в решении вопроса.
-                                          </p>
-
-                                       </div>
-
-                                    </div>
-
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="faq__item item-faq">
-                              <div class="item-faq__head">
-                                 <div class="item-faq__top-line">
-                                    <p class="item-faq__name">Игорь Браженко</p>
-                                    <div class="item-faq__data">
-                                       <p class="item-faq__date">23.07.21 </p>
-                                       <p class="item-faq__time">10:00</p>
-                                    </div>
-                                 </div>
-                                 <h6 class="item-faq__title">Как оформить страховку для ребенка?</h6>
-                                 <button type="button" class="item-faq__btn-answer">1 ответ</button>
-                              </div>
-                              <div class="item-faq__body">
-                                 <div class="item-faq__answer">
-                                    <div class="item-faq__answer-photo">
-                                       <img src="images/ekta-cons.png" alt="">
-                                    </div>
-                                    <div class="item-faq__answer-text">
-                                       <div class="item-faq__top-line">
-                                          <p class="item-faq__name">Консультант Ирина EKTA TRAVELING</p>
-                                          <div class="item-faq__data">
-                                             <p class="item-faq__date">23.07.21 </p>
-                                             <p class="item-faq__time">11:00</p>
-                                          </div>
-                                       </div>
-                                       <div class="item-faq__answer-descr">
-                                          <p>Страхование детей оформляется так же, как и взрослых. Укажите ваши данные в
-                                             разделе “Покупатель” (они продублируются в категории “Турист №1”), а данные
-                                             о ребенке или о другой несовершеннолетней особе — в разделе “Турист №2”.
-                                          </p>
-
-                                       </div>
-
-                                    </div>
-
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="faq__item item-faq">
-                              <div class="item-faq__head">
-                                 <div class="item-faq__top-line">
-                                    <p class="item-faq__name">Саша Патрус </p>
-                                    <div class="item-faq__data">
-                                       <p class="item-faq__date">23.07.21 </p>
-                                       <p class="item-faq__time">10:00</p>
-                                    </div>
-                                 </div>
-                                 <h6 class="item-faq__title">Можно ли оформить страховой полис на другого человека?</h6>
-                                 <button type="button" class="item-faq__btn-answer">1 ответ</button>
-                              </div>
-                              <div class="item-faq__body">
-                                 <div class="item-faq__answer">
-                                    <div class="item-faq__answer-photo">
-                                       <img src="images/ekta-cons.png" alt="">
-                                    </div>
-                                    <div class="item-faq__answer-text">
-                                       <div class="item-faq__top-line">
-                                          <p class="item-faq__name">Консультант Ирина EKTA TRAVELING</p>
-                                          <div class="item-faq__data">
-                                             <p class="item-faq__date">23.07.21 </p>
-                                             <p class="item-faq__time">11:00</p>
-                                          </div>
-                                       </div>
-                                       <div class="item-faq__answer-descr">
-                                          <p>Да, вы можете оформить страховой полис на любого гражданина без его
-                                             участия. Главное, правильно введите его данные при оформлении страховки на
-                                             сайте. После оплаты полис придет соответствующей особе на электронную
-                                             почту.</p>
-
-                                       </div>
-
-                                    </div>
-
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="faq__item item-faq">
-                              <div class="item-faq__head">
-                                 <div class="item-faq__top-line">
-                                    <p class="item-faq__name">Владислав</p>
-                                    <div class="item-faq__data">
-                                       <p class="item-faq__date">23.07.21 </p>
-                                       <p class="item-faq__time">10:00</p>
-                                    </div>
-                                 </div>
-                                 <h6 class="item-faq__title">Какую страну указать в полисе, если в планах путешествие в
-                                    две или больше стран подряд?</h6>
-                                 <button type="button" class="item-faq__btn-answer">1 ответ</button>
-                              </div>
-                              <div class="item-faq__body">
-                                 <div class="item-faq__answer">
-                                    <div class="item-faq__answer-photo">
-                                       <img src="images/ekta-cons.png" alt="">
-                                    </div>
-                                    <div class="item-faq__answer-text">
-                                       <div class="item-faq__top-line">
-                                          <p class="item-faq__name">Консультант Ирина EKTA TRAVELING</p>
-                                          <div class="item-faq__data">
-                                             <p class="item-faq__date">23.07.21 </p>
-                                             <p class="item-faq__time">11:00</p>
-                                          </div>
-                                       </div>
-                                       <div class="item-faq__answer-descr">
-                                          <p>При оформлении страховки вы можете указать все страны, которые планируете
-                                             посетить, но если ваше путешествие включает более двух стран, мы советуем
-                                             выбрать опцию “Вся Европа” или “Весь мир”.</p>
-
-                                       </div>
-
-                                    </div>
-
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="faq__item item-faq">
-                              <div class="item-faq__head">
-                                 <div class="item-faq__top-line">
-                                    <p class="item-faq__name">Юлия Мышляева</p>
-                                    <div class="item-faq__data">
-                                       <p class="item-faq__date">23.07.21 </p>
-                                       <p class="item-faq__time">10:00</p>
-                                    </div>
-                                 </div>
-                                 <h6 class="item-faq__title">Что делать, если не прошла оплата?</h6>
-                                 <button type="button" class="item-faq__btn-answer">1 ответ</button>
-                              </div>
-                              <div class="item-faq__body">
-                                 <div class="item-faq__answer">
-                                    <div class="item-faq__answer-photo">
-                                       <img src="images/ekta-cons.png" alt="">
-                                    </div>
-                                    <div class="item-faq__answer-text">
-                                       <div class="item-faq__top-line">
-                                          <p class="item-faq__name">Консультант Ирина EKTA TRAVELING</p>
-                                          <div class="item-faq__data">
-                                             <p class="item-faq__date">23.07.21 </p>
-                                             <p class="item-faq__time">11:00</p>
-                                          </div>
-                                       </div>
-                                       <div class="item-faq__answer-descr">
-                                          <p>Рекомендуем связаться с вашим банком, проверить лимит интернет-операций и
-                                             баланс платежной карты.</p>
-
-                                       </div>
-
-                                    </div>
-
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="faq__item item-faq">
-                              <div class="item-faq__head">
-                                 <div class="item-faq__top-line">
-                                    <p class="item-faq__name">Елена</p>
-                                    <div class="item-faq__data">
-                                       <p class="item-faq__date">23.07.21 </p>
-                                       <p class="item-faq__time">10:00</p>
-                                    </div>
-                                 </div>
-                                 <h6 class="item-faq__title">В каком виде я получу полис?</h6>
-                                 <button type="button" class="item-faq__btn-answer">1 ответ</button>
-                              </div>
-                              <div class="item-faq__body">
-                                 <div class="item-faq__answer">
-                                    <div class="item-faq__answer-photo">
-                                       <img src="images/ekta-cons.png" alt="">
-                                    </div>
-                                    <div class="item-faq__answer-text">
-                                       <div class="item-faq__top-line">
-                                          <p class="item-faq__name">Консультант Ирина EKTA TRAVELING</p>
-                                          <div class="item-faq__data">
-                                             <p class="item-faq__date">23.07.21 </p>
-                                             <p class="item-faq__time">11:00</p>
-                                          </div>
-                                       </div>
-                                       <div class="item-faq__answer-descr">
-                                          <p>Вы получите туристический страховой полис в электронном виде. Распечатывать
-                                             его необязательно. Просто сохраните электронный полис на телефон или
-                                             планшет.</p>
-
-                                       </div>
-
-                                    </div>
-
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="faq__item item-faq">
-                              <div class="item-faq__head">
-                                 <div class="item-faq__top-line">
-                                    <p class="item-faq__name">Артем Чистяков</p>
-                                    <div class="item-faq__data">
-                                       <p class="item-faq__date">23.07.21 </p>
-                                       <p class="item-faq__time">10:00</p>
-                                    </div>
-                                 </div>
-                                 <h6 class="item-faq__title">Как долго ждать получение страхового полиса после оплаты?
-                                 </h6>
-                                 <button type="button" class="item-faq__btn-answer">1 ответ</button>
-                              </div>
-                              <div class="item-faq__body">
-                                 <div class="item-faq__answer">
-                                    <div class="item-faq__answer-photo">
-                                       <img src="images/ekta-cons.png" alt="">
-                                    </div>
-                                    <div class="item-faq__answer-text">
-                                       <div class="item-faq__top-line">
-                                          <p class="item-faq__name">Консультант Ирина EKTA TRAVELING</p>
-                                          <div class="item-faq__data">
-                                             <p class="item-faq__date">23.07.21 </p>
-                                             <p class="item-faq__time">11:00</p>
-                                          </div>
-                                       </div>
-                                       <div class="item-faq__answer-descr">
-                                          <p>Вы получите страховой полис на ваш email в течение 10-15 минут после
-                                             оплаты. Обязательно проверяйте папки “Спам” и “Промоакции” на почте.</p>
-
-                                       </div>
-
-                                    </div>
-
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="faq__item item-faq">
-                              <div class="item-faq__head">
-                                 <div class="item-faq__top-line">
-                                    <p class="item-faq__name">Наташа Скляренко</p>
-                                    <div class="item-faq__data">
-                                       <p class="item-faq__date">23.07.21 </p>
-                                       <p class="item-faq__time">10:00</p>
-                                    </div>
-                                 </div>
-                                 <h6 class="item-faq__title">Что делать, если полис не пришел на email?</h6>
-                                 <button type="button" class="item-faq__btn-answer">1 ответ</button>
-                              </div>
-                              <div class="item-faq__body">
-                                 <div class="item-faq__answer">
-                                    <div class="item-faq__answer-photo">
-                                       <img src="images/ekta-cons.png" alt="">
-                                    </div>
-                                    <div class="item-faq__answer-text">
-                                       <div class="item-faq__top-line">
-                                          <p class="item-faq__name">Консультант Ирина EKTA TRAVELING</p>
-                                          <div class="item-faq__data">
-                                             <p class="item-faq__date">23.07.21 </p>
-                                             <p class="item-faq__time">11:00</p>
-                                          </div>
-                                       </div>
-                                       <div class="item-faq__answer-descr">
-                                          <p>В первую очередь необходимо проверить папки “Спам” и “Промоакции /
-                                             Реклама”. Если прошло более 10 минут, а полиса на почте все еще нет —
-                                             сообщите об этом страховой компании удобным для вас способом:</p>
-                                          <p>Email: info@ic-ekta.com
-                                             Viber: https://www.viber.com/ekta_insure
-                                             Телеграм: https://t.me/ic_ekta_bot</p>
-                                       </div>
-
-                                    </div>
-
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="faq__item item-faq">
-                              <div class="item-faq__head">
-                                 <div class="item-faq__top-line">
-                                    <p class="item-faq__name">Ксения</p>
-                                    <div class="item-faq__data">
-                                       <p class="item-faq__date">23.07.21 </p>
-                                       <p class="item-faq__time">10:00</p>
-                                    </div>
-                                 </div>
-                                 <h6 class="item-faq__title">Что делать, если произошел страховой случай?</h6>
-                                 <button type="button" class="item-faq__btn-answer">1 ответ</button>
-                              </div>
-                              <div class="item-faq__body">
-                                 <div class="item-faq__answer">
-                                    <div class="item-faq__answer-photo">
-                                       <img src="images/ekta-cons.png" alt="">
-                                    </div>
-                                    <div class="item-faq__answer-text">
-                                       <div class="item-faq__top-line">
-                                          <p class="item-faq__name">Консультант Ирина EKTA TRAVELING</p>
-                                          <div class="item-faq__data">
-                                             <p class="item-faq__date">23.07.21 </p>
-                                             <p class="item-faq__time">11:00</p>
-                                          </div>
-                                       </div>
-                                       <div class="item-faq__answer-descr">
-                                          <p>Сразу свяжитесь со страховой компанией. После оплаты вы получите страховой
-                                             полис, в котором указаны ее контактные номера. Звонить необходимо
-                                             исключительно по ним. Далее обязательно следуйте всем инструкциям
-                                             специалиста по решению экстренных вопросов.</p>
-
-                                       </div>
-
-                                    </div>
-
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="faq__item item-faq">
-                              <div class="item-faq__head">
-                                 <div class="item-faq__top-line">
-                                    <p class="item-faq__name">Владимир Бернацкий</p>
-                                    <div class="item-faq__data">
-                                       <p class="item-faq__date">23.07.21 </p>
-                                       <p class="item-faq__time">10:00</p>
-                                    </div>
-                                 </div>
-                                 <h6 class="item-faq__title">Как происходит денежная компенсация при наступлении
-                                    страхового случая?</h6>
-                                 <button type="button" class="item-faq__btn-answer">1 ответ</button>
-                              </div>
-                              <div class="item-faq__body">
-                                 <div class="item-faq__answer">
-                                    <div class="item-faq__answer-photo">
-                                       <img src="images/ekta-cons.png" alt="">
-                                    </div>
-                                    <div class="item-faq__answer-text">
-                                       <div class="item-faq__top-line">
-                                          <p class="item-faq__name">Консультант Ирина EKTA TRAVELING</p>
-                                          <div class="item-faq__data">
-                                             <p class="item-faq__date">23.07.21 </p>
-                                             <p class="item-faq__time">11:00</p>
-                                          </div>
-                                       </div>
-                                       <div class="item-faq__answer-descr">
-                                          <p>Страховая компания самостоятельно решает все вопросы, связанные с
-                                             транспортом, оплатой лечения и медикаментов. Вам не нужно искать клинику,
-                                             врача, самим оплачивать медицинскую помощь, сохранять чеки, а потом
-                                             предоставлять их страховой компании. Мы все сделаем за вас.</p>
-
-                                       </div>
-
-                                    </div>
-
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="faq__item item-faq">
-                              <div class="item-faq__head">
-                                 <div class="item-faq__top-line">
-                                    <p class="item-faq__name">Елена Сахарук</p>
-                                    <div class="item-faq__data">
-                                       <p class="item-faq__date">23.07.21 </p>
-                                       <p class="item-faq__time">10:00</p>
-                                    </div>
-                                 </div>
-                                 <h6 class="item-faq__title">Вернут ли мне деньги, если я оплатил лечение
-                                    самостоятельно?</h6>
-                                 <button type="button" class="item-faq__btn-answer">1 ответ</button>
-                              </div>
-                              <div class="item-faq__body">
-                                 <div class="item-faq__answer">
-                                    <div class="item-faq__answer-photo">
-                                       <img src="images/ekta-cons.png" alt="">
-                                    </div>
-                                    <div class="item-faq__answer-text">
-                                       <div class="item-faq__top-line">
-                                          <p class="item-faq__name">Консультант Ирина EKTA TRAVELING</p>
-                                          <div class="item-faq__data">
-                                             <p class="item-faq__date">23.07.21 </p>
-                                             <p class="item-faq__time">11:00</p>
-                                          </div>
-                                       </div>
-                                       <div class="item-faq__answer-descr">
-                                          <p>Если случилось так, что вы оплатили лечение за границей самостоятельно,
-                                             сразу обратитесь в страховую компанию и сообщите об этом специалисту.
-                                             Обязательно сохраните все чеки и назначения врача, чтобы потом предоставить
-                                             их нам. Если это страховой случай, мы покроем ваши расходы максимально
-                                             быстро. </p>
-
-                                       </div>
-
-                                    </div>
-
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="faq__item item-faq">
-                              <div class="item-faq__head">
-                                 <div class="item-faq__top-line">
-                                    <p class="item-faq__name">Елена Стасюк</p>
-                                    <div class="item-faq__data">
-                                       <p class="item-faq__date">23.07.21 </p>
-                                       <p class="item-faq__time">10:00</p>
-                                    </div>
-                                 </div>
-                                 <h6 class="item-faq__title">Можно купить страховку на 1 день?</h6>
-                                 <button type="button" class="item-faq__btn-answer">1 ответ</button>
-                              </div>
-                              <div class="item-faq__body">
-                                 <div class="item-faq__answer">
-                                    <div class="item-faq__answer-photo">
-                                       <img src="images/ekta-cons.png" alt="">
-                                    </div>
-                                    <div class="item-faq__answer-text">
-                                       <div class="item-faq__top-line">
-                                          <p class="item-faq__name">Консультант Ирина EKTA TRAVELING</p>
-                                          <div class="item-faq__data">
-                                             <p class="item-faq__date">23.07.21 </p>
-                                             <p class="item-faq__time">11:00</p>
-                                          </div>
-                                       </div>
-                                       <div class="item-faq__answer-descr">
-                                          <p>Нет, минимальный термин страхования – 2 дня.</p>
-
-                                       </div>
-
-                                    </div>
-
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="faq__item item-faq">
-                              <div class="item-faq__head">
-                                 <div class="item-faq__top-line">
-                                    <p class="item-faq__name">Настя Войтушено</p>
-                                    <div class="item-faq__data">
-                                       <p class="item-faq__date">23.07.21 </p>
-                                       <p class="item-faq__time">10:00</p>
-                                    </div>
-                                 </div>
-                                 <h6 class="item-faq__title">Нужно ли покупать страховку при перелете транзитным рейсом
-                                    в Украину?</h6>
-                                 <button type="button" class="item-faq__btn-answer">1 ответ</button>
-                              </div>
-                              <div class="item-faq__body">
-                                 <div class="item-faq__answer">
-                                    <div class="item-faq__answer-photo">
-                                       <img src="images/ekta-cons.png" alt="">
-                                    </div>
-                                    <div class="item-faq__answer-text">
-                                       <div class="item-faq__top-line">
-                                          <p class="item-faq__name">Консультант Ирина EKTA TRAVELING</p>
-                                          <div class="item-faq__data">
-                                             <p class="item-faq__date">23.07.21 </p>
-                                             <p class="item-faq__time">11:00</p>
-                                          </div>
-                                       </div>
-                                       <div class="item-faq__answer-descr">
-                                          <p>Да, страховой случай может произойти в любом мест е и в любое время. Это
-                                             касается и транзитного перелета. Если во время пересадки с вами что-то
-                                             случится, а у вас нет страховки — кто о вас позаботится? Поэтому мы
-                                             настоятельно рекомендуем оформлять страхование, даже когда вы летите
-                                             транзитом, чтобы получить поддержку в случае непредвиденных обстоятельств.
-                                          </p>
-
-                                       </div>
-
-                                    </div>
-
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="faq__item item-faq">
-                              <div class="item-faq__head">
-                                 <div class="item-faq__top-line">
-                                    <p class="item-faq__name">Настя Гордиенко</p>
-                                    <div class="item-faq__data">
-                                       <p class="item-faq__date">23.07.21 </p>
-                                       <p class="item-faq__time">10:00</p>
-                                    </div>
-                                 </div>
-                                 <h6 class="item-faq__title">Как с вами связаться?</h6>
-                                 <button type="button" class="item-faq__btn-answer">1 ответ</button>
-                              </div>
-                              <div class="item-faq__body">
-                                 <div class="item-faq__answer">
-                                    <div class="item-faq__answer-photo">
-                                       <img src="images/ekta-cons.png" alt="">
-                                    </div>
-                                    <div class="item-faq__answer-text">
-                                       <div class="item-faq__top-line">
-                                          <p class="item-faq__name">Консультант Ирина EKTA TRAVELING</p>
-                                          <div class="item-faq__data">
-                                             <p class="item-faq__date">23.07.21 </p>
-                                             <p class="item-faq__time">11:00</p>
-                                          </div>
-                                       </div>
-                                       <div class="item-faq__answer-descr">
-                                          <p>Email: info@ic-ekta.com <br>
-                                             Viber: https://www.viber.com/ekta_insure <br>
-                                             Telegram: https://t.me/ <br>
-                                             Телефон : 0 800 305 122</p>
-
-                                       </div>
-
-                                    </div>
-
+                                 <div class="card-blog-post__text-block">
+                                    <h6 class="card-blog-post__title">Lorem ipsum dolor sit amet, fgdhs
+                                       consectetur adipiscing elit</h6>
+                                    <p class="card-blog-post__descr">Sed ut perspiciatis, unde omnis iste natus error
+                                       sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque
+                                       ipsa.......</p>
                                  </div>
                               </div>
                            </div>
                         </div>
-                        <div class="blog-pagination">
-                           <a href="#" class="blog-pagination__btn blog-pagination__prev disabled">
-                              <span class="icon icon-triangle-right"></span>
-                              Назад
-                           </a>
-                           <div class="blog-pagination__pages">
-                              <a href="#" class="blog-pagination__item active">1</a>
-                              <a href="#" class="blog-pagination__item">2</a>
-                              <a href="#" class="blog-pagination__item">3</a>
-                              <button type="button" class="blog-pagination__item other">....</button>
-                              <a href="#" class="blog-pagination__item">7</a>
-                           </div>
-                           <a href="#" class="blog-pagination__btn blog-pagination__next">
-                              Вперед
-                              <span class="icon icon-triangle-right"></span>
-                           </a>
-                        </div>
+                        <button type="button" class="page-blog-author__btn-all btn btn-gray">Все статьи автора</button>
                      </div>
                   </div>
                </div>
-               <div class="faq__bg">
-                  <img src="images/faq__bg.png" alt="">
-               </div>
-               <div class="faq__bg--mobile">
-                  <img src="images/faq__bg--mobile.png" alt="">
-               </div>
-
-
             </div>
-            <!-- banner end -->
 
 
 
@@ -1607,6 +957,7 @@
          </div>
       </div>
    </div>
+
    </main>
    <!-- MAIN end -->
 

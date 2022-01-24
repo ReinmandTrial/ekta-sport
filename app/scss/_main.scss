@@ -19,6 +19,7 @@ gi .icon-triangle-down {
 }
 .languages__country-name {
    color: $mainColor;
+   flex: none;
 }
 // OPTIONS========================================================================================================================================================
 .options {
@@ -367,7 +368,7 @@ gi .icon-triangle-down {
    &__results {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
+      align-items: flex-start;
       gap: 20px;
       min-height: 128px;
       @media (max-width: 991.98px) {
@@ -377,7 +378,7 @@ gi .icon-triangle-down {
          min-height: 350px;
       }
       @media (max-width: 575.98px) {
-         min-height: 188px;
+         min-height: unset;
          column-gap: 7px;
          row-gap: 10px;
       }
@@ -392,11 +393,19 @@ gi .icon-triangle-down {
       font-size: 18px;
       display: none;
       transition: 0.1s ease;
-      &:hover {
+      &:hover,&:active,&.active {
          background: #8f9bb37a;
+         @media (max-width: 991.98px){
+            background: #006FD6;
+            border: 1px solid  #006FD6;
+           color: $white;
+         }
       }
       &.show {
          display: block !important;
+         &:nth-child(n + 15) {
+            display: none;
+         }
       }
       &:nth-child(n + 15) {
          display: none;
@@ -427,9 +436,9 @@ gi .icon-triangle-down {
       text-align: center;
       font-size: 16px;
       font-weight: bold;
-      @media (min-width: 992px) {
-         display: none;
-      }
+      position: relative;z-index: 20;
+      display: none;
+      
    }
 }
 
@@ -2109,6 +2118,9 @@ gi .icon-triangle-down {
    &__item {
    }
 }
+.swiper-container-free-mode>.swiper-wrapper{
+   transition-timing-function: linear;
+}
 .slider-partners {
    @media (max-width: 767.98px) {
       height: 60px;
@@ -2413,8 +2425,7 @@ gi .icon-triangle-down {
 .write-review {
    padding-top: 30px;
    @media (max-width: 575.98px) {
-      padding-top: unset;
-      padding-bottom: 50px;
+      padding-top: unset; 
    }
    &__content {
    }
@@ -2563,19 +2574,46 @@ gi .icon-triangle-down {
       .post__text {
          font-size: 16px;
          margin-bottom: 10px;
+         @media (max-width: 575.98px) {
+            font-size: 14px;
+         }
       }
       .post__title {
          font-size: 22px;
          margin-bottom: 20px;
+         @media (max-width: 575.98px) {
+            font-size: 20px;
+         }
       }
       .post__list {
          margin-bottom: 10px;
       }
       .post__list-item::before {
          top: 9px;
+         @media (max-width: 575.98px) {
+            width: 6px;height: 6px;
+            top: 8px;
+         }
       }
       .post__btn {
          margin-top: 30px;
+      }
+      .post__highlight-text{
+         font-size: 16px;  @media (max-width: 575.98px) {
+            font-size: 14px;
+         }
+      }
+      .table__row--head{
+         font-size: 18px;
+      }
+      .table{
+         font-size: 16px;
+      }
+      .table__col{
+         @media (max-width: 575.98px) {
+            
+            font-size: 14px;
+         }
       }
    }
 
@@ -2945,6 +2983,9 @@ gi .icon-triangle-down {
       // margin: 0 auto;
       margin: 0 82px;
       margin-bottom: 25px;
+      img{
+         width: 100%;
+      }
       @media (max-width: 1299.98px) {
          margin: 0 -50px;
       }
@@ -3578,14 +3619,16 @@ gi .icon-triangle-down {
       @media (max-width: 575.98px) {
          padding-bottom: 32%;
       }
-      &:hover {
-         border: 1px solid $mainColor;
-         .pages-types__item-bg::before {
-            display: none;
-         }
-         .pages-types__item-descr {
-            background: rgba(34, 43, 69, 0.7);
-            color: $white;
+      @media (min-width: 992px) {
+
+         &:hover {
+            border: 1px solid $mainColor;
+            .pages-types__item-bg::before {
+               display: none;
+            }
+            .pages-types__item-descr {
+               background: rgba(34, 43, 69, 0.7);
+               color: $white;
          }
          .pages-types__top {
             display: none;
@@ -3595,7 +3638,8 @@ gi .icon-triangle-down {
          }
       }
    }
-
+}
+   
    &__item-bg {
       position: absolute;
       top: -2px;
@@ -3757,14 +3801,16 @@ gi .icon-triangle-down {
       @media (max-width: 575.98px) {
          padding-bottom: 32%;
       }
-      &:hover {
-         border: 1px solid $mainColor;
-         .pages-types__item-bg::before {
-            display: none;
-         }
-         .pages-types__item-descr {
-            background: rgba(34, 43, 69, 0.7);
-            color: $white;
+      @media (min-width: 992px) {
+
+         &:hover {
+            border: 1px solid $mainColor;
+            .pages-types__item-bg::before {
+               display: none;
+            }
+            .pages-types__item-descr {
+               background: rgba(34, 43, 69, 0.7);
+               color: $white;
          }
          .pages-types__top {
             display: none;
@@ -3772,6 +3818,7 @@ gi .icon-triangle-down {
          .pages-types__item-bg img {
             transform: scale(1.05);
          }
+      }
       }
    }
 
@@ -4356,6 +4403,9 @@ gi .icon-triangle-down {
          background: rgba(228, 232, 242, 0.4);
          border: 1px solid #ffffff;
          color: $white;
+         &:hover{
+            box-shadow: 0px 10px 10px rgba(237, 241, 247, 0.18);
+         }
       }
       &__descr {
          @media (max-width: 575.98px) {
@@ -5390,7 +5440,7 @@ gi .icon-triangle-down {
          border-radius: 20px 20px 0 0;
          width: 100%;
          border-bottom: 1px solid #c5cee0;
-      }
+      } 
    }
    &__btn-edit-step-one {
       position: absolute;
@@ -5399,6 +5449,10 @@ gi .icon-triangle-down {
       font-size: 22px;
       right: 20px;
       display: none;
+      @media (max-width: 575.98px) {
+         font-size: 15px;
+         top: 9px;right: 12px;
+      }
    }
 
    &__list-all {
@@ -5667,6 +5721,7 @@ gi .icon-triangle-down {
    }
 
    &__main {
+      align-self: flex-start;
       background: $white;
       box-shadow: 0px 10px 10px rgba(91, 89, 89, 0.25);
       border-radius: 0px 20px 20px 0px;
@@ -5675,10 +5730,12 @@ gi .icon-triangle-down {
       @media (max-width: 991.98px) {
          border-radius: 0 0 20px 20px;
          box-shadow: none;
+         align-self: stretch;
       }
       @media (max-width: 575.98px) {
          margin-left: -15px;
          margin-right: -15px;
+         padding-top: 20px;
       }
    }
 
@@ -6279,7 +6336,7 @@ gi .icon-triangle-down {
       background: #e4e7ed;
       border-radius: 20px;
       font-weight: bold;
-      font-size: 22px;
+      font-size: 18px;
       min-width: 180px;
       margin-bottom: 20px;
    }
@@ -7290,7 +7347,7 @@ gi .icon-triangle-down {
       transform: translate(0, -50%);
       position: relative;
       @media (max-width: 767.98px) {
-         margin-left: 75px;
+         margin-left: 30px;
       }
       @media (max-width: 370px) {
          margin-left: auto;
@@ -8951,6 +9008,35 @@ gi .icon-triangle-down {
          display: none;
       }
    }
+   .post__block{
+      margin-bottom: 30px;
+   }
+   .post__title{
+      margin-bottom: 20px;font-size: 18px;
+      @media (max-width: 575.98px) {
+         font-size: 16px;
+         margin-bottom: 15px;
+      }
+      &.h4{
+         font-size: 26px;
+         @media (max-width: 575.98px) {
+            font-size: 20px;
+         }
+      }
+   }
+   .post__text{
+      margin-bottom: 10px;font-size: 16px;
+      @media (max-width: 575.98px) {
+         font-size: 14px;
+      }
+   }
+   .post__list-item{
+      font-size: 16px;
+      @media (max-width: 575.98px) {
+         font-size: 14px;
+      }
+
+   }
 }
 
 .card-blog-simple {
@@ -9511,8 +9597,10 @@ gi .icon-triangle-down {
    border-radius: 10px;
    transition: 0.2s ease;
    filter: drop-shadow(0px 10px 10px rgba(143, 155, 179, 0.1));
-   &:hover {
-      filter: drop-shadow(0px 10px 10px rgba(91, 89, 89, 0.25));
+   @media (min-width: 992px) {
+      &:hover {
+         filter: drop-shadow(0px 10px 10px rgba(91, 89, 89, 0.25));
+      }
    }
    &:not(:last-child) {
       margin-right: 50px;
@@ -9799,7 +9887,10 @@ gi .icon-triangle-down {
       border-radius: 20px;
       background: #044481;
       font-size: 16px;
-      font-weight: bold;
+      font-weight: bold;transition: 0.2s ease;
+      &:hover{
+         filter: drop-shadow(0px 10px 10px rgba(34, 43, 69, 0.1));
+      }
       @media (max-width: 991.98px) {
          flex: 1 1 calc(50% - 10px);
          min-width: 280px;
@@ -10204,6 +10295,7 @@ gi .icon-triangle-down {
          margin-bottom: 10px;
          @media (max-width: 575.98px) {
             margin-bottom: 5px;
+            margin-top: 20px;
             font-size: 16px;
             font-weight: 600;
          }
@@ -10254,10 +10346,9 @@ gi .icon-triangle-down {
       padding-bottom: 135px;
       margin-bottom: 40px;
       @media (max-width: 1210px) {
-         margin-left: -15px;
-         padding-left: 15px;
-         margin-right: 15px;
-         padding-right: 15px;
+         margin-top: -40px;
+         margin-left: -15px; 
+         margin-right: -15px; 
       }
       @media (max-width: 575.98px) {
          padding: 80px 0;
@@ -10266,6 +10357,9 @@ gi .icon-triangle-down {
       .post__highlight {
          max-width: 560px;
          background: $white;
+         @media (max-width: 575.98px){
+            margin: 0 36px;
+         }
       }
    }
    &__full-img-block-bg {
@@ -10280,6 +10374,10 @@ gi .icon-triangle-down {
          width: 100%;
          height: 100%;
          object-fit: cover;
+         @media (max-width: 575.98px){
+
+            padding-top: 150px;
+         }
       }
       &::before {
          content: "";
@@ -10289,6 +10387,9 @@ gi .icon-triangle-down {
          right: 0;
          left: 0;
          background: linear-gradient(180deg, #ffffff -7.65%, #ffffff 1.97%, rgba(255, 255, 255, 0) 98.78%);
+         @media (max-width: 575.98px){
+            display: none;
+         }
       }
       &::after {
          content: "";
@@ -10529,6 +10630,9 @@ gi .icon-triangle-down {
          height: 25px;
          font-size: 13px;
          bottom: 2px;
+      }
+      &:hover{
+         background: #231F20;
       }
       &.swiper-button-disabled {
          background: #c5cee0;
@@ -11736,6 +11840,7 @@ gi .icon-triangle-down {
    .gift__btn-send {
       background: $mainColor;
       border: 1px solid $mainColor;
+      
    }
    .gift .input {
       color: $mainColor !important;

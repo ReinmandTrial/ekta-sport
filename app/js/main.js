@@ -84,34 +84,54 @@ if ($(window).width() < 768) {
 // Выбор языка конец
 
 // Поиск по элементам   
-function searchForItems(filter, ul, li) {
+function searchForItems(filter, ul, li, max) {
    for (i = 0; i < li.length; i++) {
       var a = li[i];
       if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
          a.classList.add('show');
-         if (ul.classList.contains('js-not-for-all')) {
-            if (i > max) {
-               a.classList.remove('show');
+
+         if ($(window).width() < 992) {
+            if (a.innerHTML.toUpperCase() == filter) {
+               a.classList.add('active');
+
+               a.getAttribute('href');
+               console.log(a.getAttribute('href'));
+
+               var btnToCounrty = document.querySelector(".world-map__btn-to-country");
+
+               $('.world-map__btn-to-country').css('display', 'block');
+               btnToCounrty.setAttribute("href", a.getAttribute('href'));
+
             } else {
-               a.classList.add('show');
+               a.classList.remove('active');
+
             }
          }
+
+
       } else {
          a.classList.remove('show');
       }
    }
+
 }
-
-$('#search-lang-input').keyup(function () {
-
-   var input, filter, ul, li, a, i;
-   input = document.getElementById("search-lang-input");
+if ($('.wrapper').hasClass('page-main')) {
+   var input, filter, ul, li, i, max;
+   input = document.getElementById("search-contry-input");
    filter = input.value.toUpperCase();
-   ul = document.getElementById("search-lang-results");
-   li = ul.getElementsByTagName("button");
-   searchForItems(filter, ul, li, i);
-});
+   ul = document.getElementById("search-contry-results");
+   li = ul.getElementsByTagName("a");
+   max = 15;
+   $('.world-map__results').find('.world-map__item.show').each(function (index) {
+      console.log('filt');
 
+      if (index >= max) {
+         $(this).removeClass('show');
+      } else {
+         $(this).addClass('show');
+      }
+   })
+}
 $('#search-contry-input').keyup(function () {
    // alert('f')
    var input, filter, ul, li, i, max;
@@ -120,17 +140,38 @@ $('#search-contry-input').keyup(function () {
    ul = document.getElementById("search-contry-results");
    li = ul.getElementsByTagName("a");
    max = 15;
-
    searchForItems(filter, ul, li, i, max);
+   $('.world-map__results').find('.world-map__item.show').each(function (index) {
+      console.log('filt');
+
+      if (index >= max) {
+         $(this).removeClass('show');
+      } else {
+         $(this).addClass('show');
+      }
+   })
 });
+
+$('#search-lang-input').keyup(function () {
+
+   var input, filter, ul, li, a, i;
+   input = document.getElementById("search-lang-input");
+   filter = input.value.toUpperCase();
+   ul = document.getElementById("search-lang-results");
+   li = ul.getElementsByTagName("button");
+
+   searchForItems(filter, ul, li, i);
+});
+
+
 
 if ($(window).width() < 992) {
    $('.world-map__item').on('click', function () {
 
       link = $(this).attr('href');
-      console.log(link);
+      // console.log(link);
 
-
+      $(this).closest('.world-map__nav').find('.world-map__btn-to-country').css('display', 'block');
       $(this).closest('.world-map__nav').find('.world-map__btn-to-country').attr('href', link);
 
       return false;
@@ -270,7 +311,8 @@ $('.form-policy__btn-to-step-two').on('click', function () {
    $(this).closest('.form-policy').find('.form-policy__step-two').show();
    $('.policy-form__steps').removeClass('policy-form__steps--one')
    $('.policy-form__steps').addClass('policy-form__steps--two')
-   $(this).closest('.policy-form').addClass('fixed')
+   $(this).closest('.policy-form').addClass('fixed');
+   $(this).closest('.policy-form').find('.form-policy__num-of-step span').text('2')
 });
 $('.form-policy__btn-prev-to-step-one').on('click', function () {
    $(this).closest('.form-policy').find('.form-policy__step-two').hide();
@@ -278,6 +320,7 @@ $('.form-policy__btn-prev-to-step-one').on('click', function () {
    $('.policy-form__steps').removeClass('policy-form__steps--two')
    $('.policy-form__steps').addClass('policy-form__steps--one')
    $(this).closest('.policy-form').removeClass('fixed')
+   $(this).closest('.policy-form').find('.form-policy__num-of-step span').text('1')
 });
 
 $('.form-policy__btn-to-step-three').on('click', function () {
@@ -301,6 +344,7 @@ $('.form-policy__btn-to-step-five').on('click', function () {
    $(this).closest('.form-policy').find('.form-policy__step-five').show().addClass('active');
    $('.policy-form__steps').removeClass('policy-form__steps--two')
    $('.policy-form__steps').addClass('policy-form__steps--three')
+   $(this).closest('.policy-form').find('.form-policy__num-of-step span').text('3')
 });
 
 $('.form-policy__include-item').on('click', function () {
@@ -484,7 +528,7 @@ $('.btn-popup-message').on('click', function () {
 });
 //нажатие вне body
 $(document).on('click', function (e) {
-   if (!$(e.target).closest(".popup__content").length && !$(e.target).closest(".btn-popup").length) {
+   if (!$(e.target).closest(".popup__content").length && !$(e.target).closest(".btn-popup").length && !$(e.target).closest(".popup-message__content").length) {
       $('.popup').fadeOut();
    }
    e.stopPropagation();
@@ -563,10 +607,13 @@ new Swiper('.slider-partners ', {
    slidesPerView: 'auto',
    spaceBetween: 60,
    loop: true,
-   // autoplay: {
-   //    delay: 3250,
-   //    disableOnInteraction: false,
-   // },
+   freeMode: true,
+   speed: 3250,
+   waitForTransition: false,
+   autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+   },
    breakpoints: {
       768: {
          spaceBetween: 60,
@@ -609,16 +656,16 @@ $('.card-tariff__item-head').on('click', function () {
 })
 
 $('.card-tariff__pointer').on('click', function () {
-   $(this).closest('.card-tariff').find('.card-tariff__content').show();
-   $(this).closest('.banner__content').find('.card-tariff__hide').css('display', 'block');
-   $(this).closest('.card-tariff').find('.card-tariff__pointer').hide();
-   $(this).closest('.card-tariff').find('.card-tariff__short-info').hide();
+   $('.card-tariff__content').slideDown();
+   $('.card-tariff__hide').css('display', 'block');
+   $('.card-tariff__pointer').slideUp();
+   $('.card-tariff__short-info').slideUp();
 })
 $('.card-tariff__hide').on('click', function () {
-   $(this).closest('.banner__content').find('.card-tariff__content').hide();
-   $(this).closest('.banner__content').find('.card-tariff__pointer').show();
-   $(this).closest('.banner__content').find('.card-tariff__short-info').show();
-   $(this).closest('.banner__content').find('.card-tariff__hide').hide();
+   $(this).closest('.banner__content').find('.card-tariff__content').slideUp();
+   $(this).closest('.banner__content').find('.card-tariff__pointer').slideDown();
+   $(this).closest('.banner__content').find('.card-tariff__short-info').slideDown();
+   $(this).closest('.banner__content').find('.card-tariff__hide').slideUp();
 
 })
 
@@ -691,21 +738,26 @@ $('.form-calculator__hide-all').on('click', function () {
    $('.form-calculator__show-all').show();
 })
 
-$('.form-calculator__check-block .checkbox').on('click', function () {
-   $(this).closest('.form-calculator').find('.form-calculator__addition').show();
-})
-$('.form-calculator__input .input__select-item, .form-calculator__input .js-calendar-head').on('click', function () {
-   $(this).closest('.form-calculator').find('.form-calculator__calc-peoples-prev').show();
-   $(this).closest('.form-calculator').find('.form-calculator__details').show();
-   $(this).closest('.form-calculator').find('.form-calculator__calc-peoples').show();
-   $(this).closest('.form-calculator').find('.form-calculator__list-all').hide();
-})
+// $('.form-calculator__check-block .checkbox').on('click', function () {
+//    $(this).closest('.form-calculator').find('.form-calculator__addition').show();
+// })
+// $('.form-calculator__input .input__select-item, .form-calculator__input .js-calendar-head').on('click', function () {
+//    $(this).closest('.form-calculator').find('.form-calculator__calc-peoples-prev').show();
+//    $(this).closest('.form-calculator').find('.form-calculator__details').show();
+//    $(this).closest('.form-calculator').find('.form-calculator__calc-peoples').show();
+//    $(this).closest('.form-calculator').find('.form-calculator__list-all').hide();
+// })
 
 $('.form-calculator__btn-to-step-two').on('click', function () {
    // $(this).closest('.form-calculator').find('.form-calculator__step-three').hide();
    $(this).closest('.form-calculator').find('.form-calculator__step-one').hide();
    $(this).closest('.form-calculator').find('.form-calculator__step-two').show();
    $('.form-calculator__btn-edit-step-one').show();
+   $(this).closest('.form-calculator').find('.form-calculator__calc-peoples-prev').show();
+   $(this).closest('.form-calculator').find('.form-calculator__details').show();
+   $(this).closest('.form-calculator').find('.form-calculator__calc-peoples').show();
+   $(this).closest('.form-calculator').find('.form-calculator__list-all').hide();
+   $(this).closest('.form-calculator').find('.form-calculator__addition').show();
 })
 $('.form-calculator__btn-to-step-three').on('click', function () {
    // $(this).closest('.form-calculator').find('.form-calculator__step-three').hide();
@@ -718,6 +770,40 @@ $('.form-calculator__btn-edit-step-one').on('click', function () {
    $(this).closest('.form-calculator').find('.form-calculator__step-three').hide();
    $(this).closest('.form-calculator').find('.form-calculator__step-one').show();
    $('.form-calculator__btn-edit-step-one').hide();
+})
+
+$('.form-calculator__check-block-head .checkbox').on('click', function checkForm() {
+   var checkBlock = $(this).closest('.form-calculator__check-block');
+
+   if ($(this).find('.checkbox-none').prop('checked') && !checkBlock.hasClass('check-all')) {
+      $(checkBlock.find('.form-calculator__check-block-body .checkbox-none')).each(function () {
+         $(this).not(':disabled').prop('checked', true);
+
+      })
+      checkBlock.addClass('check-all')
+      // checkBlock.find('.form-calculator__check-block-body .checkbox-none').prop('checked')
+   }
+   else {
+      $(checkBlock.find('.form-calculator__check-block-body .checkbox-none')).each(function () {
+         $(this).not(':disabled').prop('checked', false);
+
+      })
+      checkBlock.removeClass('check-all')
+   }
+})
+$('.form-calculator__check-block-body .checkbox-none').on('click', function () {
+   var checkBlock = $(this).closest('.form-calculator__check-block');
+
+   if (checkBlock.find('.form-calculator__check-block-body .checkbox-none').length === checkBlock.find('.form-calculator__check-block-body .checkbox-none:checked').length) {
+
+
+      checkBlock.find('.form-calculator__check-block-head .checkbox-none').prop('checked', true);
+      checkBlock.addClass('check-all')
+   } else {
+
+      checkBlock.find('.form-calculator__check-block-head .checkbox-none').prop('checked', false);
+      checkBlock.removeClass('check-all')
+   }
 })
 
 // туристы

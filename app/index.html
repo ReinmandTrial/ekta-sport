@@ -49,7 +49,7 @@
 									</div>
 									<div class="lang btn-popup-languages">
 										<div class="flag">
-											<img src="images/flag-ru.svg" alt="">
+											<img src="images/flag-ua.svg" alt="">
 										</div>
 										<p class="lang__text">Русский</p>
 										<span class="icon icon-triangle-down"></span>
@@ -93,14 +93,21 @@
 							</a>
 						</div>
 					</div>
-					<div class="connection-trigger__wrap">
-						<button type="button" class="connection-trigger connection-trigger--phone btn-popup btn-popup-phone">
-							<span class="icon icon-phone-reverse"></span>
-						</button>
-						<button type="button"
-							class="connection-trigger connection-trigger--message btn-popup btn-popup-message">
+					<div class="connection-trigger__block">
+						<button class="connection-trigger__hover-btn">
+							<span class="icon icon-double-triangle"></span>
 							<span class="icon icon-message"></span>
 						</button>
+						<div class="connection-trigger__wrap">
+							<button type="button"
+								class="connection-trigger connection-trigger--phone btn-popup btn-popup-phone">
+								<span class="icon icon-phone-reverse"></span>
+							</button>
+							<button type="button"
+								class="connection-trigger connection-trigger--message btn-popup btn-popup-message">
+								<span class="icon icon-message"></span>
+							</button>
+						</div>
 					</div>
 					<div class="banner__bg">
 						<img src="images/banner-home.png" alt="">
@@ -3843,18 +3850,17 @@
 
 
 							</div>
-							<div class="world-map__nav">
-								<div class="world-map__search search-panel">
-									<input type="text" id="search-contry-input" class="search-panel__input"
+							<div class="world-map__nav js-not-for-all">
+								<div class="world-map__search search-panel input__block">
+									<input type="text" id="search-contry-input" class="search-panel__input input"
 										placeholder="Выберите страну назначения">
 									<span class="icon icon-search"></span>
 								</div>
-								<div id="search-contry-results" class="world-map__results">
+								<div id="search-contry-results" class="world-map__results js-not-for-all">
 									<a href="countries-all.html" class="world-map__item world-map__item-overall show">Весь
 										мир</a>
 									<a href="#" class="world-map__item world-map__item-overall show">Шенген</a>
-									<a href="CountryHtml/country-USA.html"
-										class="world-map__item world-map__item-overall show">США</a>
+									<a href="CountryHtml/country-USA.html" class="world-map__item show">США</a>
 									<a href="CountryHtml/country-china.html" class="world-map__item show">Китай</a>
 									<a href="CountryHtml/country-turkey.html" class="world-map__item show">Турция</a>
 									<a href="CountryHtml/country-canada.html" class="world-map__item show">Канада</a>
@@ -5367,12 +5373,6 @@
 										<button type="button"
 											class="form-policy__btn-next form-policy__btn-to-step-two">Далее</button>
 									</div>
-									<div class="form-policy__bottom-line">
-										<p class="form-policy__num-of-step">Шаг 1 из 3</p>
-										<div class="form-policy__secure">
-											<img src="images/secure.png" alt="">
-										</div>
-									</div>
 								</div>
 								<div class="form-policy__step-two">
 									<div class="form-policy__content">
@@ -5642,12 +5642,6 @@
 											Назад</button>
 										<button type="button"
 											class="form-policy__btn-next form-policy__btn-to-step-three">Далее</button>
-									</div>
-									<div class="form-policy__bottom-line">
-										<p class="form-policy__num-of-step">Шаг 2 из 3</p>
-										<div class="form-policy__secure">
-											<img src="images/secure.png" alt="">
-										</div>
 									</div>
 								</div>
 								<div class="form-policy__step-three">
@@ -5958,12 +5952,6 @@
 										<button type="button"
 											class="form-policy__btn-next form-policy__btn-to-step-four">Далее</button>
 									</div>
-									<div class="form-policy__bottom-line">
-										<p class="form-policy__num-of-step">Шаг 2 из 3</p>
-										<div class="form-policy__secure">
-											<img src="images/secure.png" alt="">
-										</div>
-									</div>
 								</div>
 								<div class="form-policy__step-four">
 									<div class="form-policy__content">
@@ -6189,12 +6177,6 @@
 										<button type="button"
 											class="form-policy__btn-next form-policy__btn-to-step-five">Купить</button>
 									</div>
-									<div class="form-policy__bottom-line">
-										<p class="form-policy__num-of-step">Шаг 2 из 3</p>
-										<div class="form-policy__secure">
-											<img src="images/secure.png" alt="">
-										</div>
-									</div>
 								</div>
 								<div class="form-policy__step-five">
 
@@ -6335,16 +6317,15 @@
 									<div class="form-policy__footer">
 										<button type="button" class="form-policy__btn-pay">Оплатить</button>
 									</div>
-									<div class="form-policy__bottom-line">
-										<p class="form-policy__num-of-step">Шаг 3 из 3</p>
-										<div class="form-policy__secure">
-											<img src="images/secure.png" alt="">
-										</div>
-									</div>
 
 								</div>
 
-
+								<div class="form-policy__bottom-line">
+									<p class="form-policy__num-of-step">Шаг <span>1</span> из 3</p>
+									<div class="form-policy__secure">
+										<img src="images/secure.png" alt="">
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -7520,15 +7501,15 @@
 		<div class="container">
 			<div class="burger__content">
 				<div class="burger__head js-search-panel-block">
-					<div class="burger__lang lang btn-popup-languages">
-						<div class="flag">
-							<img src="images/flag-ru.svg" alt="">
-						</div>
-						<p class="lang__text">Русский</p>
-						<span class="icon icon-triangle-down"></span>
-					</div>
 					<div class="burger__head-row">
 						<p class="burger__title h1">Меню</p>
+						<div class="burger__lang lang btn-popup-languages">
+							<div class="flag">
+								<img src="images/flag-ua.svg" alt="">
+							</div>
+							<p class="lang__text">Русский</p>
+							<span class="icon icon-triangle-down"></span>
+						</div>
 						<button type="button" class="burger__btn-search icon icon-search js-search-panel-trigger"></button>
 						<button type="button" class="burger__close icon icon-close"></button>
 					</div>
@@ -8021,9 +8002,9 @@
 				<button class="popup-close icon icon-close"></button>
 			</div>
 			<div class="languages__rightside-body">
-				<button type="button" class="languages__lang">English</button>
-				<button type="button" class="languages__lang">Ukrainian</button>
-				<button type="button" class="languages__lang">Russian</button>
+				<button type="button" class="languages__lang">Английский</button>
+				<button type="button" class="languages__lang">Украинский</button>
+				<button type="button" class="languages__lang">Русский</button>
 			</div>
 		</div>
 	</div>
@@ -8043,7 +8024,7 @@
 				</div>
 				<div class="footer__lang lang btn-popup-languages">
 					<div class="flag">
-						<img src="images/flag-ru.svg" alt="">
+						<img src="images/flag-ua.svg" alt="">
 					</div>
 					<p class="lang__text">Русский</p>
 					<span class="icon icon-triangle-down"></span>
