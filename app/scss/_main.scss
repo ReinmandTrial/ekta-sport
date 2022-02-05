@@ -9040,13 +9040,13 @@ gi .icon-triangle-down {
    }
    .post__title {
       margin-bottom: 20px;
-      font-size: 18px;
+      font-size: 24px;
       @media (max-width: 575.98px) {
          font-size: 16px;
          margin-bottom: 15px;
       }
       &.h4 {
-         font-size: 26px;
+         font-size: 30px;
          @media (max-width: 575.98px) {
             font-size: 20px;
          }
@@ -10393,7 +10393,7 @@ gi .icon-triangle-down {
    }
    &__full-img-block-bg {
       position: absolute;
-      top: 0;
+      top: 5px;
       right: 0;
       bottom: 0;
       left: 0;
@@ -10824,6 +10824,7 @@ gi .icon-triangle-down {
       font-size: 22px;
       font-weight: bold;
       margin-bottom: 10px;
+      display: block;
       @media (max-width: 575.98px) {
          font-size: 16px;
          font-weight: 600;
@@ -12178,8 +12179,8 @@ gi .icon-triangle-down {
    }
 }
 
-.page-country-england {
-   .banner__title {
-      color: #fff;
-   }
-}
+// .page-country-england {
+//    .banner__title {
+//       color: #fff;
+//    }
+// }
