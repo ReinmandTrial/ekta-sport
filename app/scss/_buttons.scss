@@ -44,6 +44,10 @@
             .icon-arrow-right {
                 color: #e83933;
                 transform: rotate(90deg);
+                &::before {
+                    animation: arrow-hover 1s linear infinite;
+                    animation-delay: 0.2s;
+                }
             }
         }
         &:active {

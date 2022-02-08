@@ -121,7 +121,7 @@ if ($('.wrapper').hasClass('page-main')) {
    filter = input.value.toUpperCase();
    ul = document.getElementById("search-contry-results");
    li = ul.getElementsByTagName("a");
-   max = 15;
+   max = 14;
    $('.world-map__results').find('.world-map__item.show').each(function (index) {
       console.log('filt');
 
@@ -139,7 +139,7 @@ $('#search-contry-input').keyup(function () {
    filter = input.value.toUpperCase();
    ul = document.getElementById("search-contry-results");
    li = ul.getElementsByTagName("a");
-   max = 15;
+   max = 14;
    searchForItems(filter, ul, li, i, max);
    $('.world-map__results').find('.world-map__item.show').each(function (index) {
       console.log('filt');
@@ -220,7 +220,7 @@ $('.js-select--swich .js-select-body .js-select-item').on('click', function () {
 });
 
 
-$('.js-select--country .js-select-body--country .js-select-item--country').on('click', function () {
+$('.js-select--country .js-select-body--country .js-select-item--country, input__several-item').on('click', function () {
    btn = $(this);
    block = btn.closest('.js-select');
 
@@ -454,15 +454,17 @@ $(document).on('click', '.form-policy__close', function () {
 // действия в форме полиса конец
 
 // Календарь
-
+var nowDate = new Date();
+var today = new Date(nowDate.getFullYear(), nowDate.getMonth(), nowDate.getDate(), 0, 0, 0, 0);
 $('input[name="daterange"], .daterangepicker').on('focus', function () {
-   $(this).closest('.js-calendar').addClass('open')
+   $(this).closest('.js-calendar').addClass('open');
    $(this).daterangepicker({
       opens: 'right',
       "linkedCalendars": false,
       "autoApply": true,
       "parentEl": ".js-calendar",
       "showCustomRangeLabel": false,
+      "minDate": today,
       "locale": {
          "format": "DD.MM.YYYY",
          "separator": " - ",
@@ -495,14 +497,128 @@ $('input[name="daterange"], .daterangepicker').on('focus', function () {
             "Ноябрь",
             "Декабрь"
          ],
-         "firstDay": 1
+         "firstDay": 1,
+         "dateLimit": {
+            "month": 1
+         },
       },
    }, function (start, end, label) {
-      console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+      console.log("A new date selection was made: " + start.format('DD.MM.YYYY') + ' to ' + end.format('DD.MM.YYYY'));
    });
 });
-$('input[name="daterange"], .daterangepicker').on('blur', function () {
-   $(this).closest('.js-calendar').removeClass('open')
+
+
+
+$('input[name="daterange-one"], .daterangepicker').on('focus', function () {
+   $(this).closest('.js-calendar').addClass('open');
+   $(this).closest('.input__block').addClass('--fill');
+   $(this).daterangepicker({
+      singleDatePicker: true,
+      opens: 'right',
+      "linkedCalendars": false,
+      "autoApply": true,
+      "parentEl": ".js-calendar",
+      "showCustomRangeLabel": false,
+      "minDate": today,
+      autoUpdateInput: false,
+      "locale": {
+         "format": "DD.MM.YYYY",
+         "separator": " - ",
+         "applyLabel": "Apply",
+         "cancelLabel": "Cancel",
+         "fromLabel": "From",
+         "toLabel": "To",
+         "customRangeLabel": "Custom",
+         "weekLabel": "W",
+         "daysOfWeek": [
+            "Пн",
+            "Вт",
+            "Ср",
+            "Чт",
+            "Пт",
+            "Сб",
+            "Вс"
+         ],
+         "monthNames": [
+            "Январь",
+            "Февраль",
+            "Март",
+            "Апрель",
+            "Май",
+            "Июнь",
+            "Июль",
+            "Август",
+            "Сентябрь",
+            "Октябрь",
+            "Ноябрь",
+            "Декабрь"
+         ],
+         "firstDay": 1,
+         "dateLimit": {
+            "month": 1
+         },
+      },
+   },
+      function (start) {
+         $('input[name="daterange-one"]').val(start.format('DD.MM.YYYY') + ' - ' + start.add(1, "months").format('DD.MM.YYYY'));
+      });
+});
+$('input[name="daterange-two"], .daterangepicker').on('focus', function () {
+   $(this).closest('.js-calendar').addClass('open');
+   $(this).closest('.input__block').addClass('--fill');
+   $(this).daterangepicker({
+      singleDatePicker: true,
+      opens: 'right',
+      "linkedCalendars": false,
+      "autoApply": true,
+      "parentEl": ".js-calendar",
+      "showCustomRangeLabel": false,
+      "minDate": today,
+      autoUpdateInput: false,
+      "locale": {
+         "format": "DD.MM.YYYY",
+         "separator": " - ",
+         "applyLabel": "Apply",
+         "cancelLabel": "Cancel",
+         "fromLabel": "From",
+         "toLabel": "To",
+         "customRangeLabel": "Custom",
+         "weekLabel": "W",
+         "daysOfWeek": [
+            "Пн",
+            "Вт",
+            "Ср",
+            "Чт",
+            "Пт",
+            "Сб",
+            "Вс"
+         ],
+         "monthNames": [
+            "Январь",
+            "Февраль",
+            "Март",
+            "Апрель",
+            "Май",
+            "Июнь",
+            "Июль",
+            "Август",
+            "Сентябрь",
+            "Октябрь",
+            "Ноябрь",
+            "Декабрь"
+         ],
+         "firstDay": 1,
+         "dateLimit": {
+            "month": 1
+         },
+      },
+   }, function (start) {
+      $('input[name="daterange-two"]').val(start.format('DD.MM.YYYY') + ' - ' + start.add(1, "years").format('DD.MM.YYYY'));
+   });
+});
+$('input[name="daterange"],input[name="daterange-one"],input[name="daterange-two"], .daterangepicker').on('blur', function () {
+   $(this).closest('.js-calendar').removeClass('open');
+   $(this).closest('.input__block').addClass('--fill');
 });
 // Календарь конец
 
@@ -615,7 +731,7 @@ new Swiper('.slider-partners ', {
       disableOnInteraction: false,
    },
    breakpoints: {
-      992:{
+      992: {
          speed: 20000,
       },
       768: {
@@ -781,7 +897,7 @@ $('.form-calculator__check-block-head .checkbox').on('click', function checkForm
 
    if ($(this).find('.checkbox-none').prop('checked') && !checkBlock.hasClass('check-all')) {
       $(checkBlock.find('.form-calculator__check-block-body .checkbox-none')).each(function () {
-         $(this).not(':disabled').prop('checked', true);
+         $(this).prop('checked', true).addClass('disabled');
 
       })
       checkBlock.addClass('check-all')
@@ -789,7 +905,7 @@ $('.form-calculator__check-block-head .checkbox').on('click', function checkForm
    }
    else {
       $(checkBlock.find('.form-calculator__check-block-body .checkbox-none')).each(function () {
-         $(this).not(':disabled').prop('checked', false);
+         $(this).prop('checked', false).removeClass('disabled');
 
       })
       checkBlock.removeClass('check-all')
@@ -803,10 +919,18 @@ $('.form-calculator__check-block-body .checkbox-none').on('click', function () {
 
       checkBlock.find('.form-calculator__check-block-head .checkbox-none').prop('checked', true);
       checkBlock.addClass('check-all')
+      $(checkBlock.find('.form-calculator__check-block-body .checkbox-none')).each(function () {
+         $(this).prop('checked', true).addClass('disabled');
+
+      })
    } else {
 
       checkBlock.find('.form-calculator__check-block-head .checkbox-none').prop('checked', false);
       checkBlock.removeClass('check-all')
+      $(checkBlock.find('.form-calculator__check-block-body .checkbox-none')).each(function () {
+         $(this).removeClass('disabled');
+
+      })
    }
 })
 

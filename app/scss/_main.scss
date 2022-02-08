@@ -14,7 +14,7 @@
 .burger-icon {
    color: $mainColor;
 }
-gi .icon-triangle-down {
+.icon-triangle-down {
    color: $mainColor;
 }
 .languages__country-name {
@@ -363,6 +363,9 @@ gi .icon-triangle-down {
    &__search {
       max-width: 345px;
       margin: 0 auto 35px;
+      @media (max-width: 575.98px) {
+         max-width: 400px;
+      }
    }
 
    &__results {
@@ -3050,6 +3053,9 @@ gi .icon-triangle-down {
 
    &__title {
       margin-bottom: 40px;
+      @media (min-width: 576px) {
+         font-size: 40px !important;
+      }
       @media (max-width: 575.98px) {
          margin-bottom: 20px;
       }
@@ -3081,6 +3087,9 @@ gi .icon-triangle-down {
 
    &__title {
       font-weight: bold;
+      @media (min-width: 576px) {
+         font-size: 20px !important;
+      }
       @media (max-width: 575.98px) {
          font-weight: 600;
       }
@@ -3095,6 +3104,9 @@ gi .icon-triangle-down {
       padding: 10px 85px 20px 0;
       color: $gray;
       display: none;
+      @media (min-width: 576px) {
+         font-size: 18px !important;
+      }
       @media (max-width: 575.98px) {
          padding: 10px 25px 10px 0;
       }
@@ -3583,126 +3595,6 @@ gi .icon-triangle-down {
       margin-bottom: 70px;
    }
 }
-.pages-types {
-   &__content {
-   }
-
-   &__title {
-      margin-bottom: 34px;
-      @media (max-width: 575.98px) {
-         margin-bottom: 13px;
-      }
-   }
-
-   &__wrapper {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
-      grid-gap: 40px 30px;
-      margin-bottom: 32px;
-      @media (max-width: 575.98px) {
-         grid-row-gap: 10px;
-         margin-bottom: 20px;
-      }
-   }
-
-   &__item {
-      border: 1px solid #8f9bb3;
-      border-radius: 20px;
-      position: relative;
-      overflow: hidden;
-      padding-bottom: 86%;
-      display: flex;
-      align-items: flex-end;
-      box-sizing: border-box;
-      transition: 0.1s ease;
-      @media (max-width: 575.98px) {
-         padding-bottom: 32%;
-      }
-      @media (min-width: 992px) {
-         &:hover {
-            border: 1px solid $mainColor;
-            .pages-types__item-bg::before {
-               display: none;
-            }
-            .pages-types__item-descr {
-               background: rgba(34, 43, 69, 0.7);
-               color: $white;
-            }
-            .pages-types__top {
-               display: none;
-            }
-            .pages-types__item-bg img {
-               transform: scale(1.05);
-            }
-         }
-      }
-   }
-
-   &__item-bg {
-      position: absolute;
-      top: -2px;
-      right: -2px;
-      bottom: -2px;
-      left: -2px;
-      transition: 0.1s ease;
-      img:not(.pages-types__top) {
-         width: stretch;
-         height: stretch;
-         object-fit: cover;
-         transition: 0.1s ease;
-      }
-      &::before {
-         content: "";
-         position: absolute;
-         top: 0;
-         right: 0;
-         left: 0;
-         bottom: 0;
-         background: rgba(143, 155, 179, 0.3);
-         transition: 0.1s ease;
-         @media (max-width: 575.98px) {
-            display: none;
-         }
-      }
-   }
-   &__top {
-      position: absolute;
-      top: 0;
-      right: 0;
-      @media (max-width: 575.98px) {
-         display: none;
-      }
-   }
-
-   &__item-descr {
-      transition: 0.1s ease;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      z-index: 10;
-      background: rgba(255, 255, 255, 0.7);
-      // border-radius: 0px 0px 20px 20px;
-      font-size: 24px;
-      padding: 12px;
-      font-weight: 800;
-      text-align: center;
-      @media (max-width: 575.98px) {
-         padding: 4px;
-         font-size: 16px;
-         font-weight: 700;
-      }
-   }
-
-   &__btn-more {
-      margin: 0 auto;
-      @media (max-width: 575.98px) {
-         max-width: unset;
-         padding: 14px;
-         border: 1px solid $mainColor;
-      }
-   }
-}
 
 .page-leisure {
    .banner__bg {
@@ -3770,8 +3662,10 @@ gi .icon-triangle-down {
 
    &__title {
       margin-bottom: 34px;
+      font-size: 30px;
       @media (max-width: 575.98px) {
          margin-bottom: 13px;
+         font-size: 20px;
       }
    }
 
@@ -3975,6 +3869,9 @@ gi .icon-triangle-down {
    &__listbtn {
       list-style-type: none; /* Убираем исходные маркеры */
       counter-reset: my-counter; /* Задаём имя счетчика */
+      &:not(:last-child) {
+         margin-bottom: 20px;
+      }
    }
    &__listbtn-item {
       position: relative;
@@ -4276,6 +4173,9 @@ gi .icon-triangle-down {
 }
 
 .page-countries-visa {
+   .search__icon {
+      color: inherit;
+   }
    .banner__title {
       color: $white;
       margin-bottom: 60px;
@@ -4340,10 +4240,10 @@ gi .icon-triangle-down {
    }
    .banner__bg--mobile {
       bottom: 0;
-      top: unset;
+      // top: unset;
+      top: 0;
    }
    .form-policy {
-      background: none;
       &::before {
          @media (max-width: 575.98px) {
             background: #edf1f7;
@@ -4769,6 +4669,10 @@ gi .icon-triangle-down {
             }
          }
          &_6 {
+            margin-bottom: 20px;
+            @media (max-width: 575.98px) {
+               margin-bottom: 10px;
+            }
          }
          &_7 {
          }
@@ -5008,6 +4912,10 @@ gi .icon-triangle-down {
       margin-bottom: 70px;
       &__title {
          &_1 {
+            margin-bottom: 30px;
+            @media (max-width: 575.98px) {
+               margin-bottom: 20px;
+            }
          }
          &_2 {
             margin-bottom: 30px;
@@ -5018,11 +4926,19 @@ gi .icon-triangle-down {
       }
       &__text {
          &_1 {
+            margin-bottom: 20px;
+            @media (max-width: 575.98px) {
+               margin-bottom: 10px;
+            }
          }
          &_2 {
             margin-bottom: 70px;
          }
          &_3 {
+            margin-bottom: 20px;
+            @media (max-width: 575.98px) {
+               margin-bottom: 10px;
+            }
          }
          &_4 {
             margin-bottom: 20px;
@@ -5354,6 +5270,11 @@ gi .icon-triangle-down {
          padding-top: 8px;
          padding-bottom: 8px;
       }
+      &.--fill {
+         .input {
+            padding: 7px 39px 7px 20px;
+         }
+      }
    }
 
    &__btn-give {
@@ -5457,6 +5378,7 @@ gi .icon-triangle-down {
       display: none;
    }
    &__sidebar {
+      flex: none;
       background: $white;
       box-shadow: 0px 10px 10px rgba(91, 89, 89, 0.25);
       border-radius: 20px 0 0 20px;
@@ -5678,6 +5600,11 @@ gi .icon-triangle-down {
       @media (max-width: 575.98px) {
          font-size: 12px;
          margin-top: 8px;
+      }
+      &:hover {
+         .form-calculator__policy-includes-btn-text {
+            text-decoration-line: underline;
+         }
       }
       .icon {
          font-size: 19px;
@@ -7299,6 +7226,7 @@ gi .icon-triangle-down {
    .header {
       background: rgba(255, 255, 255, 0.4);
       backdrop-filter: blur(10px);
+      z-index: 30;
    }
    &__content {
       position: relative;
@@ -7340,10 +7268,17 @@ gi .icon-triangle-down {
    .btn-red {
       padding: 4px 26px 4px 5px;
       margin: 0 auto;
+      &:hover {
+         .icon-arrow-right {
+            transform: rotate(180deg);
+            &::before {
+               animation: arrow-hover 1s linear infinite;
+            }
+         }
+      }
       .icon-arrow-right {
          margin-left: unset;
          margin-right: 28px;
-         rotate: 180deg;
       }
       @media (max-width: 991.98px) {
          padding: 2px 39px 2px 2px;
@@ -7352,6 +7287,23 @@ gi .icon-triangle-down {
             margin-right: 10px;
          }
       }
+   }
+}
+@keyframes arrow-hover {
+   0% {
+      transform: translateX(0px);
+   }
+   25% {
+      transform: translateX(4px);
+   }
+   50% {
+      transform: translateX(0px);
+   }
+   75% {
+      transform: translateX(-2px);
+   }
+   100% {
+      transform: translateX(0px);
    }
 }
 
@@ -11862,19 +11814,24 @@ gi .icon-triangle-down {
    }
 }
 .page-country-maldives {
-   .gift {
-      color: $mainColor !important;
-   }
-   .gift__btn-send {
-      background: $mainColor;
-      border: 1px solid $mainColor;
-   }
-   .gift .input {
-      color: $mainColor !important;
-      border: 1px solid $mainColor;
+   @media (min-width: 576px) {
+      .gift {
+         color: $mainColor !important;
+      }
+      .gift__divide {
+         background: $mainColor !important;
+      }
+      .gift__btn-send {
+         background: $mainColor;
+         border: 1px solid $mainColor;
+      }
+      .gift .input {
+         color: $mainColor !important;
+         border: 1px solid $mainColor;
 
-      &::placeholder {
-         color: $gray !important;
+         &::placeholder {
+            color: $gray !important;
+         }
       }
    }
 }

@@ -12,6 +12,9 @@ body {
 		font-size: 14px;
 	}
 }
+html {
+	overflow: hidden;
+}
 textarea {
 	resize: none;
 }
@@ -1057,6 +1060,9 @@ button {
 	@media (max-width: 575.98px) {
 		border-top: 5px solid #2e3a59;
 	}
+	.container {
+		height: unset;
+	}
 	&__bg {
 		position: absolute;
 		transform: translate(-50%, -50%);
@@ -1137,6 +1143,7 @@ button {
 	&__menu {
 		margin-bottom: 20px;
 		@media (max-width: 575.98px) {
+			height: 100%;
 			.menu__section {
 				order: 5;
 			}
@@ -1245,7 +1252,8 @@ button {
 .daterangepicker td.weekend.available {
 	color: $red;
 }
-.daterangepicker td.in-range {
+.daterangepicker td.in-range,
+.daterangepicker td.off.in-range {
 	background: #e9e9e9;
 }
 .daterangepicker td.in-range.active {
@@ -1324,8 +1332,12 @@ input {
 	border-radius: 20px;
 	font-size: 16px;
 	background: rgba(255, 255, 255, 0.5);
+	transition: box-shadow 0.1s ease-in-out;
 	&::placeholder {
 		color: #74798a;
+	}
+	&:hover {
+		box-shadow: 0px 10px 10px rgba(34, 43, 69, 0.1);
 	}
 
 	&__block {
@@ -1389,6 +1401,7 @@ input {
 			display: none;
 			font-size: 21px;
 			color: #338700;
+			pointer-events: none;
 		}
 		.icon-close {
 			display: none;
@@ -1397,6 +1410,7 @@ input {
 		}
 		.icon-triangle-down {
 			cursor: pointer;
+			pointer-events: none;
 		}
 	}
 
@@ -1419,6 +1433,7 @@ input {
 			}
 			.input {
 				border-radius: 20px 20px 0 0;
+				box-shadow: none;
 			}
 		}
 		&--country {
@@ -1512,7 +1527,7 @@ input {
 				display: block;
 			}
 		}
-		.checkbox-none:checked:disabled + .checkbox-style {
+		.checkbox-none:checked.disabled + .checkbox-style {
 			background: rgba(46, 58, 89, 0.2);
 			border-color: rgba(46, 58, 89, 0.2);
 			.icon-check-small {
@@ -1542,6 +1557,9 @@ input {
 	&__several-item {
 		font-size: 14px;
 		color: #044481;
+		.icon {
+			display: none;
+		}
 	}
 
 	&__more-details {
@@ -1677,6 +1695,9 @@ p.input {
 		@media (max-width: 575.98px) {
 			font-weight: 600;
 			font-size: 12px;
+		}
+		&:last-child {
+			cursor: default;
 		}
 	}
 	&__link--bold {
