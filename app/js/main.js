@@ -298,6 +298,40 @@ $('input.input').on('click keyup', function () {
 // dropdowns end
 
 // плавная прокрутка якоря
+// var scrollToTopBtn = document.querySelector(".link-to-top");
+// var rootElement = document.documentElement;
+
+// function handleScroll() {
+//    // Do something on scroll
+//    var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+//    if (rootElement.scrollTop / scrollTotal > 0.3) {
+//       // Show button
+//       scrollToTopBtn.classList.add("showBtn");
+//    } else {
+//       // Hide button
+//       scrollToTopBtn.classList.remove("showBtn");
+//    }
+// }
+let btn = document.querySelector('.link-to-top')
+//
+function magic() {
+   if (window.pageYOffset > 300) {
+      btn.style.opacity = '1'
+   } else { btn.style.opacity = '0' }
+
+   console.log('scr');
+}
+//
+// btn.onclick = function () {
+//    document.querySelector('body').scrollTo(0, 0)
+// }
+
+// When scrolling, we run the function 
+$(document).on('scroll', function () {
+   magic();
+})
+
+
 const anchors = document.querySelectorAll('a[href*="#"]')
 
 for (let anchor of anchors) {
@@ -817,12 +851,12 @@ new Swiper('.slider-partners ', {
 // Слайдеры конец
 
 $('.post__btn-more').on('click', function () {
-   $(this).closest('.post').find('.post__item--hide').show();
+   $(this).closest('.post').find('.post__item--hide').slideDown();
    $(this).closest('.post').find('.post__btn-roll-up').show();
    $(this).hide();
 })
 $('.post__btn-roll-up').on('click', function () {
-   $(this).closest('.post').find('.post__item--hide').hide();
+   $(this).closest('.post').find('.post__item--hide').slideUp();
    $(this).closest('.post').find('.post__btn-more').show();
    $(this).hide();
 })

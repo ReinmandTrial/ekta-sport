@@ -1,6 +1,6 @@
 html,
 body {
-	height: 100%;
+	// height: 100%;
 	font-family: "Open Sans";
 	font-weight: normal;
 	font-style: normal;
@@ -13,7 +13,7 @@ body {
 	}
 }
 html {
-	overflow: hidden;
+	// overflow: hidden;
 }
 textarea {
 	resize: none;
@@ -1698,6 +1698,9 @@ p.input {
 			font-weight: 600;
 			font-size: 12px;
 		}
+		&:last-child {
+			font-weight: 400 !important;
+		}
 	}
 	&__link--bold {
 		font-weight: 600;
@@ -2713,17 +2716,24 @@ p.input {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 67px;
-	height: 67px;
+	width: 40px;
+	height: 40px;
 	border-radius: 50%;
 	border: 4px solid #edeff3;
 	color: $white;
 	background: #db3731;
-	font-size: 35px;
-	position: absolute;
+	font-size: 27px;
+	// position: absolute;
 	margin: 7px;
-	bottom: 6px;
-	left: 100%;
+	// bottom: 6px;
+	// left: 100%;
+	position: fixed;
+	right: 110px;
+	bottom: 30px;
+	// display: none;
+	opacity: 0;
+	transition: 0.2s ease-in-out;
+	z-index: 100;
 	@media (max-width: 575.98px) {
 		width: 46px;
 		height: 46px;
@@ -2735,5 +2745,8 @@ p.input {
 	}
 	&::before {
 		transform: rotate(-90deg);
+	}
+	&.showBtn {
+		// display: block;
 	}
 }

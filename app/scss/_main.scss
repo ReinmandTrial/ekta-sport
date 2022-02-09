@@ -2023,10 +2023,40 @@
          left: 0;
          margin: 8px;
          flex: none;
+         @media (min-width: 576px) {
+            width: 67px;
+            height: 67px;
+            border-width: 4px;
+            font-size: 34px;
+         }
+
          &:not(:last-child) {
             margin-bottom: 23px;
             @media (max-width: 991.98px) {
                margin-bottom: 8px;
+            }
+         }
+         &::before {
+            @media (min-width: 576px) {
+               width: 68px;
+               height: 68px;
+               animation-name: bdScale23;
+            }
+         }
+         @keyframes bdScale23 {
+            0% {
+               opacity: 0;
+            }
+            10% {
+               opacity: 1;
+            }
+            40% {
+               opacity: 1;
+            }
+            100% {
+               opacity: 0;
+               width: 68px * 1.3;
+               height: 68px * 1.3;
             }
          }
       }
@@ -2043,11 +2073,11 @@
       }
    }
    .link-to-top {
-      @media (max-width: 1399.98px) {
-         bottom: calc(100% + 15px);
-         left: unset;
-         right: 10px;
-      }
+      // @media (max-width: 1399.98px) {
+      //    bottom: calc(100% + 15px);
+      //    left: unset;
+      //    right: 10px;
+      // }
    }
    &__content {
       position: relative;
@@ -2574,7 +2604,7 @@
       align-self: center;
       .post__text {
          font-size: 16px;
-         margin-bottom: 10px;
+         margin-bottom: 15px;
          @media (max-width: 575.98px) {
             font-size: 14px;
          }
@@ -2587,7 +2617,11 @@
          }
       }
       .post__list {
-         margin-bottom: 10px;
+         margin-bottom: 15px;
+         font-size: 16px;
+         @media (max-width: 575.98px) {
+            font-size: 14px;
+         }
       }
       .post__list-item::before {
          top: 9px;
@@ -4892,6 +4926,12 @@
       }
    }
 }
+.registration__title {
+   margin-bottom: 30px;
+   @media (max-width: 575.98px) {
+      margin-bottom: 20px;
+   }
+}
 //surfing END========================================================================================================================================================
 
 //skiing START========================================================================================================================================================
@@ -6717,7 +6757,7 @@
          width: 100%;
          margin-bottom: 20px;
          padding-top: 337px;
-         background: url("../images/cooperation-1.png") center/cover no-repeat;
+         background: url("../images/cooperation-1.jpg") center/cover no-repeat;
          .cooperation__info {
             height: 72px;
          }
@@ -6738,22 +6778,22 @@
          }
       }
       &:nth-child(2) {
-         background: url("../images/cooperation-2.png") center/cover no-repeat;
+         background: url("../images/cooperation-2.jpg") center/cover no-repeat;
       }
       &:nth-child(3) {
-         background: url("../images/cooperation-3.png") center/cover no-repeat;
+         background: url("../images/cooperation-3.jpg") center/cover no-repeat;
       }
       &:nth-child(4) {
-         background: url("../images/cooperation-4.png") center/cover no-repeat;
+         background: url("../images/cooperation-4.jpg") center/cover no-repeat;
       }
       &:nth-child(5) {
-         background: url("../images/cooperation-5.png") center/cover no-repeat;
+         background: url("../images/cooperation-5.jpg") center/cover no-repeat;
       }
       &:nth-child(6) {
-         background: url("../images/cooperation-6.png") center/cover no-repeat;
+         background: url("../images/cooperation-6.jpg") center/cover no-repeat;
       }
       &:nth-child(7) {
-         background: url("../images/cooperation-7.png") center/cover no-repeat;
+         background: url("../images/cooperation-7.jpg") center/cover no-repeat;
       }
    }
 }
@@ -9224,16 +9264,16 @@
          margin-bottom: 30px;
       }
       .link-to-top {
-         bottom: unset;
-         top: 0;
-         transform: translateY(-50%);
-         @media (max-width: 1399.98px) {
-            right: 0;
-            left: unset;
-         }
-         @media (max-width: 575.98px) {
-            display: none;
-         }
+         // bottom: unset;
+         // top: 0;
+         // transform: translateY(-50%);
+         // @media (max-width: 1399.98px) {
+         //    right: 0;
+         //    left: unset;
+         // }
+         // @media (max-width: 575.98px) {
+         //    display: none;
+         // }
       }
    }
 
