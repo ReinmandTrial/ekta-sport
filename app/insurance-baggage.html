@@ -213,22 +213,6 @@
 					<div class="container">
 						<div class="policy-form__content">
 							<p class="policy-form__title h4">Онлайн калькулятор расчета стоимости полиса</p>
-							<!-- <div class="policy-form__steps policy-form__steps--one">
-								<div class="policy-form__steps-line"></div>
-								<div class="policy-form__steps-item">
-									<div class="policy-form__steps-circle"></div>
-									<p class="policy-form__steps-text">Рассчитайте стоимость </p>
-								</div>
-								<div class="policy-form__steps-item">
-									<div class="policy-form__steps-circle"></div>
-									<p class="policy-form__steps-text">Введите Ваши данные</p>
-								</div>
-								<div class="policy-form__steps-item">
-									<div class="policy-form__steps-circle"></div>
-									<p class="policy-form__steps-text">Оплатите и получите
-										полис на email</p>
-								</div>
-							</div> -->
 							<div class="form-policy">
 								<div class="form-policy__step-one">
 									<div class="form-policy__content">
@@ -329,18 +313,160 @@
 												</label>
 											</div>
 										</div>
+										<div class="form-policy__footer">
+											<div class="form-policy__total-price">
+												<p class="form-policy__total-price-term">Цена:</p>
+												<div class="form-policy__total-price-num">
+													<p class="form-policy__total-price-full">10,00 <span>USD</span></p>
+												</div>
+											</div>
+											<button type="button"
+												class="form-policy__btn-pay form-policy__btn-to-step-two">Оформить</button>
+										</div>
+									</div>
 
+
+								</div>
+								<div class="form-policy__step-five form-policy__step-two">
+
+									<div class="form-policy__toggle">
+										<button type="button" class="form-policy__toggle-item active">
+											<svg width="19" height="14" viewBox="0 0 19 14" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+													d="M3.75488 0.5H15.7549C17.4089 0.5 18.7549 1.47211 18.7549 2.66667V4.5H0.754883V2.66667C0.754883 1.47211 2.10088 0.5 3.75488 0.5ZM0.754883 6.5V11.3333C0.754883 12.5279 2.10088 13.5 3.75488 13.5H15.7549C17.4089 13.5 18.7549 12.5279 18.7549 11.3333V6.5H0.754883Z"
+													fill="white" />
+											</svg>
+
+											Карта
+										</button>
+										<button type="button" class="form-policy__toggle-item form-policy__toggle-item--gplay ">
+											<svg width="70" height="28" viewBox="0 0 70 28" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path class="text"
+													d="M32.8932 13.3475V21.2946H30.3545V1.6688H37.0876C37.8913 1.65213 38.6904 1.79368 39.4387 2.0853C40.187 2.37691 40.8698 2.81281 41.4476 3.36784C42.0312 3.88917 42.4957 4.52852 42.8099 5.24294C43.124 5.95735 43.2805 6.73026 43.2689 7.50973C43.2856 8.29337 43.1315 9.07133 42.8171 9.79029C42.5028 10.5093 42.0356 11.1522 41.4476 11.6751C40.2702 12.7901 38.8169 13.347 37.0876 13.346H32.8932V13.3475ZM32.8932 4.08503V10.936H37.1507C37.6174 10.9497 38.0819 10.8666 38.5145 10.6918C38.947 10.5171 39.3381 10.2547 39.6626 9.92127C39.9855 9.60955 40.2421 9.2367 40.4174 8.82478C40.5926 8.41286 40.6829 7.97022 40.6829 7.52304C40.6829 7.07586 40.5926 6.63322 40.4174 6.2213C40.2421 5.80938 39.9855 5.43653 39.6626 5.12481C39.3421 4.78439 38.9524 4.5155 38.5194 4.33597C38.0863 4.15645 37.6198 4.07038 37.1507 4.08347H32.8932V4.08503Z"
+													fill="white" />
+												<path class="text"
+													d="M49.1203 7.42822C50.9968 7.42822 52.478 7.92619 53.5639 8.92212C54.6498 9.91806 55.1922 11.2836 55.1912 13.0186V21.2946H52.7629V19.4311H52.6525C51.6012 20.9657 50.2031 21.733 48.4581 21.733C46.9685 21.733 45.7222 21.2946 44.7194 20.4176C44.2381 20.0152 43.8533 19.5111 43.5931 18.9422C43.3328 18.3733 43.2037 17.7539 43.215 17.1292C43.215 15.7397 43.7438 14.6346 44.8014 13.8141C45.8589 12.9935 47.2707 12.5822 49.0368 12.5801C50.5442 12.5801 51.7857 12.8542 52.7613 13.4023V12.826C52.7641 12.4001 52.6715 11.9789 52.4902 11.5929C52.3088 11.207 52.0432 10.8659 51.7127 10.5945C51.0413 9.99303 50.1664 9.66483 49.2623 9.67534C47.8441 9.67534 46.722 10.2693 45.8957 11.4574L43.6597 10.059C44.8897 8.30515 46.7099 7.42822 49.1203 7.42822ZM45.8358 17.184C45.8341 17.5048 45.9096 17.8215 46.0561 18.1075C46.2025 18.3935 46.4157 18.6406 46.6778 18.8282C47.2393 19.2668 47.9362 19.4992 48.6504 19.4859C49.7217 19.4841 50.7486 19.0607 51.5061 18.3083C52.3471 17.5222 52.7676 16.5999 52.7676 15.5413C51.976 14.9149 50.8722 14.6018 49.4562 14.6018C48.4249 14.6018 47.565 14.8487 46.8765 15.3424C46.1811 15.8435 45.8358 16.4527 45.8358 17.184Z"
+													fill="white" />
+												<path class="text"
+													d="M69.1307 7.86768L60.6536 27.2148H58.0328L61.1786 20.4452L55.6045 7.86768H58.364L62.3928 17.5138H62.448L66.3665 7.86768H69.1307Z"
+													fill="white" />
+												<path
+													d="M22.6352 11.6343C22.6362 10.866 22.5708 10.099 22.4397 9.3418H11.7329V13.6841H17.8653C17.7398 14.3777 17.4742 15.0388 17.0845 15.6276C16.6948 16.2165 16.189 16.7209 15.5978 17.1104V19.9291H19.2576C21.4005 17.967 22.6352 15.0653 22.6352 11.6343Z"
+													fill="#4285F4" />
+												<path
+													d="M11.7322 22.654C14.796 22.654 17.3758 21.6549 19.2569 19.9324L15.5971 17.1137C14.5784 17.7996 13.2665 18.1911 11.7322 18.1911C8.77091 18.1911 6.25742 16.2086 5.35862 13.5371H1.58838V16.4419C2.53333 18.3093 3.98231 19.879 5.77355 20.976C7.56479 22.0729 9.62779 22.6539 11.7322 22.654Z"
+													fill="#34A853" />
+												<path
+													d="M5.35905 13.5369C4.88388 12.1371 4.88388 10.6211 5.35905 9.22121V6.31641H1.58881C0.79388 7.88728 0.379883 9.62099 0.379883 11.3791C0.379883 13.1371 0.79388 14.8709 1.58881 16.4417L5.35905 13.5369Z"
+													fill="#FBBC04" />
+												<path
+													d="M11.7322 4.56668C13.3513 4.54041 14.9158 5.14791 16.0875 6.25789L19.3279 3.03989C17.2731 1.12331 14.551 0.0710718 11.7322 0.103767C9.62779 0.103862 7.56479 0.684814 5.77355 1.78176C3.98231 2.87871 2.53333 4.44848 1.58838 6.31583L5.35862 9.22063C6.25742 6.54915 8.77091 4.56668 11.7322 4.56668Z"
+													fill="#EA4335" />
+											</svg>
+
+										</button>
+										<button type="button" class="form-policy__toggle-item">
+											<svg width="70" height="30" viewBox="0 0 70 30" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M57.4603 29.1903C60.6289 29.1903 62.1203 27.9813 63.423 24.3164L69.1299 8.30971H65.8257L61.9987 20.6935H61.9316L58.1046 8.32648H54.7068L60.2124 23.5617L59.9175 24.4883C59.7092 25.8148 58.5184 26.761 57.178 26.6632C56.9222 26.6632 56.426 26.6366 56.2247 26.6101V29.126C56.6342 29.1819 57.048 29.2085 57.4603 29.2071V29.1903ZM46.449 21.1743C44.7159 21.1743 43.6158 20.3357 43.6158 19.0666C43.6158 17.7513 44.6767 16.9854 46.7048 16.8638L50.3165 16.6359V17.8184C50.2369 19.7668 48.5917 21.2834 46.6433 21.2037C46.5776 21.2009 46.5133 21.1953 46.449 21.1897V21.1743ZM45.5768 23.6581C47.5434 23.7112 49.3828 22.6867 50.371 20.9857H50.4381V23.5016H53.446V13.0815C53.446 10.0597 51.0294 8.11263 47.3086 8.11263C43.8576 8.11263 41.3054 10.0862 41.2118 12.7992H44.14C44.4894 11.4196 45.8005 10.5097 47.215 10.6635C49.2025 10.6635 50.3165 11.5902 50.3165 13.2954V14.4499L46.2631 14.6917C42.4893 14.9195 40.4486 16.464 40.4486 19.1504C40.4458 21.8746 42.5536 23.6735 45.5755 23.6735L45.5768 23.6581ZM28.1458 5.30181H31.8917C34.7123 5.30181 36.3239 6.80576 36.3239 9.45165C36.3239 12.0975 34.7123 13.6141 31.8792 13.6141H28.1458V5.30181ZM24.8961 2.56227V23.4974H28.1458V16.3606H32.6451C36.3099 16.5577 39.4394 13.7468 39.6365 10.082C39.6477 9.87376 39.6491 9.66689 39.6407 9.45863C39.814 5.83434 37.0172 2.75655 33.3929 2.58184C33.179 2.57205 32.9666 2.57345 32.7527 2.58324L24.8961 2.56227ZM14.1099 6.46891C12.2425 6.36128 10.645 7.52978 9.7588 7.52978C8.87264 7.52978 7.50287 6.52342 6.02547 6.55137C4.06866 6.60169 2.28517 7.68492 1.33891 9.39853C-0.675212 12.8635 0.814763 17.9931 2.76179 20.8123C3.71504 22.2101 4.85838 23.7406 6.36093 23.6861C7.78381 23.6329 8.34849 22.7594 10.0677 22.7594C11.7869 22.7594 12.2971 23.6861 13.801 23.6581C15.3581 23.6315 16.3393 22.2604 17.2953 20.8627C17.969 19.8731 18.4932 18.7898 18.8524 17.6479C17.0172 16.8456 15.8277 15.0383 15.8179 13.0354C15.8459 11.2687 16.7712 9.63894 18.2751 8.71225C17.3163 7.35087 15.7774 6.51503 14.1127 6.45633L14.1099 6.46891ZM12.9442 4.61972C12.1265 5.64984 10.8756 6.24108 9.56032 6.21732C9.47645 4.93421 9.91254 3.67206 10.7693 2.71322C11.622 1.72364 12.824 1.10305 14.1239 0.981445C14.2161 2.3009 13.7926 3.60357 12.9414 4.61552"
+													fill="#222B45" />
+											</svg>
+										</button>
+									</div>
+									<div class="form-policy__content">
+										<div class="form-policy__toggle-body">
+											<div class="form-policy__toggle-item-body active">
+												<div class="form-card">
+													<div class="form-card__front">
+														<div class="form-card__bg-front">
+															<img src="images/card-mask.png" alt="">
+														</div>
+														<div class="form-card__inputs">
+															<div class="form-card__input-num input__block">
+																<p class="input__title">Номер карты</p>
+																<div class="input__box">
+																	<input type="text" class="input" placeholder="**** **** **** ****">
+																</div>
+															</div>
+															<div class="form-card__input-row">
+																<div class=" form-card__input-term input__block">
+																	<p class="input__title">Срок действия</p>
+																	<div class="input__box">
+																		<input type="text" class="input" placeholder="**/**">
+																	</div>
+																</div>
+																<div class=" form-card__input-pass input__block">
+																	<p class="input__title">Код</p>
+																	<div class="input__box">
+																		<input type="text" class="input" placeholder="***">
+																		<div class="form-card__info">
+																			<button type="button"
+																				class="form-card__info-icon icon icon-info"></button>
+																			<div class="form-card__info-body">
+																				<p> Трехзначный номер на обратной стороне вашей карты</p>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="form-card__cards">
+															<div class="form-card__mastercard">
+																<img src="images/mastercard-simple.png" alt="">
+															</div>
+															<div class="form-card__visa">
+																<img src="images/visa-simple.png" alt="">
+															</div>
+														</div>
+													</div>
+													<div class="form-card__back">
+														<div class="form-card__bg-back">
+															<img src="images/card-mask-back.png" alt="">
+														</div>
+														<div class=" form-card__input-pass input__block">
+															<p class="input__title">Код</p>
+															<div class="input__box">
+																<input type="text" class="input" placeholder="***">
+																<div class="form-card__info">
+																	<button type="button"
+																		class="form-card__info-icon icon icon-info"></button>
+																	<div class="form-card__info-body">
+																		<p> Трехзначный номер на обратной стороне вашей карты</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-policy__toggle-item-body">
+												<button class="form-policy__payment-btn">
+													Оплатить через
+													<img src="images/gpay.png" alt="">
+												</button>
+												<div class="form-policy__secure--mobile">
+													<img src="images/secure.png" alt="">
+												</div>
+											</div>
+											<div class="form-policy__toggle-item-body">
+												<button class="form-policy__payment-btn">
+													Оплатить через
+													<img src="images/apay.png" alt="">
+												</button>
+												<div class="form-policy__secure--mobile">
+													<img src="images/secure.png" alt="">
+												</div>
+											</div>
+										</div>
 									</div>
 
 									<div class="form-policy__footer">
-										<div class="form-policy__total-price">
-											<p class="form-policy__total-price-term">Цена:</p>
-											<div class="form-policy__total-price-num">
-												<p class="form-policy__total-price-full">10,00 <span>USD</span></p>
-											</div>
-										</div>
-										<button type="button" class="form-policy__btn-pay">Оформить</button>
+										<button type="button" class="form-policy__btn-pay">Оплатить</button>
 									</div>
+
 								</div>
 
 								<div class="form-policy__bottom-line">

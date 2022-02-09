@@ -1907,7 +1907,7 @@
          background: unset;
       }
    }
-   .form-policy__btn-pay {
+   .form-policy__step-one .form-policy__btn-pay {
       margin-right: unset;
       padding: 20px 60px;
       max-width: unset;
@@ -8121,11 +8121,17 @@
 
 //insurance-air-ticket START========================================================================================================================================================
 .insurance-air-ticket {
+   .banner__content {
+      @media (min-width: 576px) {
+         padding: 125px 0;
+      }
+   }
    .banner__title {
       color: $mainColor;
       @media (max-width: 575.98px) {
          margin-top: 50px;
          margin-bottom: 100px;
+         max-width: 260px;
       }
    }
 
@@ -8326,7 +8332,7 @@
    .thank-you__policy-form .input__block .check-block {
       margin-top: unset;
    }
-   .thank-you__policy-form .form-policy__btn-pay {
+   .thank-you__policy-form .form-policy__step-one .form-policy__btn-pay {
       font-size: 22px;
    }
    .card-tariff__content {
@@ -8962,6 +8968,16 @@
    &__search {
       margin-top: 70px;
       margin-bottom: -15px;
+      .search-panel__input {
+         background: rgba(255, 255, 255, 0.5);
+         color: $mainColor;
+         &::placeholder {
+            color: $gray;
+         }
+         &:hover {
+            box-shadow: 0px 10px 10px rgba(34, 43, 69, 0.1);
+         }
+      }
       @media (min-width: 576px) {
          display: none;
       }
@@ -9361,6 +9377,14 @@
       // max-width: 315px;
       margin-left: auto;
       margin-bottom: 40px;
+      .search-panel__input {
+         &:hover {
+            box-shadow: 0px 10px 10px rgba(34, 43, 69, 0.1);
+         }
+      }
+      .icon-search {
+         color: $gray;
+      }
    }
 
    &__container {
@@ -10240,12 +10264,6 @@
             display: none;
          }
       }
-      &:last-child {
-         margin-bottom: 140px;
-         @media (max-width: 575.98px) {
-            margin-bottom: 40px;
-         }
-      }
    }
    .short-form-policy {
       @media (max-width: 575.98px) {
@@ -10264,6 +10282,7 @@
    .post {
       &__title {
          margin-bottom: 20px;
+         margin-top: 30px;
          font-size: 26px;
          font-weight: bold;
          @media (max-width: 575.98px) {
@@ -10272,6 +10291,7 @@
          }
       }
       &__subtitle {
+         margin-top: 15px;
          font-size: 22px;
          font-weight: bold;
          margin-bottom: 10px;
@@ -10313,6 +10333,12 @@
    margin-bottom: -1px;
    &:not(:last-child) {
       border-bottom: 1px solid #edf1f7;
+   }
+   &:last-child {
+      margin-bottom: 140px;
+      @media (max-width: 575.98px) {
+         margin-bottom: 40px;
+      }
    }
    @media (max-width: 575.98px) {
       padding: 40px 0 10px;
@@ -10603,9 +10629,10 @@
       align-items: center;
       font-size: 30px;
       color: $white;
-      background: #231f20;
+      background: #c5cee0;
       position: absolute;
       bottom: 5px;
+      // transition: 0.1s ease-out;
       @media (max-width: 575.98px) {
          width: 25px;
          height: 25px;
@@ -10616,7 +10643,6 @@
          background: #231f20;
       }
       &.swiper-button-disabled {
-         background: #c5cee0;
       }
    }
 
@@ -10753,7 +10779,9 @@
       background: $white;
       padding: 6px 7px 7px 6px;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
       img {
+         border-radius: 50%;
          width: 100%;
          height: 100%;
          object-fit: cover;
@@ -11134,6 +11162,10 @@
 .item-review {
    padding-bottom: 10px;
    border-bottom: 1px solid #edf1f7;
+   margin-bottom: 70px;
+   @media (max-width: 575.98px) {
+      margin-bottom: 40px;
+   }
    &__head {
       display: flex;
       justify-content: space-between;
@@ -11477,6 +11509,9 @@
          @media (max-width: 767.98px) {
             display: flex;
             flex-direction: column-reverse;
+            br {
+               display: none;
+            }
             .not-mobile {
                display: none;
             }
@@ -11492,12 +11527,21 @@
          font-weight: 700;
          color: #fff;
          background: linear-gradient(107.89deg, #2e3a59 10.19%, #8f9bb3 54.58%, #2e3a59 96.63%, #2e3a59 96.64%);
+         background: linear-gradient(107.89deg, #2e3a59 5.19%, #8f9bb3 27.58%, #2e3a59 48.63%, #2e3a59 48.64%);
+         animation-name: gradient2;
+         animation-duration: 2.5s;
+         animation-iteration-count: infinite;
+         animation-timing-function: ease-out;
+         background-size: 200%;
          &:hover {
             background: #222b45;
          }
          @media (max-width: 767.98px) {
             display: flex;
             flex-direction: column-reverse;
+            br {
+               display: none;
+            }
             .not-mobile {
                display: none;
             }
