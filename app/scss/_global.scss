@@ -1457,6 +1457,7 @@ input {
 				border-radius: 20px;
 				width: max-content;
 				flex: none;
+				color: $mainColor;
 				&-close {
 					display: block !important;
 					position: static !important;
@@ -1557,6 +1558,7 @@ input {
 	&__several-item {
 		font-size: 14px;
 		color: #044481;
+		padding: 0;
 		.icon {
 			display: none;
 		}

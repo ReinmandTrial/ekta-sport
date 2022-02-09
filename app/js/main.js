@@ -220,7 +220,7 @@ $('.js-select--swich .js-select-body .js-select-item').on('click', function () {
 });
 
 
-$('.js-select--country .js-select-body--country .js-select-item--country, input__several-item').on('click', function () {
+$('.js-select--country .js-select-body--country .js-select-item--country, .input__several-item').on('click', function () {
    btn = $(this);
    block = btn.closest('.js-select');
 
@@ -231,6 +231,22 @@ $('.js-select--country .js-select-body--country .js-select-item--country, input_
 
    block.toggleClass('open');
    $(this).closest('.input__block').addClass('--fill');
+   console.log('btn');
+
+});
+$('.js-select-several .js-select-item').on('click', function () {
+   btn = $(this);
+   block = btn.closest('.input__block');
+   if (block.find('.js-select--country').hasClass('js-select--country')) {
+      block.find('.input').hide();
+      block.find('.input.input--filled').css('display', 'flex');
+
+      btn.clone().appendTo(block.find('.input--filled'));
+
+      block.toggleClass('open');
+      $(this).closest('.input__block').addClass('--fill');
+      console.log('btn');
+   }
 });
 
 $('.input__select-item-close').on('click', function () {
@@ -614,6 +630,59 @@ $('input[name="daterange-two"], .daterangepicker').on('focus', function () {
       },
    }, function (start) {
       $('input[name="daterange-two"]').val(start.format('DD.MM.YYYY') + ' - ' + start.add(1, "years").format('DD.MM.YYYY'));
+   });
+});
+$('input[name="daterange-three"], .daterangepicker').on('focus', function () {
+   $(this).closest('.js-calendar').addClass('open');
+   $(this).closest('.input__block').addClass('--fill');
+   $(this).daterangepicker({
+      singleDatePicker: true,
+      opens: 'right',
+      "linkedCalendars": false,
+      "autoApply": true,
+      "parentEl": ".js-calendar",
+      "showCustomRangeLabel": false,
+      "minDate": today,
+      autoUpdateInput: false,
+      "locale": {
+         "format": "DD.MM.YYYY",
+         "separator": " - ",
+         "applyLabel": "Apply",
+         "cancelLabel": "Cancel",
+         "fromLabel": "From",
+         "toLabel": "To",
+         "customRangeLabel": "Custom",
+         "weekLabel": "W",
+         "daysOfWeek": [
+            "Пн",
+            "Вт",
+            "Ср",
+            "Чт",
+            "Пт",
+            "Сб",
+            "Вс"
+         ],
+         "monthNames": [
+            "Январь",
+            "Февраль",
+            "Март",
+            "Апрель",
+            "Май",
+            "Июнь",
+            "Июль",
+            "Август",
+            "Сентябрь",
+            "Октябрь",
+            "Ноябрь",
+            "Декабрь"
+         ],
+         "firstDay": 1,
+         "dateLimit": {
+            "month": 1
+         },
+      },
+   }, function (start) {
+      $('input[name="daterange-three"]').val(start.format('DD.MM.YYYY') + ' - ' + start.add(3, "months").format('DD.MM.YYYY'));
    });
 });
 $('input[name="daterange"],input[name="daterange-one"],input[name="daterange-two"], .daterangepicker').on('blur', function () {
