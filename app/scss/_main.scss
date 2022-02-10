@@ -867,6 +867,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      min-height: 75px;
       @media (max-width: 991.98px) {
          flex-direction: column;
          align-items: stretch;
@@ -1697,15 +1698,22 @@
    }
    &__btn-pay {
       display: block;
-      padding: 9px 20px;
+      padding: 10px 20px;
       width: 100%;
-      max-width: 280px;
+      max-width: 580px;
       border-radius: 30px;
       background: $mainColor;
+      border: 1px solid $mainColor;
       margin: 0 auto;
       font-size: 16px;
       font-weight: bold;
       color: $white;
+      font-size: 22px;
+      &:disabled {
+         background: rgba(228, 232, 242, 0.4);
+         border: 1px solid #74798a;
+         color: $gray;
+      }
    }
    &__payment-btn {
       padding: 24px 30px;
@@ -1736,6 +1744,17 @@
          min-height: unset;
          font-size: 16px;
          column-gap: 10px;
+      }
+   }
+   &__btn-back {
+      font-size: 22px;
+      font-weight: 700;
+      color: $gray;
+      position: absolute;
+      top: 20px;
+      left: 0;
+      @media (max-width: 991.98px) {
+         display: none;
       }
    }
 }
@@ -8360,6 +8379,18 @@
 
 //insurance-baggage START========================================================================================================================================================
 .insurance-baggage {
+   .thank-you__policy-form .form-policy__step-one .form-policy__secure {
+      @media (min-width: 992px) {
+         margin-top: unset;
+         margin-right: 30px;
+      }
+   }
+   // .thank-you__policy-form .form-policy__step-five + .form-policy__bottom-line .form-policy__secure {
+   //    @media (min-width: 992px) {
+   //       margin-top: 10px;
+   //       margin-right: auto !important;
+   //    }
+   // }
    .thank-you__policy-form .form-policy__secure {
       @media (min-width: 992px) {
          margin-top: unset;

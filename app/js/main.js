@@ -359,6 +359,14 @@ for (let anchor of anchors) {
 $('.form-policy__btn-to-step-two').on('click', function () {
    $(this).closest('.form-policy').find('.form-policy__step-one').hide();
    $(this).closest('.form-policy').find('.form-policy__step-two').show();
+   if ($(this).closest('.form-policy').find('.form-policy__step-two').hasClass('form-policy__step-five')) {
+      $(this).closest('.form-policy').find('.form-policy__secure').css('margin', '10px auto 0');
+
+   }
+   if ($(this).closest('.form-policy').find('.form-policy__step-two').hasClass('form-policy__step-five') && ($('.form-policy__toggle-item--gplay').hasClass('active') || $('.form-policy__toggle-item--apay').hasClass('active'))) {
+      $(this).closest('.policy-form').find(".form-policy__secure").hide();
+
+   }
    $('.policy-form__steps').removeClass('policy-form__steps--one')
    $('.policy-form__steps').addClass('policy-form__steps--two')
    $(this).closest('.policy-form').addClass('fixed');
@@ -371,6 +379,11 @@ $('.form-policy__btn-prev-to-step-one').on('click', function () {
    $('.policy-form__steps').addClass('policy-form__steps--one')
    $(this).closest('.policy-form').removeClass('fixed')
    $(this).closest('.policy-form').find('.form-policy__num-of-step span').text('1')
+   if ($(this).closest('.form-policy').find('.form-policy__step-two').hasClass('form-policy__step-five')) {
+      $(this).closest('.form-policy').find('.form-policy__secure').css('margin', '0 30px 0 auto');
+      $(this).closest('.policy-form').find(".form-policy__secure").show();
+
+   }
 });
 
 $('.form-policy__btn-to-step-three').on('click', function () {
@@ -392,9 +405,25 @@ $('.form-policy__btn-prev-to-step-three').on('click', function () {
 $('.form-policy__btn-to-step-five').on('click', function () {
    $(this).closest('.form-policy').find('.form-policy__step-four').hide();
    $(this).closest('.form-policy').find('.form-policy__step-five').show().addClass('active');
-   $('.policy-form__steps').removeClass('policy-form__steps--two')
-   $('.policy-form__steps').addClass('policy-form__steps--three')
-   $(this).closest('.policy-form').find('.form-policy__num-of-step span').text('3')
+   $(this).closest('.form-policy').find('.form-policy__num-of-step').hide();
+   $(this).closest('.form-policy').find('.form-policy__secure').css('margin', '0 auto');
+   $('.policy-form__steps').removeClass('policy-form__steps--two');
+   $('.policy-form__steps').addClass('policy-form__steps--three');
+   $(this).closest('.policy-form').find('.form-policy__num-of-step span').text('3');
+   if ($('.form-policy__toggle-item--gplay').hasClass('active') || $('.form-policy__toggle-item--apay').hasClass('active')) {
+      $(this).closest('.policy-form').find(".form-policy__secure").hide();
+
+   }
+});
+$('.form-policy__btn-prev-to-step-four').on('click', function () {
+   $(this).closest('.form-policy').find('.form-policy__step-four').show();
+   $(this).closest('.form-policy').find('.form-policy__step-five').hide().removeClass('active');
+   $(this).closest('.form-policy').find('.form-policy__num-of-step').show();
+   $(this).closest('.form-policy').find('.form-policy__secure').css('margin', '0 0 0 auto');
+   $('.policy-form__steps').removeClass('policy-form__steps--three')
+   $('.policy-form__steps').addClass('policy-form__steps--two')
+   $(this).closest('.policy-form').find('.form-policy__num-of-step span').text('2')
+   $(this).closest('.policy-form').find(".form-policy__secure").show();
 });
 
 $('.form-policy__include-item').on('click', function () {
@@ -424,6 +453,16 @@ $(".form-policy__toggle-item").on('click', function () {
    if (!$(this).hasClass("active")) {
       let btns = $(this).closest(".form-policy__toggle").find(".form-policy__toggle-item");
       let count;
+      if ($(this).hasClass('form-policy__toggle-item--gplay') || $(this).hasClass('form-policy__toggle-item--apay')) {
+         $(this).closest('.form-policy__step-five').find(".form-policy__btn-pay").hide();
+         $(this).closest('.policy-form').find(".form-policy__secure").hide();
+         $(this).closest('.form-calculator').find(".form-calculator__btn-pay").hide();
+      } else {
+         $(this).closest('.form-policy__step-five').find(".form-policy__btn-pay").show();
+         $(this).closest('.policy-form').find(".form-policy__secure").show();
+         $(this).closest('.form-calculator').find(".form-calculator__btn-pay").show();
+
+      }
       $(btns).each(function () {
          $(this).removeClass("active");
       })
