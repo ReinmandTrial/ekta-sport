@@ -736,14 +736,15 @@ button {
 		font-size: 24px;
 		font-weight: 700;
 		margin-bottom: 15px;
-		&:hover {
-			text-decoration-line: underline;
-		}
+		
 		@media (max-width: 575.98px) {
 			font-size: 18px;
 			margin-bottom: 10px;
 		}
 	}
+	a.menu__subtitle:hover {
+		text-decoration-line: underline;
+	} 
 
 	&__block {
 	}
@@ -756,7 +757,7 @@ button {
 			@media (max-width: 575.98px) {
 				margin-bottom: 5px;
 			}
-		}
+		} 
 		&:hover {
 			text-decoration-line: underline;
 		}

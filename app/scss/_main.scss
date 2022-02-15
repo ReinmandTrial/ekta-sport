@@ -689,9 +689,11 @@
          }
          .form-policy__btn-next {
             flex: 0 1 50%;
+            width: 50%;
          }
          .form-policy__btn-prev {
             flex: 0 1 50%;
+            width: 50%;
          }
       }
    }
@@ -1643,13 +1645,14 @@
       }
    }
    &__toggle-item {
-      padding: 15px;
+      padding: 5px 15px;
       background: rgba(143, 155, 179, 0.12);
       border: 1px solid $mainColor;
       border-radius: 20px;
-      font-size: 26px;
+      font-size: 22px;
+      height: 50px;
       font-weight: bold;
-      min-width: 235px;
+      min-width: 173px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -1657,10 +1660,13 @@
          padding: 10px;
          font-size: 20px;
          background: $white;
+         min-width: 230px;
       }
       &:nth-child(1) {
          svg {
-            margin-right: 13px;
+            width: 22px;
+            height: 18px;
+            margin-right: 10px;
             margin-top: 2px;
             path {
                fill: $mainColor;
@@ -1669,6 +1675,9 @@
       }
       svg path.text {
          fill: $mainColor;
+      }
+      svg {
+         height: 26px;
       }
       &:nth-child(3) {
          svg {
@@ -1682,7 +1691,7 @@
          height: 28px;
       }
       &:not(:last-child) {
-         margin-right: 40px;
+         margin-right: 32px;
          @media (max-width: 991.98px) {
             margin-right: unset;
             margin-bottom: 8px;
@@ -1746,6 +1755,7 @@
          min-height: unset;
          font-size: 16px;
          column-gap: 10px;
+         color: $mainColor;
       }
    }
    &__btn-back {
@@ -2315,24 +2325,6 @@
             }
          }
 
-         &.slider-partners__slide--consolidator {
-            // svg path:nth-child(1) {
-            //    fill: #000000;
-            // }
-            // .consolidator {
-            //    &__stop1 {
-            //       stop-color: #c60fe9;
-            //    }
-
-            //    &__stop2 {
-            //       stop-color: #0c6af7;
-            //    }
-            //    &__stop3 {
-            //       stop-color: #2be4fc;
-            //    }
-            // }
-         }
-
          &.slider-partners__slide--lufthansa {
             svg path:nth-child(1) {
                fill: #fdb813;
@@ -2343,6 +2335,7 @@
          }
 
          &.slider-partners__slide--farvater {
+            order: 7;
             svg path {
                fill: #00aeef;
             }
@@ -2354,8 +2347,8 @@
             }
          }
          &.slider-partners__slide--bees {
-            width: 100vw;
-
+            width: 50vw;
+            order: 5;
             & svg {
                width: 93px;
                height: 35px;
@@ -2364,7 +2357,7 @@
 
          &.slider-partners__slide--it-tour {
             width: 50vw;
-
+            order: 4;
             & svg {
                width: 85px;
                height: 30px;
@@ -2373,7 +2366,7 @@
 
          &.slider-partners__slide--tui {
             width: 50vw;
-
+            order: 8;
             & svg {
                width: 69px;
                height: 30px;
@@ -2382,7 +2375,7 @@
 
          &.slider-partners__slide--workport {
             width: 50vw;
-
+            order: 6;
             & svg {
                width: 116px;
                height: 34px;
@@ -2391,7 +2384,7 @@
 
          &.slider-partners__slide--consolidator {
             width: 50vw;
-
+            order: 3;
             & svg {
                width: 147px;
                height: 19px;
@@ -2404,7 +2397,7 @@
 
          &.slider-partners__slide--lufthansa {
             width: 100vw;
-
+            order: 2;
             & svg {
                width: 328px;
                height: 30px;
@@ -2422,6 +2415,7 @@
 
          &.slider-partners__slide--tripmydream {
             width: 100vw;
+            order: 1;
 
             & svg {
                width: 235px;
@@ -3338,7 +3332,7 @@
    &__text-block {
       padding: 100px 25px 110px 30px;
       background: rgba(247, 249, 252, 0.9);
-      height: stretch;
+      height: 100%;
       @media (max-width: 1099.98px) {
          padding: 20px 15px 40px;
          margin-left: -15px;
@@ -10351,6 +10345,13 @@
       @media (max-width: 575.98px) {
          margin-bottom: 5px;
       }
+   }
+   .blog-subscription--mobile {
+      background: rgba(237, 241, 247, 0.5);
+      border-radius: unset;
+      margin-left: -15px !important;
+      margin-right: -15px !important;
+      padding: 20px 15px 30px;
    }
    .post {
       &__title {
