@@ -348,11 +348,26 @@ for (let anchor of anchors) {
 }
 //плавная прокрутка якоря конец
 
-// custon scroll
+// custom scroll
 // new SimpleBar(document.getElementById('scroll-popup-read-more'));
-// new SimpleBar($('js-scroll'));
-
-// custon scroll end
+// new SimpleBar(document.getElementById('form-policy'));
+// new SimpleBar($('#form-policy'));
+// new SimpleBar($('.input__select-body'));
+// $('.input__select-body').each(element, new SimpleBar());
+// $('.input__select-body').each(function () {
+//    new SimpleBar($(this))
+// });
+// Array.prototype.forEach.call(
+// document.querySelectorAll('.js-scroll'),
+//    el => new SimpleBar()
+// );
+jQuery(document).ready(function ($) {
+   $(".input__select-body").mCustomScrollbar({
+      scrollInertia: 0,
+      mouseWheel: { scrollAmount: 40 },
+   });
+});
+// custom scroll end
 
 
 // действия в форме полиса
@@ -1026,6 +1041,12 @@ $('.form-calculator__btn-to-step-three').on('click', function () {
    $(this).closest('.form-calculator').find('.form-calculator__step-two').hide();
    $(this).closest('.form-calculator').find('.form-calculator__step-three').show();
    $('.form-calculator__btn-edit-step-one').show();
+})
+$('.form-calculator__btn-prev-to-step-two').on('click', function () {
+   // $(this).closest('.form-calculator').find('.form-calculator__step-three').hide();
+   $(this).closest('.form-calculator').find('.form-calculator__step-two').show();
+   $(this).closest('.form-calculator').find('.form-calculator__step-three').hide();
+   // $('.form-calculator__btn-edit-step-one').show();
 })
 $('.form-calculator__btn-edit-step-one').on('click', function () {
    $(this).closest('.form-calculator').find('.form-calculator__step-two').hide();
