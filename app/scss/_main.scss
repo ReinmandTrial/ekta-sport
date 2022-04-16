@@ -4442,6 +4442,12 @@
          margin-top: -10px;
       }
    }
+   .post__list {
+      font-size: 16px;
+      @media (max-width: 575.98px) {
+         font-size: 14px;
+      }
+   }
 }
 
 //PARACHUTING START========================================================================================================================================================
@@ -5792,7 +5798,7 @@
 
    &__policy-includes-subtitle {
       font-size: 16px;
-      color: $gray;
+      // color: $gray;
       font-weight: 600;
       @media (max-width: 575.98px) {
          font-size: 12px;
@@ -5815,7 +5821,7 @@
       display: none;
       font-size: 16px;
       color: $gray;
-      font-weight: 600;
+      // font-weight: 600;
       @media (max-width: 575.98px) {
          font-size: 12px;
       }
@@ -9548,7 +9554,8 @@
    &__type {
       margin-bottom: 10px;
       @media (max-width: 575.98px) {
-         font-size: 14px;
+         font-size: 16px;
+         text-transform: uppercase;
          font-weight: bold;
          margin-bottom: 0;
       }
@@ -9933,6 +9940,8 @@
    @media (max-width: 575.98px) {
       width: 280px !important;
       border: none;
+      filter: none;
+      box-shadow: 0px 10px 10px rgba(143, 155, 179, 0.1);
    }
    &__img {
       padding-bottom: 73%;
