@@ -312,12 +312,11 @@ $('input.input').on('click keyup', function () {
 //       scrollToTopBtn.classList.remove("showBtn");
 //    }
 // }
-let btn = document.querySelector('.link-to-top')
-//
 function magic() {
+   let btnTop = document.querySelector('.link-to-top');
    if (window.pageYOffset > 300) {
-      btn.style.opacity = '1'
-   } else { btn.style.opacity = '0' }
+      btnTop.style.opacity = '1'
+   } else { btnTop.style.opacity = '0' }
 
    console.log('scr');
 }
@@ -1038,15 +1037,25 @@ $('.form-calculator__btn-to-step-two').on('click', function () {
 })
 $('.form-calculator__btn-to-step-three').on('click', function () {
    // $(this).closest('.form-calculator').find('.form-calculator__step-three').hide();
-   $(this).closest('.form-calculator').find('.form-calculator__step-two').hide();
-   $(this).closest('.form-calculator').find('.form-calculator__step-three').show();
-   $('.form-calculator__btn-edit-step-one').show();
+   if ($(this).hasClass('js-form-to-cheeck')) {
+      $('.js-input-wrapper-to-hide').each(function () {
+         $(this).addClass('closed');
+         $(this).find('input').prop('disabled', true);
+      })
+      $(this).removeClass('js-form-to-cheeck')
+   } else {
+      $(this).closest('.form-calculator').find('.form-calculator__step-two').hide();
+      $(this).closest('.form-calculator').find('.form-calculator__step-three').show();
+      $('.form-calculator__btn-edit-step-one').show();
+   }
 })
 $('.form-calculator__btn-prev-to-step-two').on('click', function () {
    // $(this).closest('.form-calculator').find('.form-calculator__step-three').hide();
    $(this).closest('.form-calculator').find('.form-calculator__step-two').show();
    $(this).closest('.form-calculator').find('.form-calculator__step-three').hide();
    // $('.form-calculator__btn-edit-step-one').show();
+   // $('.form-calculator__btn-to-step-three').addClass('js-form-to-cheeck')
+
 })
 $('.form-calculator__btn-edit-step-one').on('click', function () {
    $(this).closest('.form-calculator').find('.form-calculator__step-two').hide();
@@ -1115,6 +1124,7 @@ $('.js-add-tourist').on('click', function () {
       $('.form-policy__tourist:last-child').removeClass('closed');
       $('.form-policy__tourist:last-child').find('input').prop('disabled', false);
       $('.form-calculator__step-two').addClass('some-hide');
+      $('.form-calculator__btn-to-step-three').addClass('js-form-to-cheeck')
    } else {
       btn.closest('.form-calculator').find('.form-policy__tourist.to-clone').clone().appendTo('.form-policy__participants').show();
       $('.form-policy__tourist.to-clone:last-child').removeClass('to-clone');
@@ -1129,6 +1139,7 @@ $('.js-add-tourist').on('click', function () {
       })
       $('.form-policy__tourist:last-child').removeClass('closed');
       $('.form-policy__tourist:last-child').find('input').prop('disabled', false);
+      $('.form-calculator__btn-to-step-three').addClass('js-form-to-cheeck')
    }
 });
 
@@ -1139,6 +1150,7 @@ $(document).on('click', '.form-calculator__edit-this', function () {
    })
    $(this).closest('.js-input-wrapper-to-hide').removeClass('closed');
    $(this).closest('.js-input-wrapper-to-hide').find('input').prop('disabled', false);
+   $('.form-calculator__btn-to-step-three').addClass('js-form-to-cheeck')
 })
 
 $(document).on('click', '.form-calculator__delete-this', function () {

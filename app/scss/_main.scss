@@ -6057,6 +6057,9 @@
             border-radius: 0 !important;
             border: none !important;
             font-size: 18px !important;
+            &:hover {
+               box-shadow: none;
+            }
             @media (max-width: 575.98px) {
                font-size: 12px !important;
                font-weight: 500 !important;
@@ -6133,6 +6136,9 @@
             border-radius: 0 !important;
             border: none !important;
             font-size: 18px;
+            &:hover{
+               box-shadow: none !important;
+            }
             @media (max-width: 575.98px) {
                font-size: 12px !important;
                font-weight: 500 !important;
